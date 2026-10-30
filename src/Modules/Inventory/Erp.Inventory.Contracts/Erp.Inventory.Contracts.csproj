@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../../../BuildingBlocks/Erp.Kernel/Erp.Kernel.csproj" />
+</ItemGroup>
+</Project>

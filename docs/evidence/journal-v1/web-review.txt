@@ -1,0 +1,56 @@
+
+> erp-web-foundation@0.1.0 lint
+> tsc --noEmit -p tsconfig.app.json
+
+
+> erp-web-foundation@0.1.0 format:check
+> prettier --check src angular.json *.json *.mjs
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> erp-web-foundation@0.1.0 build
+> ng build
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          | 254.19 kB |                69.62 kB
+styles.css          | styles        |   3.79 kB |                 1.20 kB
+
+                    | Initial total | 257.98 kB |                70.82 kB
+
+Lazy chunk files    | Names         |  Raw size | Estimated transfer size
+chunk-Bi2sEPqE.js   | journals      |  17.63 kB |                 4.50 kB
+chunk-kyMRhgII.js   | workspace     |   2.99 kB |                 1.08 kB
+chunk-Uhjl2qir.js   | home          | 682 bytes |               682 bytes
+
+Application bundle generation complete. [1.788 seconds] - 2026-10-18T14:45:09.613Z
+
+Output location: /workspace/codex/src/Clients/Web/dist/web
+
+
+> erp-web-foundation@0.1.0 test
+> ng test --watch=false
+
+❯ Building...
+✔ Building...
+Application bundle generation complete. [1.269 seconds] - 2026-10-18T14:45:11.440Z
+
+
+ RUN  v4.1.12 /workspace/codex/src/Clients/Web
+
+ ✓ |web| src/core/foundation.spec.ts (5 tests) 44ms
+ ✓ |web| src/features/finance/journals.spec.ts (6 tests) 123ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  14:45:11
+   Duration  863ms (transform 144ms, setup 420ms, import 188ms, tests 167ms, environment 651ms)
+
+JSON report written to /workspace/codex/artifacts/web/unit-results.json
+
+> erp-web-foundation@0.1.0 test:browser
+> node browser-tests.mjs
+
+{"status": "PASS", "browserChecks": 19, "databaseChecks": {"postedJournals": "1", "postedAudit": "1", "outbox": "1", "receipt": "1", "inbox": "1", "deliveredTrace": "1", "correlationChain": "1", "globalUnbalanced": "0", "totals": "100.000000 / 100.000000"}}

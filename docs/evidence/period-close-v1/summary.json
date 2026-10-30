@@ -1,0 +1,53 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-23T21:18:17.531956+00:00",
+  "scope": "Finance Fiscal Period Close; all previous regression gates required",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "9b4bf27f93ba87dca8312b5538b7a1f14e83eded078dc5a0c30c67ea04a885ec"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "passed": 107,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "f1e9c7dab30e544738821cffb132b288e72024b48f013ee7b2135f5d435a2d1e"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "323efdd4ebe5192d6dbbedcf6db508eb6aa89d1a09efb4ed4779ba3df58ef878"
+    }
+  ],
+  "dotnetTotal": 167,
+  "angularUnit": 41,
+  "automatedTestsTotal": 208,
+  "newAutomatedTests": 23,
+  "browserAcceptanceChecksTotal": 112,
+  "newBrowserAcceptanceChecks": 16,
+  "periodCloseBrowserChecks": 16,
+  "goldenDatabaseChecks": {
+    "periodState": "Closed:2",
+    "requestedAudit": "1",
+    "closedAudit": "1",
+    "outbox": "1",
+    "receipt": "1",
+    "postedJournals": "1",
+    "originalUnchanged": "1",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  },
+  "migrationsAdded": 1,
+  "tablesAdded": 0,
+  "architecture": "PASS",
+  "securityAudits": "No reported vulnerabilities at execution time",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false
+}

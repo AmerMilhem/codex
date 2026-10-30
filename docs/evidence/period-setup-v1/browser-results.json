@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Company begins without SQL-seeded periods",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL setup form",
+      "status": "PASS"
+    },
+    {
+      "name": "Response lost after real creation commit",
+      "status": "PASS"
+    },
+    {
+      "name": "Uncertain create freezes both dates",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry reuses key and exact dates",
+      "status": "PASS"
+    },
+    {
+      "name": "New period is Open with actor/time",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid order is explained in Arabic without creating a period",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact duplicate is rejected with Arabic UI message",
+      "status": "PASS"
+    },
+    {
+      "name": "Mid-range overlap is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Inclusive end boundary overlap is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Authenticated user lacking Create is denied at API boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "Journal validates in newly created period without posting",
+      "status": "PASS"
+    },
+    {
+      "name": "Created period accepts UI posting",
+      "status": "PASS"
+    },
+    {
+      "name": "Created Open period accepts UI reversal",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance UI reconciles posting and reversal",
+      "status": "PASS"
+    },
+    {
+      "name": "GL UI shows both posted movements",
+      "status": "PASS"
+    },
+    {
+      "name": "Existing Close command closes created period",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed period rejects later post",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance includes both posted effects",
+      "status": "PASS"
+    },
+    {
+      "name": "GL retains posting and reversal",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period report remains readable in UI",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR setup/closed list",
+      "status": "PASS"
+    },
+    {
+      "name": "English invalid-date message is understandable",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "periodId": "01a16eb9-0568-7ad7-bd82-35ede1cabd8b",
+  "originalJournalId": "01a16eb9-09bd-740f-bc62-745d3581dba9",
+  "trialBalance": {
+    "openingDebit": "0",
+    "openingCredit": "0",
+    "periodDebit": "200",
+    "periodCredit": "200",
+    "closingDebit": "0",
+    "closingCredit": "0"
+  },
+  "generalLedger": {
+    "totalCount": 2
+  }
+}

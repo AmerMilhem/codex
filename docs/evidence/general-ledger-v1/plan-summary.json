@@ -1,0 +1,177 @@
+{
+  "definition": "Scan-node tuple visits across relations/loops, not distinct ledger lines",
+  "queries": {
+    "count-and-period-plan.json": {
+      "executionMilliseconds": 15.831,
+      "returnedRows": 1.0,
+      "scanTupleVisits": 102520.0,
+      "scanNodes": [
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_lines",
+          "index": null,
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_lines_tenant_id_company_id_account_id",
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_entries",
+          "index": null,
+          "rowsPerLoop": 260.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_entries_tenant_id_company_id_status_posting_date",
+          "rowsPerLoop": 260.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        }
+      ]
+    },
+    "movements-middle-page-plan.json": {
+      "executionMilliseconds": 31.925,
+      "returnedRows": 50.0,
+      "scanTupleVisits": 102520.0,
+      "scanNodes": [
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_lines",
+          "index": null,
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_lines_tenant_id_company_id_account_id",
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_entries",
+          "index": null,
+          "rowsPerLoop": 260.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_entries_tenant_id_company_id_status_posting_date",
+          "rowsPerLoop": 260.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        }
+      ]
+    },
+    "opening-plan.json": {
+      "executionMilliseconds": 15.097,
+      "returnedRows": 1.0,
+      "scanTupleVisits": 102500.0,
+      "scanNodes": [
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_lines",
+          "index": null,
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_lines_tenant_id_company_id_account_id",
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_entries",
+          "index": null,
+          "rowsPerLoop": 250.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_entries_tenant_id_company_id_status_posting_date",
+          "rowsPerLoop": 250.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        }
+      ]
+    },
+    "trial-reconciliation-plan.json": {
+      "executionMilliseconds": 22.44,
+      "returnedRows": 1.0,
+      "scanTupleVisits": 103532.0,
+      "scanNodes": [
+        {
+          "node": "Subquery Scan",
+          "relation": null,
+          "index": null,
+          "rowsPerLoop": 1.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_lines",
+          "index": null,
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_lines_tenant_id_company_id_account_id",
+          "rowsPerLoop": 51000.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Heap Scan",
+          "relation": "journal_entries",
+          "index": null,
+          "rowsPerLoop": 510.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Bitmap Index Scan",
+          "relation": null,
+          "index": "IX_journal_entries_tenant_id_company_id_fiscal_period_id",
+          "rowsPerLoop": 1020.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        },
+        {
+          "node": "Index Scan",
+          "relation": "accounts",
+          "index": "AK_accounts_tenant_id_company_id_id",
+          "rowsPerLoop": 1.0,
+          "loops": 1,
+          "rowsRemovedPerLoop": 0
+        }
+      ]
+    }
+  }
+}

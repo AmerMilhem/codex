@@ -1,0 +1,1 @@
+<Project Sdk="Microsoft.NET.Sdk"><ItemGroup><ProjectReference Include="../Erp.Kernel/Erp.Kernel.csproj" /></ItemGroup></Project>

@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-24T16:41:58.295Z",
+  "browser": "154.0.8037.57",
+  "journalId": "01a16eca-587c-709a-8846-bb86d67cdfd2",
+  "checks": [
+    {
+      "name": "Journal styles load under strict CSP",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL journal form",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact UI totals",
+      "status": "PASS"
+    },
+    {
+      "name": "Real API creates draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Draft edits round trip",
+      "status": "PASS"
+    },
+    {
+      "name": "Validate without posting",
+      "status": "PASS"
+    },
+    {
+      "name": "Uncertain result locks draft editing",
+      "status": "PASS"
+    },
+    {
+      "name": "First posting commits before response loss",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry preserves idempotency key and revision",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted UI is immutable",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted number and actor displayed",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted account labels remain visible after reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Traceable audit exists",
+      "status": "PASS"
+    },
+    {
+      "name": "Post replay returns original receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "Changed request conflicts with same key",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted English LTR",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted Arabic RTL mobile layout",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted list and reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "databaseChecks": {
+    "postedJournals": "1",
+    "postedAudit": "1",
+    "outbox": "1",
+    "receipt": "1",
+    "inbox": "1",
+    "deliveredTrace": "1",
+    "correlationChain": "1",
+    "globalUnbalanced": "0",
+    "totals": "100.000000 / 100.000000"
+  },
+  "status": "PASS"
+}

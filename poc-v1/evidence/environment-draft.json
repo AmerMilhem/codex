@@ -1,0 +1,11 @@
+{
+  "status": "saved",
+  "draft_id": "4a93c3ed-5d2e-4ca2-bdfe-e5e05b315310~cecfgdraft_6ad499760740819c9831e2d27fbe36d7",
+  "fields": ["install_script", "start_skill", "network.allowed_domains"],
+  "added_custom_domain": "storage.googleapis.com",
+  "existing_package_manager_presets": "preserved",
+  "requires_publish": true,
+  "runtime_network_change_verified": false,
+  "published": false,
+  "fresh_task_restoration_verified": false
+}

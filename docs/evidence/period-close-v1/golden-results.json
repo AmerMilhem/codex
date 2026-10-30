@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Open period permits initial posting",
+      "status": "PASS"
+    },
+    {
+      "name": "Period begins Open",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL period list",
+      "status": "PASS"
+    },
+    {
+      "name": "Pre-close passes with posted ledger",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit confirmation required",
+      "status": "PASS"
+    },
+    {
+      "name": "Response lost after committed close",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry freezes comment",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry sends same key and comment",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed period has no close action",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR closed period",
+      "status": "PASS"
+    },
+    {
+      "name": "Actor time comment and revision persisted",
+      "status": "PASS"
+    },
+    {
+      "name": "Posting rejected after close",
+      "status": "PASS"
+    },
+    {
+      "name": "Reversal rejected after close",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period Trial Balance retains exact totals",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period GL retains original movement",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "periodId": "ca971792-ca7c-4a85-a916-60310407c2d0",
+  "originalJournalId": "01a16a9f-86c6-74a4-90f5-6355eefcc8e1",
+  "closed": {
+    "id": "ca971792-ca7c-4a85-a916-60310407c2d0",
+    "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+    "companyId": "11111111-1111-4111-8111-111111111111",
+    "fiscalYear": 2026,
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-31",
+    "status": "Closed",
+    "revision": 2,
+    "closedAt": "2026-10-23T21:16:43.207147+00:00",
+    "closedByIssuer": "development-adapter",
+    "closedBySubject": "period-browser-actor",
+    "closeComment": "Golden close",
+    "closeReconciliation": "{\"version\":1,\"passed\":true,\"periodDebit\":\"100\",\"periodCredit\":\"100\",\"checks\":[{\"code\":\"TB_OPENING_BALANCED\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"TB_PERIOD_BALANCED\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_CLOSING_BALANCED\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_LEDGER_OPENING_BALANCED\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"TB_LEDGER_CLOSING_BALANCED\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_OPENING_DEBIT_MATCH\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"TB_OPENING_CREDIT_MATCH\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"TB_PERIOD_DEBIT_MATCH\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_PERIOD_CREDIT_MATCH\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_CLOSING_DEBIT_MATCH\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_CLOSING_CREDIT_MATCH\",\"passed\":true,\"expected\":\"100\",\"actual\":\"100\"},{\"code\":\"TB_LEDGER_JOURNAL_INTEGRITY\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"TB_ACCOUNT_EQUATIONS\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"GL_TB_PERIOD_ACCOUNTS\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"},{\"code\":\"POSTED_PERIOD_SCOPE\",\"passed\":true,\"expected\":\"0\",\"actual\":\"0\"}]}"
+  },
+  "trialBalance": {
+    "openingDebit": "0",
+    "openingCredit": "0",
+    "periodDebit": "100",
+    "periodCredit": "100",
+    "closingDebit": "100",
+    "closingCredit": "100"
+  },
+  "generalLedger": {
+    "totalCount": 1
+  },
+  "databaseChecks": {
+    "periodState": "Closed:2",
+    "requestedAudit": "1",
+    "closedAudit": "1",
+    "outbox": "1",
+    "receipt": "1",
+    "postedJournals": "1",
+    "originalUnchanged": "1",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  }
+}

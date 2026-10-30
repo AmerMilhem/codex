@@ -1,0 +1,83 @@
+<section class="panel trial-balance" id="accounting-books">
+  <h1>{{ i18n.t('accountingBooks') }}</h1>
+  <p>{{ i18n.t('oneBookPerCompany') }}</p>
+  <a [routerLink]="['/finance', tenant, company, 'journals']">{{ i18n.t('back') }}</a>
+  @if (authorization.can('Finance.Book.Create')) {
+  <form id="book-create-form" (submit)="create($event)">
+    <h2>{{ i18n.t('createBook') }}</h2>
+    <label
+      >{{ i18n.t('bookCode') }}
+      <input
+        id="book-create-code"
+        required
+        maxlength="32"
+        [disabled]="retryPending"
+        [value]="code"
+        (input)="code=$any($event.target).value"
+      />
+    </label>
+    <label
+      >{{ i18n.t('bookName') }}
+      <input
+        id="book-create-name"
+        required
+        maxlength="200"
+        [disabled]="retryPending"
+        [value]="name"
+        (input)="name=$any($event.target).value"
+      />
+    </label>
+    <label
+      >{{ i18n.t('functionalCurrency') }}
+      <select
+        id="book-create-currency"
+        [disabled]="retryPending"
+        [value]="functionalCurrency"
+        (change)="functionalCurrency=$any($event.target).value"
+      >
+        @for (currency of ['JOD','USD','EUR','GBP','SAR','AED','KWD','BHD','OMR','JPY']; track
+        currency) {
+        <option [value]="currency">{{ currency }}</option>
+        }
+      </select>
+    </label>
+    @if (retryPending) {
+    <p role="status">{{ i18n.t('bookCreateRetry') }}</p>
+    }
+    <button id="create-book" class="primary" type="submit" [disabled]="busy() || !code || !name">
+      {{ i18n.t('createBook') }}
+    </button>
+  </form>
+  } @if (error()) {
+  <p role="alert">{{ error() }}</p>
+  } @if (notice()) {
+  <p role="status">{{ notice() }}</p>
+  } @if (busy()) {
+  <p role="status">{{ i18n.t('busy') }}</p>
+  } @if (authorization.can('Finance.Book.View') && !busy() && books().length === 0) {
+  <p id="book-empty">{{ i18n.t('bookEmpty') }}</p>
+  } @if (authorization.can('Finance.Book.View')) {
+  <div class="table-scroll">
+    <table id="book-table">
+      <thead>
+        <tr>
+          <th>{{ i18n.t('bookCode') }}</th>
+          <th>{{ i18n.t('bookName') }}</th>
+          <th>{{ i18n.t('functionalCurrency') }}</th>
+          <th>{{ i18n.t('periodStatus') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (book of books(); track book.id) {
+        <tr>
+          <td dir="ltr">{{ book.code }}</td>
+          <td>{{ book.name }}</td>
+          <td dir="ltr">{{ book.functionalCurrency }}</td>
+          <td>{{ i18n.t('accountActive') }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+</section>

@@ -1,0 +1,744 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Arabic RTL eligible reversal action",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit confirmation is required",
+      "status": "PASS"
+    },
+    {
+      "name": "Response lost only after server commit",
+      "status": "PASS"
+    },
+    {
+      "name": "Pending retry freezes date and reason",
+      "status": "PASS"
+    },
+    {
+      "name": "Relationship exists despite lost response",
+      "status": "PASS"
+    },
+    {
+      "name": "UI retry reuses identical key and payload",
+      "status": "PASS"
+    },
+    {
+      "name": "Original unchanged including status date revision lines",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent posted reversal and number",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact opposite stored lines",
+      "status": "PASS"
+    },
+    {
+      "name": "Reverse action disappears after success",
+      "status": "PASS"
+    },
+    {
+      "name": "Reason and independent date shown",
+      "status": "PASS"
+    },
+    {
+      "name": "Original to reversal uses existing immutable screen",
+      "status": "PASS"
+    },
+    {
+      "name": "Reversal to original and audit reason correlation",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR relationship",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed period A contains original movement only",
+      "status": "PASS"
+    },
+    {
+      "name": "Open period B contains reversal with original opening",
+      "status": "PASS"
+    },
+    {
+      "name": "Combined balances net zero without hiding either journal",
+      "status": "PASS"
+    },
+    {
+      "name": "GL preserves both movements and running 100 then 0",
+      "status": "PASS"
+    },
+    {
+      "name": "GL UI shows both independently traceable journal numbers",
+      "status": "PASS"
+    },
+    {
+      "name": "Same key different date and reason conflict",
+      "status": "PASS"
+    },
+    {
+      "name": "New key cannot double reverse",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "snapshots": {
+    "original": {
+      "id": "01a16a9f-5582-7c3c-8c0e-be5468c185c3",
+      "status": "Posted",
+      "revision": 2,
+      "postingDate": "2026-01-01",
+      "currency": "JOD",
+      "reference": "Reversal golden",
+      "description": "Original remains immutable",
+      "journalNumber": "MJ-2026-000001",
+      "postedByIssuer": "development-adapter",
+      "postedBySubject": "reversal-browser-actor",
+      "postedAt": "2026-10-23T21:16:29.85787+00:00",
+      "totalDebit": "100",
+      "totalCredit": "100",
+      "difference": "0",
+      "roundingPolicy": "internal-to-even-v1",
+      "lines": [
+        {
+          "id": "01a16a9f-5586-7655-9d2c-5d56e0079447",
+          "position": 1,
+          "accountId": "55555555-5555-4555-8555-555555555555",
+          "accountCode": "5000",
+          "accountName": "مصروف / Expense",
+          "debit": "100",
+          "credit": "0",
+          "description": "Expense"
+        },
+        {
+          "id": "01a16a9f-5586-7f58-9877-e61f8472e111",
+          "position": 2,
+          "accountId": "66666666-6666-4666-8666-666666666666",
+          "accountCode": "1000",
+          "accountName": "نقد / Cash",
+          "debit": "0",
+          "credit": "100",
+          "description": "Cash"
+        }
+      ],
+      "reversal": {
+        "originalJournalId": "01a16a9f-5582-7c3c-8c0e-be5468c185c3",
+        "originalJournalNumber": "MJ-2026-000001",
+        "reversalJournalId": "01a16a9f-5f39-79c3-9545-b0e3c1f4a6d5",
+        "reversalJournalNumber": "MJ-2026-000002",
+        "postingDate": "2026-02-01",
+        "reason": "Correction",
+        "actorIssuer": "development-adapter",
+        "actorSubject": "reversal-browser-actor",
+        "timestamp": "2026-10-23T21:16:31.928559+00:00",
+        "requestId": "b57b4f4634e544e9b5ab3e36087e6b99",
+        "correlationId": "b5a78d6b-ab43-41e7-9c44-fbf3b356d04c"
+      }
+    },
+    "reversal": {
+      "id": "01a16a9f-5f39-79c3-9545-b0e3c1f4a6d5",
+      "status": "Posted",
+      "revision": 2,
+      "postingDate": "2026-02-01",
+      "currency": "JOD",
+      "reference": "Reversal golden",
+      "description": "Correction",
+      "journalNumber": "MJ-2026-000002",
+      "postedByIssuer": "development-adapter",
+      "postedBySubject": "reversal-browser-actor",
+      "postedAt": "2026-10-23T21:16:31.928559+00:00",
+      "totalDebit": "100",
+      "totalCredit": "100",
+      "difference": "0",
+      "roundingPolicy": "internal-to-even-v1",
+      "lines": [
+        {
+          "id": "01a16a9f-5f39-766d-87be-fe98b8c4c3b1",
+          "position": 1,
+          "accountId": "55555555-5555-4555-8555-555555555555",
+          "accountCode": "5000",
+          "accountName": "مصروف / Expense",
+          "debit": "0",
+          "credit": "100",
+          "description": "Expense"
+        },
+        {
+          "id": "01a16a9f-5f39-7458-9d83-55814acecbbf",
+          "position": 2,
+          "accountId": "66666666-6666-4666-8666-666666666666",
+          "accountCode": "1000",
+          "accountName": "نقد / Cash",
+          "debit": "100",
+          "credit": "0",
+          "description": "Cash"
+        }
+      ],
+      "reversal": {
+        "originalJournalId": "01a16a9f-5582-7c3c-8c0e-be5468c185c3",
+        "originalJournalNumber": "MJ-2026-000001",
+        "reversalJournalId": "01a16a9f-5f39-79c3-9545-b0e3c1f4a6d5",
+        "reversalJournalNumber": "MJ-2026-000002",
+        "postingDate": "2026-02-01",
+        "reason": "Correction",
+        "actorIssuer": "development-adapter",
+        "actorSubject": "reversal-browser-actor",
+        "timestamp": "2026-10-23T21:16:31.928559+00:00",
+        "requestId": "b57b4f4634e544e9b5ab3e36087e6b99",
+        "correlationId": "b5a78d6b-ab43-41e7-9c44-fbf3b356d04c"
+      }
+    },
+    "trialBalance": {
+      "a": {
+        "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+        "companyId": "11111111-1111-4111-8111-111111111111",
+        "startDate": "2026-01-01",
+        "endDate": "2026-01-31",
+        "currency": "JOD",
+        "minorUnits": 3,
+        "openingScope": "company-book-lifetime",
+        "generatedAt": "2026-10-23T21:16:32.566726+00:00",
+        "accounts": [
+          {
+            "accountId": "66666666-6666-4666-8666-666666666666",
+            "accountCode": "1000",
+            "accountName": "نقد / Cash",
+            "amounts": {
+              "openingDebit": "0",
+              "openingCredit": "0",
+              "periodDebit": "0",
+              "periodCredit": "100",
+              "closingDebit": "0",
+              "closingCredit": "100"
+            }
+          },
+          {
+            "accountId": "55555555-5555-4555-8555-555555555555",
+            "accountCode": "5000",
+            "accountName": "مصروف / Expense",
+            "amounts": {
+              "openingDebit": "0",
+              "openingCredit": "0",
+              "periodDebit": "100",
+              "periodCredit": "0",
+              "closingDebit": "100",
+              "closingCredit": "0"
+            }
+          }
+        ],
+        "totals": {
+          "openingDebit": "0",
+          "openingCredit": "0",
+          "periodDebit": "100",
+          "periodCredit": "100",
+          "closingDebit": "100",
+          "closingCredit": "100"
+        },
+        "ledgerControl": {
+          "totals": {
+            "openingDebit": "0",
+            "openingCredit": "0",
+            "periodDebit": "100",
+            "periodCredit": "100",
+            "closingDebit": "100",
+            "closingCredit": "100"
+          },
+          "openingLedgerDebit": "0",
+          "openingLedgerCredit": "0",
+          "closingLedgerDebit": "100",
+          "closingLedgerCredit": "100",
+          "postedJournalCount": 1,
+          "postedLineCount": 2,
+          "invalidJournalCount": 0
+        },
+        "reconciliation": {
+          "passed": true,
+          "checks": [
+            {
+              "code": "TB_OPENING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_PERIOD_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_LEDGER_OPENING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_OPENING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_OPENING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_PERIOD_DEBIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_PERIOD_CREDIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_CLOSING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_CLOSING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_LEDGER_JOURNAL_INTEGRITY",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_ACCOUNT_EQUATIONS",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            }
+          ]
+        }
+      },
+      "b": {
+        "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+        "companyId": "11111111-1111-4111-8111-111111111111",
+        "startDate": "2026-02-01",
+        "endDate": "2026-02-28",
+        "currency": "JOD",
+        "minorUnits": 3,
+        "openingScope": "company-book-lifetime",
+        "generatedAt": "2026-10-23T21:16:32.579828+00:00",
+        "accounts": [
+          {
+            "accountId": "66666666-6666-4666-8666-666666666666",
+            "accountCode": "1000",
+            "accountName": "نقد / Cash",
+            "amounts": {
+              "openingDebit": "0",
+              "openingCredit": "100",
+              "periodDebit": "100",
+              "periodCredit": "0",
+              "closingDebit": "0",
+              "closingCredit": "0"
+            }
+          },
+          {
+            "accountId": "55555555-5555-4555-8555-555555555555",
+            "accountCode": "5000",
+            "accountName": "مصروف / Expense",
+            "amounts": {
+              "openingDebit": "100",
+              "openingCredit": "0",
+              "periodDebit": "0",
+              "periodCredit": "100",
+              "closingDebit": "0",
+              "closingCredit": "0"
+            }
+          }
+        ],
+        "totals": {
+          "openingDebit": "100",
+          "openingCredit": "100",
+          "periodDebit": "100",
+          "periodCredit": "100",
+          "closingDebit": "0",
+          "closingCredit": "0"
+        },
+        "ledgerControl": {
+          "totals": {
+            "openingDebit": "100",
+            "openingCredit": "100",
+            "periodDebit": "100",
+            "periodCredit": "100",
+            "closingDebit": "0",
+            "closingCredit": "0"
+          },
+          "openingLedgerDebit": "100",
+          "openingLedgerCredit": "100",
+          "closingLedgerDebit": "200",
+          "closingLedgerCredit": "200",
+          "postedJournalCount": 2,
+          "postedLineCount": 4,
+          "invalidJournalCount": 0
+        },
+        "reconciliation": {
+          "passed": true,
+          "checks": [
+            {
+              "code": "TB_OPENING_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_PERIOD_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_OPENING_BALANCED",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_LEDGER_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "200",
+              "actual": "200"
+            },
+            {
+              "code": "TB_OPENING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_OPENING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_PERIOD_DEBIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_PERIOD_CREDIT_MATCH",
+              "passed": true,
+              "expected": "100",
+              "actual": "100"
+            },
+            {
+              "code": "TB_CLOSING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_CLOSING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_JOURNAL_INTEGRITY",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_ACCOUNT_EQUATIONS",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            }
+          ]
+        }
+      },
+      "combined": {
+        "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+        "companyId": "11111111-1111-4111-8111-111111111111",
+        "startDate": "2026-01-01",
+        "endDate": "2026-02-28",
+        "currency": "JOD",
+        "minorUnits": 3,
+        "openingScope": "company-book-lifetime",
+        "generatedAt": "2026-10-23T21:16:32.589248+00:00",
+        "accounts": [
+          {
+            "accountId": "66666666-6666-4666-8666-666666666666",
+            "accountCode": "1000",
+            "accountName": "نقد / Cash",
+            "amounts": {
+              "openingDebit": "0",
+              "openingCredit": "0",
+              "periodDebit": "100",
+              "periodCredit": "100",
+              "closingDebit": "0",
+              "closingCredit": "0"
+            }
+          },
+          {
+            "accountId": "55555555-5555-4555-8555-555555555555",
+            "accountCode": "5000",
+            "accountName": "مصروف / Expense",
+            "amounts": {
+              "openingDebit": "0",
+              "openingCredit": "0",
+              "periodDebit": "100",
+              "periodCredit": "100",
+              "closingDebit": "0",
+              "closingCredit": "0"
+            }
+          }
+        ],
+        "totals": {
+          "openingDebit": "0",
+          "openingCredit": "0",
+          "periodDebit": "200",
+          "periodCredit": "200",
+          "closingDebit": "0",
+          "closingCredit": "0"
+        },
+        "ledgerControl": {
+          "totals": {
+            "openingDebit": "0",
+            "openingCredit": "0",
+            "periodDebit": "200",
+            "periodCredit": "200",
+            "closingDebit": "0",
+            "closingCredit": "0"
+          },
+          "openingLedgerDebit": "0",
+          "openingLedgerCredit": "0",
+          "closingLedgerDebit": "200",
+          "closingLedgerCredit": "200",
+          "postedJournalCount": 2,
+          "postedLineCount": 4,
+          "invalidJournalCount": 0
+        },
+        "reconciliation": {
+          "passed": true,
+          "checks": [
+            {
+              "code": "TB_OPENING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_PERIOD_BALANCED",
+              "passed": true,
+              "expected": "200",
+              "actual": "200"
+            },
+            {
+              "code": "TB_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_OPENING_BALANCED",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_CLOSING_BALANCED",
+              "passed": true,
+              "expected": "200",
+              "actual": "200"
+            },
+            {
+              "code": "TB_OPENING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_OPENING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_PERIOD_DEBIT_MATCH",
+              "passed": true,
+              "expected": "200",
+              "actual": "200"
+            },
+            {
+              "code": "TB_PERIOD_CREDIT_MATCH",
+              "passed": true,
+              "expected": "200",
+              "actual": "200"
+            },
+            {
+              "code": "TB_CLOSING_DEBIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_CLOSING_CREDIT_MATCH",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_LEDGER_JOURNAL_INTEGRITY",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            },
+            {
+              "code": "TB_ACCOUNT_EQUATIONS",
+              "passed": true,
+              "expected": "0",
+              "actual": "0"
+            }
+          ]
+        }
+      }
+    },
+    "generalLedger": {
+      "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "companyId": "11111111-1111-4111-8111-111111111111",
+      "accountId": "55555555-5555-4555-8555-555555555555",
+      "accountCode": "5000",
+      "accountName": "مصروف / Expense",
+      "startDate": "2026-01-01",
+      "endDate": "2026-02-28",
+      "currency": "JOD",
+      "minorUnits": 3,
+      "openingScope": "company-book-lifetime",
+      "generatedAt": "2026-10-23T21:16:32.602406+00:00",
+      "offset": 0,
+      "limit": 50,
+      "totalCount": 2,
+      "openingBalance": "0",
+      "periodDebit": "100",
+      "periodCredit": "100",
+      "closingBalance": "0",
+      "pageOpeningBalance": "0",
+      "movements": [
+        {
+          "lineId": "01a16a9f-5586-7655-9d2c-5d56e0079447",
+          "journalId": "01a16a9f-5582-7c3c-8c0e-be5468c185c3",
+          "position": 1,
+          "postingDate": "2026-01-01",
+          "journalNumber": "MJ-2026-000001",
+          "reference": "Reversal golden",
+          "description": "Expense",
+          "journalDescription": "Original remains immutable",
+          "debit": "100",
+          "credit": "0",
+          "runningBalance": "100"
+        },
+        {
+          "lineId": "01a16a9f-5f39-766d-87be-fe98b8c4c3b1",
+          "journalId": "01a16a9f-5f39-79c3-9545-b0e3c1f4a6d5",
+          "position": 1,
+          "postingDate": "2026-02-01",
+          "journalNumber": "MJ-2026-000002",
+          "reference": "Reversal golden",
+          "description": "Expense",
+          "journalDescription": "Correction",
+          "debit": "0",
+          "credit": "100",
+          "runningBalance": "0"
+        }
+      ],
+      "reconciliation": {
+        "passed": true,
+        "checks": [
+          {
+            "code": "GL_TB_OPENING",
+            "passed": true,
+            "expected": "0",
+            "actual": "0"
+          },
+          {
+            "code": "GL_TB_PERIOD_DEBIT",
+            "passed": true,
+            "expected": "100",
+            "actual": "100"
+          },
+          {
+            "code": "GL_TB_PERIOD_CREDIT",
+            "passed": true,
+            "expected": "100",
+            "actual": "100"
+          },
+          {
+            "code": "GL_TB_CLOSING",
+            "passed": true,
+            "expected": "0",
+            "actual": "0"
+          },
+          {
+            "code": "GL_CLOSING_EQUATION",
+            "passed": true,
+            "expected": "0",
+            "actual": "0"
+          },
+          {
+            "code": "GL_PAGE_RUNNING_EQUATION",
+            "passed": true,
+            "expected": "0",
+            "actual": "0"
+          }
+        ]
+      }
+    }
+  },
+  "databaseChecks": {
+    "originalUnchanged": true,
+    "originalPeriod": "Closed",
+    "reversalPeriod": "Open",
+    "postedJournals": "2",
+    "links": "1",
+    "reversalRequestedAudit": "1",
+    "reversedAudit": "1",
+    "postedAudit": "2",
+    "reversedOutbox": "1",
+    "postedOutbox": "2",
+    "reversalReceipts": "1",
+    "unbalanced": "0"
+  }
+}

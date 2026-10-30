@@ -1,0 +1,116 @@
+<section class="panel trial-balance">
+  <h1>{{ i18n.t('trialBalance') }}</h1>
+  <a [routerLink]="['/finance', tenant, company, 'journals']">{{ i18n.t('back') }}</a>
+  <p>{{ i18n.t('trialBalanceScope') }}</p>
+  <form class="report-range" (submit)="run($event)">
+    <label
+      >{{ i18n.t('startDate') }}<input
+        id="tb-start"
+        type="date"
+        required
+        [value]="startDate"
+        (input)="startDate=$any($event.target).value; changed()"
+    /></label>
+    <label
+      >{{ i18n.t('endDate') }}<input
+        id="tb-end"
+        type="date"
+        required
+        [value]="endDate"
+        (input)="endDate=$any($event.target).value; changed()"
+    /></label>
+    <button
+      id="tb-run"
+      class="primary"
+      type="submit"
+      [disabled]="busy() || !authorization.can('Finance.Journal.View')"
+    >
+      {{ i18n.t('runReport') }}
+    </button>
+  </form>
+  @if (busy()) {
+  <p role="status" id="tb-loading">{{ i18n.t('busy') }}</p>
+  } @if (error()) {
+  <p role="alert" id="tb-error">{{ error() }}</p>
+  } @if (!authorization.can('Finance.Journal.View')) {
+  <p role="alert">{{ i18n.t('denied') }}</p>
+  } @if (report(); as report) {
+  <p class="report-context">
+    <span>{{ i18n.t('company') }}: <code>{{ report.companyId }}</code></span
+    ><span>{{ i18n.t('currency') }}: {{ report.currency }}</span
+    ><span dir="ltr">{{ report.startDate }} — {{ report.endDate }}</span>
+  </p>
+  @if (report.reconciliation.passed) {
+  <p id="tb-reconciled" role="status">{{ i18n.t('trialBalanceReconciled') }}</p>
+  } @else {
+  <div id="tb-warning" role="alert" class="report-warning">
+    <p>{{ i18n.t('trialBalanceFailure') }}</p>
+    <ul>
+      @for (check of report.reconciliation.checks; track check.code) { @if (!check.passed) {
+      <li>
+        <code>{{ check.code }}</code>: {{ i18n.t('expected') }}
+        <span dir="ltr">{{ check.expected }}</span> / {{ i18n.t('actual') }}
+        <span dir="ltr">{{ check.actual }}</span>
+      </li>
+      } }
+    </ul>
+  </div>
+  } @if (report.accounts.length === 0) {
+  <p id="tb-empty">{{ i18n.t('trialBalanceEmpty') }}</p>
+  }
+  <div class="table-scroll" tabindex="0" [attr.aria-label]="i18n.t('trialBalance')">
+    <table id="trial-balance-table" class="trial-balance-table">
+      <thead>
+        <tr>
+          <th rowspan="2" scope="col">{{ i18n.t('accountCode') }}</th>
+          <th rowspan="2" scope="col">{{ i18n.t('accountName') }}</th>
+          <th colspan="2" scope="colgroup">{{ i18n.t('openingBalance') }}</th>
+          <th colspan="2" scope="colgroup">{{ i18n.t('periodMovement') }}</th>
+          <th colspan="2" scope="colgroup">{{ i18n.t('closingBalance') }}</th>
+        </tr>
+        <tr>
+          <th scope="col">{{ i18n.t('debit') }}</th>
+          <th scope="col">{{ i18n.t('credit') }}</th>
+          <th scope="col">{{ i18n.t('debit') }}</th>
+          <th scope="col">{{ i18n.t('credit') }}</th>
+          <th scope="col">{{ i18n.t('debit') }}</th>
+          <th scope="col">{{ i18n.t('credit') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (account of report.accounts; track account.accountId) {
+        <tr [attr.data-account-code]="account.accountCode">
+          <th scope="row">
+            <a
+              [routerLink]="['/finance',tenant,company,'general-ledger']"
+              [queryParams]="{accountId:account.accountId,startDate:report.startDate,endDate:report.endDate}"
+              >{{ account.accountCode }}</a
+            >
+          </th>
+          <td>{{ account.accountName }}</td>
+          <td dir="ltr">{{ account.amounts.openingDebit }}</td>
+          <td dir="ltr">{{ account.amounts.openingCredit }}</td>
+          <td dir="ltr">{{ account.amounts.periodDebit }}</td>
+          <td dir="ltr">{{ account.amounts.periodCredit }}</td>
+          <td dir="ltr">{{ account.amounts.closingDebit }}</td>
+          <td dir="ltr">{{ account.amounts.closingCredit }}</td>
+        </tr>
+        }
+      </tbody>
+      <tfoot>
+        <tr id="tb-grand-totals">
+          <th colspan="2" scope="row">{{ i18n.t('grandTotals') }}</th>
+          <td dir="ltr">{{ report.totals.openingDebit }}</td>
+          <td dir="ltr">{{ report.totals.openingCredit }}</td>
+          <td dir="ltr">{{ report.totals.periodDebit }}</td>
+          <td dir="ltr">{{ report.totals.periodCredit }}</td>
+          <td dir="ltr">{{ report.totals.closingDebit }}</td>
+          <td dir="ltr">{{ report.totals.closingCredit }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  } @else if (!busy() && !error()) {
+  <p id="tb-idle">{{ i18n.t('chooseReportRange') }}</p>
+  }
+</section>

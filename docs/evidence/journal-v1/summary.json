@@ -1,0 +1,65 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-18T14:46:13.265618+00:00",
+  "scope": "Manual Journal only; Foundation regressions retained; no production deployment/identity/compliance approval",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "001b47f1532ef56be2c38962afae00fad97c8ec7d89d46da0ce109d7cdb03f32"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "executed": 55,
+      "passed": 55,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "dc8fb5349f5caad66af943e221f64506f28bca40c26314c77023dc083b40c5a3"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "executed": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "b7b343c6767134562d3ec773f3d16e2d5e89a24f81325f5eaed6195ba9b8b781"
+    }
+  ],
+  "dotnetTotal": 83,
+  "angularUnit": 11,
+  "foundationBrowserChecks": 9,
+  "journalBrowserChecks": 19,
+  "automatedTestsTotal": 94,
+  "newAutomatedTests": 51,
+  "browserAcceptanceChecksTotal": 28,
+  "newBrowserAcceptanceChecks": 20,
+  "automatedTestsAndChecksTotal": 122,
+  "newAutomatedTestsAndChecks": 71,
+  "foundationBaseline": 51,
+  "assertionCounting": "xUnit theory rows + Vitest tests + named browser acceptance checks; independent SQL checks are NOT counted again as tests",
+  "goldenDatabaseChecks": {
+    "postedJournals": "1",
+    "postedAudit": "1",
+    "outbox": "1",
+    "receipt": "1",
+    "inbox": "1",
+    "deliveredTrace": "1",
+    "correlationChain": "1",
+    "globalUnbalanced": "0",
+    "totals": "100.000000 / 100.000000"
+  },
+  "build": "Release clean; 0 warnings/errors",
+  "architecture": "PASS",
+  "securityAudits": "no currently reported vulnerabilities",
+  "localPublish": "API + Worker; no deployment",
+  "ciRemoteExecuted": false,
+  "nextSliceStarted": false,
+  "remainingExternalGates": [
+    "production OIDC/MFA",
+    "production deployment/operations",
+    "Jordan/JoFotara/legal/retention/residency verification"
+  ]
+}

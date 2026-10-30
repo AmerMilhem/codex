@@ -1,0 +1,1029 @@
+{
+  "recordedAtUtc": "2026-10-21T14:31:37.917084+00:00",
+  "files": [
+    {
+      "path": ".config/dotnet-tools.json",
+      "sha256": "18e7fe17b9c090b2f9487b1dd9a212e3d1e36b2cb2e078b93bdc0eec4819bece"
+    },
+    {
+      "path": ".github/workflows/foundation.yml",
+      "sha256": "4d2f531a27df090de86c975f33c330bb323f5b28a31f736d8bd9bc39b3c594dd"
+    },
+    {
+      "path": "Directory.Build.props",
+      "sha256": "58602bd02caabd740281089bcb4888f96a24428ce2040e4b2a722a88e9b5d14a"
+    },
+    {
+      "path": "Directory.Packages.props",
+      "sha256": "cb857d9d37203d7a6073b5ec5d97f35720a79003176c9ca3c9e8a295a4106a68"
+    },
+    {
+      "path": "Erp.slnx",
+      "sha256": "084a910100ef489e5365874864ff967a5e53413d91c43f6b3af71ebc867bf863"
+    },
+    {
+      "path": "README.md",
+      "sha256": "88f522497a249507444c9a3504367755a3876faa710511d4ecd04710a6dc4f09"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "e88f80a826604961fea60fdf6987a78a81ef0e77efa7873ddd5219809bf15815"
+    },
+    {
+      "path": "docs/BLOCKERS.md",
+      "sha256": "9f051c5fc1c343b1e02a8427587057a0a7cc5ab5377750e50cd57b434c0eafdf"
+    },
+    {
+      "path": "docs/COMPATIBILITY.md",
+      "sha256": "44d8151835c23ffd0c139eb9b3bf831167fec4fa63383a3efb417e68aaf01913"
+    },
+    {
+      "path": "docs/CONFIGURATION.md",
+      "sha256": "e4e1e9c54c34b258705043c1c8c5b4d34e4935a7cfc2931f2d6be8f7816d7019"
+    },
+    {
+      "path": "docs/GENERAL-LEDGER-V1.md",
+      "sha256": "d980e31cd4163063f1bff8ac8f8c96e054d6a0e698507246896039ccd2454fac"
+    },
+    {
+      "path": "docs/LOCAL-DEVELOPMENT.md",
+      "sha256": "d2d8344281f0b2272bd20bd4d6c1467e5f5a0c2c5ad0888c40b4922eba03dfc5"
+    },
+    {
+      "path": "docs/MANUAL-JOURNAL-REVERSAL-V1.md",
+      "sha256": "73723ee1d13f62ca6e59a93dbedff00f43c58886633c7cb87f231c67bca3b559"
+    },
+    {
+      "path": "docs/MANUAL-JOURNAL-V1.md",
+      "sha256": "40d0c3d9dac247fd5b138dab5d3907f4462c135ecca99cd7b21c74c3aa0999df"
+    },
+    {
+      "path": "docs/MIGRATIONS.md",
+      "sha256": "485f2b589561a87e79e28644efbac0da2b7c90ed72165eae5322438e07cc51dd"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "sha256": "54164413084a0ca6f1604f9ca7129a0cd29a52a4896602f1cc98e7b0a3e2cd3d"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "e443ccad1671dfec21fe7944abf82c43b503d557b15570c9c8ad25816bad9a15"
+    },
+    {
+      "path": "docs/TRIAL-BALANCE-V1.md",
+      "sha256": "641944f9846b219c8ec6f431eecbbe8fa53c2180983fadf81cf8caa0b077ada0"
+    },
+    {
+      "path": "docs/adr/FOUNDATION-V1.md",
+      "sha256": "e30322dcbc22748b27d20bc74a3913de989e9842f70667df84529ca94150a103"
+    },
+    {
+      "path": "docs/adr/GENERAL-LEDGER-V1.md",
+      "sha256": "fdfb4d7e69e3a2a8fb19e77f9aac83a5d88d163e8cc88de874ab2faf5fd5b48c"
+    },
+    {
+      "path": "docs/adr/MANUAL-JOURNAL-REVERSAL-V1.md",
+      "sha256": "742a3d73c62f90075adca680d7e5fe96fdcb0373227310d026a5ba279481ceb4"
+    },
+    {
+      "path": "docs/adr/MANUAL-JOURNAL-V1.md",
+      "sha256": "711f3def0bfa98dcb2c57c1cf21fc5900859c20c73d80feaca84eb2249ed2478"
+    },
+    {
+      "path": "docs/adr/TRIAL-BALANCE-V1.md",
+      "sha256": "ea18316561d6e2aebc43cb2febb2ccd5c5e4b088805f3b0e9a84349c33d9f619"
+    },
+    {
+      "path": "docs/runbooks/CLOUD-START.md",
+      "sha256": "2669681d401515e561ff45b25d6913594d76d1900c16ecb0c8dc1997eb7b5b5d"
+    },
+    {
+      "path": "global.json",
+      "sha256": "d1bb820bf074027be921b263729d1fba343d34328f0c4b7484d10162287c059e"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "sha256": "b3133a8ee16a06e24869809f1ec9a59c670a9c2f2d5da9a53e0d04533b8a6f73"
+    },
+    {
+      "path": "scripts/check-dependencies.py",
+      "sha256": "33dc8439b818cd8d0020e557015515394de0b35df3b9b66e16e87ae4d443072f"
+    },
+    {
+      "path": "scripts/collect-licenses.py",
+      "sha256": "74bbb982513711f77fa1be1829a87e5d5f8a0e1ec395ad63f3c55035fcaf4c48"
+    },
+    {
+      "path": "scripts/env.sh",
+      "sha256": "39bf3b8604fa3dd8906ba183dd56a46e0c70287301945835ece0015d37899d17"
+    },
+    {
+      "path": "scripts/evidence.py",
+      "sha256": "876e1b17cadc99afdbba41ff724e0afdcdc5a7293850a24b98b22502e4873633"
+    },
+    {
+      "path": "scripts/general-ledger-evidence.py",
+      "sha256": "ef7f34d5c718f45bebb02549cc463db34ba89f060df48b7c68cba98fef921416"
+    },
+    {
+      "path": "scripts/install-sdk.py",
+      "sha256": "50bfad7042bd18a82eadc346da62d07032acd4604320a0088ce40f44643f4b16"
+    },
+    {
+      "path": "scripts/journal-evidence.py",
+      "sha256": "4d8e1812d36af56073b2b8b64fdb1bc0f622591565efc99b5ab90e14e3f6160a"
+    },
+    {
+      "path": "scripts/local.py",
+      "sha256": "9f1f32d3afa4d364f175234720037e56a6e8b0393e66b0cbf62a97425b1f7598"
+    },
+    {
+      "path": "scripts/reversal-evidence.py",
+      "sha256": "927a6f26fcda12f0102ca3ade30ab574049622d8544f5e64d473bc38d4f3b8c7"
+    },
+    {
+      "path": "scripts/security-check.sh",
+      "sha256": "eccf7ef87c975116b8d39968404c5ff6233b0dc7b2e58192ce9a6a91ad85bfde"
+    },
+    {
+      "path": "scripts/serve-web.py",
+      "sha256": "ac0bc6a906d42fc3c7bb73c6fc93b860811990c04fa326a85ab02b67b6adbabc"
+    },
+    {
+      "path": "scripts/smoke-local.py",
+      "sha256": "60f3a94a0c4a2ba7ce4e56778984da99d4d4be6eeb23ed8c04815f2e78ede619"
+    },
+    {
+      "path": "scripts/smoke-startup.py",
+      "sha256": "a01b0820c1cd599b5d0abe473038bc7d5ae96f50c416d874227427690b68c748"
+    },
+    {
+      "path": "scripts/test-general-ledger-e2e.py",
+      "sha256": "6156d4627120ebb45f0d9ae40a149b7b6ac13d5e0065c0272d9b4bb2473c4167"
+    },
+    {
+      "path": "scripts/test-journal-e2e.py",
+      "sha256": "86a2db04d1d559ada4f627d743ec6d1646afc2c398670c29a147223f0fc5cf56"
+    },
+    {
+      "path": "scripts/test-reversal-e2e.py",
+      "sha256": "7a41f49a2ea95e8e32038d7848f5ffa381d36d4203f64b6a3cd447e0977f165d"
+    },
+    {
+      "path": "scripts/test-trial-balance-e2e.py",
+      "sha256": "9b324dfb6cebfb3556cafdc8ad9a88eeeda7271682145a861facea6c03879603"
+    },
+    {
+      "path": "scripts/test-web.sh",
+      "sha256": "fc8a5f0646207b0b92b8aa3a3e2a23fc3468aa1cd230798fb949936b97ab5aaf"
+    },
+    {
+      "path": "scripts/trial-balance-evidence.py",
+      "sha256": "edde3d303c3e74da5788fdbbda9b6ab20459c42c49c38f11a1df53776e2ac4b8"
+    },
+    {
+      "path": "scripts/verify.sh",
+      "sha256": "605dbc2df8a497c951c1e20ddfa55c7e8569fddf01f3ff04d4a5612400be1492"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Application.Abstractions/Contracts.cs",
+      "sha256": "987ef3e57771ae4cda2a471316c232d329530678d963b7b7606cc9294f097c54"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Application.Abstractions/Erp.Application.Abstractions.csproj",
+      "sha256": "eb9f8ffae01495d8f0805ac5bcc0d8ef77c78f037574bbba7668f700862f9caf"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Application.Abstractions/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Kernel/Erp.Kernel.csproj",
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Kernel/Errors.cs",
+      "sha256": "ab40d999f0e5686205ed1b8a9ba6b2e855aa6b7d4dcabd62ed39f1faa6d44480"
+    },
+    {
+      "path": "src/BuildingBlocks/Erp.Kernel/packages.lock.json",
+      "sha256": "03eeadc5ef377c17f787ab65f41fb4c8a9c936bb7f7f4171111fdeec8a81cb46"
+    },
+    {
+      "path": "src/Clients/Web/.prettierrc.json",
+      "sha256": "031f20b09bd70372c1d243ad9d691b23d09e2c60764c734c6ca2552839ff7c27"
+    },
+    {
+      "path": "src/Clients/Web/angular.json",
+      "sha256": "d130541c50af0190f2ae26acddc4f907b755f124f2564752f42e28701993913b"
+    },
+    {
+      "path": "src/Clients/Web/browser-tests.mjs",
+      "sha256": "41c33e316190f9bc9d6a08cc8ecd515c77767188aa8e9c5cb233501e9539b380"
+    },
+    {
+      "path": "src/Clients/Web/general-ledger-browser-tests.mjs",
+      "sha256": "d429204e7765327c3d521d19c46cef817f740e2a86eed93cfddba67602742c63"
+    },
+    {
+      "path": "src/Clients/Web/journal-browser-tests.mjs",
+      "sha256": "4690d814ee00e77d20c80fc6d8dedb6032c6f5eeb78e199622d28afefbaac976"
+    },
+    {
+      "path": "src/Clients/Web/package-lock.json",
+      "sha256": "7c137bd87e653316934ab193da024df4dd1ffaa4f0e195deba4c28bcb7b18edd"
+    },
+    {
+      "path": "src/Clients/Web/package.json",
+      "sha256": "ea12d99263bf14539002b29fae190b6fb72812fc73999282ffed60eb1fcb46db"
+    },
+    {
+      "path": "src/Clients/Web/proxy.conf.json",
+      "sha256": "4f2c3a7212d9066aaf37eee2532428c3ff2fe333a806b485d0bfee65dd91f440"
+    },
+    {
+      "path": "src/Clients/Web/reversal-browser-tests.mjs",
+      "sha256": "00b78f0a06a7322ddbaccc1e5552da604acf8a7ffbf5eb6bb8582ea0c19f33d6"
+    },
+    {
+      "path": "src/Clients/Web/src/core/api.ts",
+      "sha256": "a92b4514c5992a1078f6c153f00cf594ee74beb90d72355bf0872cf3c19bf1ec"
+    },
+    {
+      "path": "src/Clients/Web/src/core/auth.ts",
+      "sha256": "25fe9d85f2055def54e818d6ea113e880274a25c07d1285c15030be74e316c21"
+    },
+    {
+      "path": "src/Clients/Web/src/core/foundation.spec.ts",
+      "sha256": "97e65742c1fc7b71e9c3ab36549868ec0223a1278ce24ebbced9a306df18d0c4"
+    },
+    {
+      "path": "src/Clients/Web/src/core/i18n.ts",
+      "sha256": "ab113b13e9dde5e51b856fb2d9dcb67c7dbe208d64bd91a3413111dabe6ac331"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/general-ledger-api.ts",
+      "sha256": "8962797c84eeff48fa75dc92edf98b5cbb4bc5ffc8e77951e82fc35acab3fe0e"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/general-ledger.html",
+      "sha256": "b53376c2807abdf38372df3c9d913ba0793ba0332e4ac07f2c120283db165d5c"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/general-ledger.spec.ts",
+      "sha256": "33bd56b71424434446f348fe1af8bae3ea8efe2dc99635dab2e5c981b40b80c7"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/general-ledger.ts",
+      "sha256": "a088271167fe1d59f4d42c7e658a8765aa0a5050342a545a1e6ce74fee43819e"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/journal-api.ts",
+      "sha256": "791f280eaf454f213ef0d7584551b9c45501baf6186cf6ce5862a090cf1d8ea8"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/journal-reversal.spec.ts",
+      "sha256": "ed7fd5f5f4f699fba26b2575136b490c9ed135e82f6524b877804be6ce832f2f"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/journals.html",
+      "sha256": "c350f1da1621d3e9cb2a8fb9dbd0358c6ed24ae9edbb0889ebcd6ad174f01e71"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/journals.spec.ts",
+      "sha256": "d18388155a4fddc7b354c6fae7e363ec2ed31cfb0f34fd68727e47791edad131"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/journals.ts",
+      "sha256": "a03e5e9ea1d486c83b4f92dd62debecfab912bfdf80efd3c805cb1e3b85b08b3"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/trial-balance-api.ts",
+      "sha256": "2cae0adb47bb3bde08daabd4b209b11ae45e78e12de97312da3bbe31aa2e5238"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/trial-balance.html",
+      "sha256": "133fb2eb551d94768b834bc9af5a2983a7e8f97eaa7f88c97817d489e3936af0"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/trial-balance.spec.ts",
+      "sha256": "2cbd26f65d60731d0f36392fbacd6e726c786b1f54ed0f5509759ec5b4820924"
+    },
+    {
+      "path": "src/Clients/Web/src/features/finance/trial-balance.ts",
+      "sha256": "f331d80df10b4713f15997b474dc47d338e9fb44fe43d850ee2ca160c04610bd"
+    },
+    {
+      "path": "src/Clients/Web/src/features/home.ts",
+      "sha256": "16d79528fb54494a8b314ffcad142166cef4b1b59912d944de616714e686eb78"
+    },
+    {
+      "path": "src/Clients/Web/src/features/workspace.ts",
+      "sha256": "418798455f000062ff9a13b2fc5dc463341418f0a67435b86ae82d41e2a2c622"
+    },
+    {
+      "path": "src/Clients/Web/src/index.html",
+      "sha256": "da6bfc8881b2ddaa1042e0f66cef97995f1dd74d95310a41ce6fe5090bf2b87d"
+    },
+    {
+      "path": "src/Clients/Web/src/main.ts",
+      "sha256": "87d43536d458f3c5a6d56551eff71213e1d8593b8fecd81dbed047463c7019d3"
+    },
+    {
+      "path": "src/Clients/Web/src/shell/app.ts",
+      "sha256": "59ff29b3fbc67ac54192186da360bda77493133e612bf0e9ad353073b3be7df7"
+    },
+    {
+      "path": "src/Clients/Web/src/shell/routes.ts",
+      "sha256": "cd419d623b429f8ae1cf408d32be211d8824a752c7325175a41c6f699279db01"
+    },
+    {
+      "path": "src/Clients/Web/src/styles.css",
+      "sha256": "af54a06aa1965cd9d91ba8d70a536e69ba607db83ce9b815654ec52678c27170"
+    },
+    {
+      "path": "src/Clients/Web/trial-balance-browser-tests.mjs",
+      "sha256": "fdc5cfeb2a1041fe4adbf096a0ce1b1a480689c5d5d1aa03634cf975dc2cc6f5"
+    },
+    {
+      "path": "src/Clients/Web/tsconfig.app.json",
+      "sha256": "837ab256526710aace2caf745b967023ddef29799c708019a7669cf666741a0f"
+    },
+    {
+      "path": "src/Clients/Web/tsconfig.json",
+      "sha256": "95f45d582061fc96d0c7ecd6db1e49bf75f901ddd2fb4b84840b00bfbccebe1c"
+    },
+    {
+      "path": "src/Clients/Web/tsconfig.spec.json",
+      "sha256": "bc892c6a2ea7d7e29757fe55ae175b40f35b953e3a8fa0e0ffdc414c056bda0a"
+    },
+    {
+      "path": "src/Hosts/Erp.Api/Erp.Api.csproj",
+      "sha256": "b989bb0347b0a46aa484effe45e3219ff2bdfcc19c6d8cae4728b7eb9bac0560"
+    },
+    {
+      "path": "src/Hosts/Erp.Api/HttpFoundation.cs",
+      "sha256": "c5aa31a803f8b182ecacb39ed991bed1a66439ac33130f6648d3d24121eb7e88"
+    },
+    {
+      "path": "src/Hosts/Erp.Api/Program.cs",
+      "sha256": "216b27420a325c70bcf1e51474239221525c14b2abf81ce26f77dd611b286cb9"
+    },
+    {
+      "path": "src/Hosts/Erp.Api/appsettings.json",
+      "sha256": "973144767634528b7e5c0e9669c7cddf0019f3363d0bd4c02ad22d5f822a418e"
+    },
+    {
+      "path": "src/Hosts/Erp.Api/packages.lock.json",
+      "sha256": "e351682eb9e5e3484099fc49335034c64e6e704ca9b13e3d6ac5cc25e922ff34"
+    },
+    {
+      "path": "src/Hosts/Erp.Migrations/Erp.Migrations.csproj",
+      "sha256": "001f2335e4fde9447ea5670fcba2ff755754da019b8b1ae5563c179161fb79a8"
+    },
+    {
+      "path": "src/Hosts/Erp.Migrations/Program.cs",
+      "sha256": "3721caee3db11ee2bc55c9bffc6bbcecbb5bb40697ad6fe7ce9c83ae1a4be2da"
+    },
+    {
+      "path": "src/Hosts/Erp.Migrations/packages.lock.json",
+      "sha256": "a22c804019c7f422d340703a7f20094ff26a2075ec6b245504393658abc2fc61"
+    },
+    {
+      "path": "src/Hosts/Erp.Worker/Erp.Worker.csproj",
+      "sha256": "001f2335e4fde9447ea5670fcba2ff755754da019b8b1ae5563c179161fb79a8"
+    },
+    {
+      "path": "src/Hosts/Erp.Worker/Program.cs",
+      "sha256": "1168fe72f3c87f90c9c9c71bca030436c565ffb13dd4d3a3a631dcd32526ac5a"
+    },
+    {
+      "path": "src/Hosts/Erp.Worker/appsettings.json",
+      "sha256": "e0e669972f4475e149f490baef01f883a316a7c9acfa2eb55bac94858a1c77bb"
+    },
+    {
+      "path": "src/Hosts/Erp.Worker/packages.lock.json",
+      "sha256": "a22c804019c7f422d340703a7f20094ff26a2075ec6b245504393658abc2fc61"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/Erp.Finance.Application.csproj",
+      "sha256": "c958b97e9054e290328ed8a8d52304f9ae4bb159a5d02923a10799ce3d486d91"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/GeneralLedgerQuery.cs",
+      "sha256": "735622f8fa800aeb5aa2fd40c3589df9728d6734d905286c3f3c7ba2f8605186"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/JournalCommands.cs",
+      "sha256": "338b37790812b84ac216ffc4437ebf84298c35fbcc7f5f755419b8892c907c89"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/JournalPostedTraceHandler.cs",
+      "sha256": "ee6a4ef3bf54fe3e7df0f5d7595c84994072a929a12209b908018fc01bcbcb18"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/JournalReversedTraceHandler.cs",
+      "sha256": "32bddd478b7c579a06a1ffcfcf121ae8686c4eae9456a3e3ebc5f52c32b77d78"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/ModuleBoundary.cs",
+      "sha256": "25c3c07301c7dba44a960552ae7ac0e3bc6b8aefcd0af137a624c70eb5e946e2"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/ReverseJournalCommand.cs",
+      "sha256": "3a73e4c2b9e2773d8ae1801c26d7c3add36bb04ddd823d6c60a47c9476ef13f3"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/TrialBalanceQuery.cs",
+      "sha256": "f302e6d23f6bcb829e1e78a7c418255481e2215553ec2bd986fd2b95f66542cb"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Application/packages.lock.json",
+      "sha256": "85a755aa8de58acd219c94cae5ce3add56a1c4815c9731d261da2ae9bfd67536"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/Erp.Finance.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/GeneralLedgerContracts.cs",
+      "sha256": "af704024d6aa8b9db7558c2d47dd8e34526ccd316fdafd2046c3b3ca5c3c1364"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/ManualJournalContracts.cs",
+      "sha256": "edffbd4432facb1ef4a9b3f93585410445d2d2ab16c01c17fa69c7de68066f48"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/ModuleBoundary.cs",
+      "sha256": "d031f9f6621c25195636d43cdb6dc87684dd946a252226cb752333c2187adbb7"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/ReversalContracts.cs",
+      "sha256": "e1783dfcc0df16d8aec8ad081e157088982102db116ec591ef7f943ec40086b2"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/TrialBalanceContracts.cs",
+      "sha256": "33b9a2acec202f3e3a2092ebd585016f4a7f053ad057cc1ff6921883c0baa612"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Domain/Erp.Finance.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Domain/JournalReversal.cs",
+      "sha256": "8b0af124cb691beef491f8b5500b0d6a078e6b5963028fb3aff749f8bc064906"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Domain/ManualJournal.cs",
+      "sha256": "81b71199a7ecb65bed235d3970eab27e90168e643e3caf63f70309c81aba8d39"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Domain/ModuleBoundary.cs",
+      "sha256": "b760d9c630d6e9241cacb51e68c72e67c19d90634e430ac1b8c537ba817f7019"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Erp.Finance.Infrastructure.csproj",
+      "sha256": "2ec33c832ae067bc086a019d7e5dc3ba1d56938d8a895c368c8281f899902e8d"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/FinanceDbContext.cs",
+      "sha256": "ce15e49bdd5a7cd05285235128c04566f47f703a5911eeb2b500a6f2197c1125"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/FinanceMigrations.cs",
+      "sha256": "3bacb32bb4dbbf40c9855b8593704d5602dea585d2c57afc56ad50c123bf1321"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/GeneralLedgerReader.cs",
+      "sha256": "b4c11579645ee465b4aa92077b675444823eaced887cb77b28e70177b5c856cf"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/GeneralLedgerSql.cs",
+      "sha256": "c8e1d0c8c703b90b4dce12fd04320f2d6d7f729072706a48a5d810cba8d9ecb5"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/JournalEndpoints.cs",
+      "sha256": "76e5c30aa622ce90e92d90d8ad2ec2806475b5b7948f17a1faba90ede1331970"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/JournalPersistence.cs",
+      "sha256": "80d8b6947e8a2265571073afba4cd57e2b0efa15047585f1718c3e9e9633d4d6"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/JournalQueries.cs",
+      "sha256": "19bf03c803706f45a5ec5a99af240b90868b338e7d9a00b407406aab33d624ac"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/JournalSecuritySql.cs",
+      "sha256": "338b9c97f49ba55b8072eb9ea0cf5f1387b34b209d78145ebabffbf991960535"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261018141639_ManualJournalV1.Designer.cs",
+      "sha256": "1b860d1b4071291e28b574002bed0f1cd81c1c96b43bd281020c2432d602da83"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261018141639_ManualJournalV1.cs",
+      "sha256": "32e7caa9ca528095b7fa22dbbef5c2458b251f389280bb2e3954b75a69b31799"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261020202816_ManualJournalReversalV1.Designer.cs",
+      "sha256": "75d7cb831bc5ea77b1a96d68ebe53f55a2e8cdfcc5fd85012301ae02b430c2db"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261020202816_ManualJournalReversalV1.cs",
+      "sha256": "8b185d2c13097163c58622118c2576133ec5a3ddec38ef55267ad0843f17dc2c"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/FinanceDbContextModelSnapshot.cs",
+      "sha256": "312e19f2aa0f226df219b18dfc5bba9e0c77651a44f94bc9f2e9eb204cea2936"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/ModuleBoundary.cs",
+      "sha256": "4450549c671fa3b5befb1e14a28c3e1c2886d9c93c80a172bef35ae69280e9ed"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/ReversalSecuritySql.cs",
+      "sha256": "46b46bd378e00c9d5e8fa5cc60c1eddd02daf08c42e231888c62606edfac83f2"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/TrialBalanceReader.cs",
+      "sha256": "40bb18bc9cd1f19e1bf151189289ec18bd7e0373c8413eb0f6a47ddc92283078"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/TrialBalanceSql.cs",
+      "sha256": "d5b85d994bc6feb5ab54194d8d2211001aa68b8dc57b9142183d62f96a630e57"
+    },
+    {
+      "path": "src/Modules/Finance/Erp.Finance.Infrastructure/packages.lock.json",
+      "sha256": "3fb59fb1d2e28b7bacf924d17334279adfeade021b452319a336ce8e478aa36c"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Application/Erp.Inventory.Application.csproj",
+      "sha256": "518f58599ddcd7f27292bb9e89afd5ba33a5a8c54ee7e25fda153e16fb6903e9"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Application/ModuleBoundary.cs",
+      "sha256": "9ea04e4e5f03db6770458d7d53f4a6b6c80488f0b129ed5342134699f3e7f796"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Application/packages.lock.json",
+      "sha256": "f651c1d99b591fc8f450ca7d64d25f44c206203c317fde2c5f5045961d8cda7e"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Contracts/Erp.Inventory.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Contracts/ModuleBoundary.cs",
+      "sha256": "8526a8608b7e10b2911a84197229167911b1f04eb2d63c1fa606519deb467170"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Domain/Erp.Inventory.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Domain/ModuleBoundary.cs",
+      "sha256": "f96a530b0ccf4cf45dbcfd121cbc28ca60b3e7e9c349acb92444d4aabc38897e"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Infrastructure/Erp.Inventory.Infrastructure.csproj",
+      "sha256": "89bb78bafbf188890c1cb37fb191fc739825701a753eda0ad7fa473b269df106"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Infrastructure/ModuleBoundary.cs",
+      "sha256": "9c707d0b06df46f9a9efff6d171326cf0d0a51584cfd755d1e5f4cb5a986e1f5"
+    },
+    {
+      "path": "src/Modules/Inventory/Erp.Inventory.Infrastructure/packages.lock.json",
+      "sha256": "03128cca030556b824c526d65c2a8d83030c538dc161a76a867c15529197ced1"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Application/Erp.Localization.Application.csproj",
+      "sha256": "210c9dfe59db350c22b3d123dbbc1bb005307c9e5b0e6519224f9d173049c39c"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Application/ModuleBoundary.cs",
+      "sha256": "7ac59c1894a9d2ef28b2f7856a767e2f0671a2f013722c7716518388619f24ff"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Application/packages.lock.json",
+      "sha256": "68217c2b55102e7d9fa4a03907714ed6b52223c9bfa4b006b1f67e2a49e06f26"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Contracts/Erp.Localization.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Contracts/ModuleBoundary.cs",
+      "sha256": "e61e4cc13bb523ec9ad33f647ba08bf65a3a6a7a209fd091bf7d22441eaf91f5"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Domain/Erp.Localization.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Domain/ModuleBoundary.cs",
+      "sha256": "74fb8601ef1bd20cfe65dc93e912dea01dc9898ba622453d73aea4cacf962234"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Infrastructure/Erp.Localization.Infrastructure.csproj",
+      "sha256": "479f9df34d6503ef9baf27c42af03045756441b222f154da7ceb66601ea6a0e1"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Infrastructure/ModuleBoundary.cs",
+      "sha256": "f3cad046798b5562d4bd90dff6bcfe1d6034504d9ae33b83d31c7d09e934f84d"
+    },
+    {
+      "path": "src/Modules/Localization/Erp.Localization.Infrastructure/packages.lock.json",
+      "sha256": "27d7e7f91c4bfa06dfb4b740a0e023adfd00aa8473f4daa59ff5c7812f84a0d1"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Application/Erp.Manufacturing.Application.csproj",
+      "sha256": "42b13920f2950c1060ad56ca2e6cc9b460afe0d06b01d3c2030b8edff79722e2"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Application/ModuleBoundary.cs",
+      "sha256": "782e239d8a6cd5d8e95c3975a4ca2e2df17b8ac3e82bde06fbfc6b1376ebc0f6"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Application/packages.lock.json",
+      "sha256": "b0364d67b8914dd808418fb3d35d1a7677f88aa5b0aebce1423ed784f0fd5f22"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Contracts/Erp.Manufacturing.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Contracts/ModuleBoundary.cs",
+      "sha256": "ccdddccb79a8cca137f030135a4ab9ad871ce65dfcc887e12086854614068237"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Domain/Erp.Manufacturing.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Domain/ModuleBoundary.cs",
+      "sha256": "045bfff72a5779470334f695de2ad383ba85b576ee757ccb6941c48169009b28"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/Erp.Manufacturing.Infrastructure.csproj",
+      "sha256": "cc4ee9bb3993c786f4a1c51bce1afb818989f07c44aaec4e61ed610afb2a2126"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/ModuleBoundary.cs",
+      "sha256": "7b2a674139ef04b45dab40a9b4297f96e2839322d58a01b1cb570d6f6e1ce20d"
+    },
+    {
+      "path": "src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/packages.lock.json",
+      "sha256": "4c884f7e153b54e961e4ec11c05fc6e77bf5c5d0f4dcc76ae01b42b410c7ca60"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Application/Erp.Procurement.Application.csproj",
+      "sha256": "5d553dc0863f52cf10007317a1118ac6c31f7ad1185773f8a0e5582dfe75e982"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Application/ModuleBoundary.cs",
+      "sha256": "acdeee3b4628fa102a6567c272fb214e5d3db02274d62fd3bd0cd02edadc5562"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Application/packages.lock.json",
+      "sha256": "f690d5401200afdcf860736c2322c02357382d2b3427fb43be53e0bcbe19e2d8"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Contracts/Erp.Procurement.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Contracts/ModuleBoundary.cs",
+      "sha256": "fed543a62fb18903c64d22a67b75bd88642a9d33c502167e816afd5f4eb1beb9"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Domain/Erp.Procurement.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Domain/ModuleBoundary.cs",
+      "sha256": "343af1e74bd8b4adf3ae60e3ca337f341d60884f9daca4c301cbf5a619c4ba75"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Infrastructure/Erp.Procurement.Infrastructure.csproj",
+      "sha256": "eba48ea9e7e52928607d6af0c09062ff1c663c94897227f28089a4bafdbf4d59"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Infrastructure/ModuleBoundary.cs",
+      "sha256": "a45ef95e4ae1ec792757edb64634f9f8b0b0212471ba9811962820b2fdf651e6"
+    },
+    {
+      "path": "src/Modules/Procurement/Erp.Procurement.Infrastructure/packages.lock.json",
+      "sha256": "6aff24b0db347b74ea3a09e2a0a2f7059b6c05d11fd35739a5ea5f31f13996d8"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Application/Erp.Sales.Application.csproj",
+      "sha256": "ee2444fc6d8217f28b866a5cefe359743d4fdaec7f92c7361c7b179f793f3a1e"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Application/ModuleBoundary.cs",
+      "sha256": "eda6ae384fc8a3eb0efed244f42992922c4dee60987ebcebe95840ea8fe37318"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Application/packages.lock.json",
+      "sha256": "9f252abbc89bbf52ad50dcdf97cd49e6b1cc2d8d50b3f84d8c2f472504787d11"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Contracts/Erp.Sales.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Contracts/ModuleBoundary.cs",
+      "sha256": "bbfbad232f26832f6532fdd50ce9473726b05bc63e0906e06ef0e2faf89451ea"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Domain/Erp.Sales.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Domain/ModuleBoundary.cs",
+      "sha256": "5a2dbeb5c8586a67537e9575cf19b67aaaeb78f17ffa8a0de17b9488d42de083"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Infrastructure/Erp.Sales.Infrastructure.csproj",
+      "sha256": "5f2898a240e9ef0cf1bd869cf1656d3044850c64b14d213c24c39f499780ca8c"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Infrastructure/ModuleBoundary.cs",
+      "sha256": "3208656878dc7e838b7b378498bd4a50f749dc018b7cf2727245c75a93a4c4cc"
+    },
+    {
+      "path": "src/Modules/Sales/Erp.Sales.Infrastructure/packages.lock.json",
+      "sha256": "aabb3b6211ea3ec3a118410880e29ff6b9205ca505e0906975718755d80bbf93"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Application/Erp.Workflow.Application.csproj",
+      "sha256": "118a9474d6ed4b6c2909bc63c9573febfec07f84b6100769ad94bb7c18b24282"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Application/ModuleBoundary.cs",
+      "sha256": "332777b067d317a230fac3ceba5f5b22d16fcde199707c13b6c70044c162c0ea"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Application/packages.lock.json",
+      "sha256": "5c7cd377eb1aa618aadc2406447d5efbdc47dd30c8d76509a3f8ba247700cea1"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Contracts/Erp.Workflow.Contracts.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Contracts/ModuleBoundary.cs",
+      "sha256": "e493c5f1765693134f6c6d1929680975192b6defeef2a82d420ff15916ec02a2"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Contracts/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Domain/Erp.Workflow.Domain.csproj",
+      "sha256": "a6096e0440db76730fc996dbd4c3ed10be5258a3f0b4b6751d675f55c79aa789"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Domain/ModuleBoundary.cs",
+      "sha256": "d75e3c48e47c708a46eeb8dcb5499e89422add3aadbf07b2babd5ffee5a77ba1"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Domain/packages.lock.json",
+      "sha256": "fca83fb756ec9980888ea93d3e63cb275c65587d276b3255b86d47927104e15c"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Infrastructure/Erp.Workflow.Infrastructure.csproj",
+      "sha256": "718cbb28626aa4d7bd01a7a313d210b665a73bfa201d64415c4d98761eaf464d"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Infrastructure/ModuleBoundary.cs",
+      "sha256": "3503d133f77805dfd853f1b6207189e5b79b3a351132b7b5bb8f5333fb23cc52"
+    },
+    {
+      "path": "src/Modules/Workflow/Erp.Workflow.Infrastructure/packages.lock.json",
+      "sha256": "b25d80492183b191e48e150e6a590f755299df1eb310792d663aa13b997da357"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Audit.cs",
+      "sha256": "4cb88754190117f6015a1b4e704f9ebdc11412d647988609ed262f4ba300933d"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Configuration.cs",
+      "sha256": "e30f1cb2cea39e7fff12c98a6326ab31e30bc8602f8dfff4d302fe503a77d49b"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Erp.Platform.Infrastructure.csproj",
+      "sha256": "45d67be2ac7cc6532bf12d6eb8ea8666dbc22f69ffb20f434a363834ead53159"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/HttpContracts.cs",
+      "sha256": "befd86209aa76ad2f400c9394f99d2f939916f3ef9adc9afdcd3a39aef582f1e"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Idempotency.cs",
+      "sha256": "878c7b4436f8bd4c3613be9adb1506eb857baca7009e9d939315514be3ed8b2b"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Observability.cs",
+      "sha256": "727bbfdfd34f533db8d69645f65d7d30ba4d14238cbe297bf714786ecdd6a4a6"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Outbox.cs",
+      "sha256": "0eccf0d13a8d6b3868cfbc2778d23d2ee54c6a642a4a3cee17304609ff693c54"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/MigrationRunner.cs",
+      "sha256": "e272ec70ff37c65b1420e872938038a653ab663ed5b98fefe7d5296c646112db"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Migrations/20261018000100_InitialFoundation.Designer.cs",
+      "sha256": "1edd56687cb67599c27df74e01558a3737d3c8c29a27c34da5bff4ff7d6dd730"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Migrations/20261018000100_InitialFoundation.cs",
+      "sha256": "caf4cdb440502dc3a21c50e0852beb6bc3da5c256396d6c50a3ead1741212789"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Migrations/20261018000200_IndexOutboxLeaseRecovery.Designer.cs",
+      "sha256": "ab1b426a06b94286daf29ea443318a61f993563b2d11c40ecf3c3b539e16f0da"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Migrations/20261018000200_IndexOutboxLeaseRecovery.cs",
+      "sha256": "aee6030931be779a2dfd48c4eded81d31661bdce5a679c7b098e0cfac06818ba"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Migrations/PlatformDbContextModelSnapshot.cs",
+      "sha256": "dd5f90ba258ed3c1f0bee41a31bc09f3cc52889228c71e3780dd728866c3f411"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/PlatformDbContext.cs",
+      "sha256": "5c2868074098ded3fbba74a5223f8b308fc2615b00ccc1d29eaa20ceb31ef34b"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/SecuritySql.cs",
+      "sha256": "d9bc048abc977e101d15d09b49bed6863e54223e17ec372e311d383a8b4586fb"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/Persistence/Transactions.cs",
+      "sha256": "4440fa3d5cd7dbeabef03e9586427ce29d2bad18a4d819ead5c83969be57874c"
+    },
+    {
+      "path": "src/Platform/Erp.Platform.Infrastructure/packages.lock.json",
+      "sha256": "1b6375d96c95a1f8d2b5c9f746d448553b77083f52b3cd089fd647141ed3c83a"
+    },
+    {
+      "path": "tests/Erp.ArchitectureTests/DependencyTests.cs",
+      "sha256": "e87b3aed746c813bb32eed01015309872af76a69e6b70a83d592fd8435f880d1"
+    },
+    {
+      "path": "tests/Erp.ArchitectureTests/Erp.ArchitectureTests.csproj",
+      "sha256": "9495fa0daea7d6a695771dca93b986809a0c64db62c3cb3fce290fa0073bea98"
+    },
+    {
+      "path": "tests/Erp.ArchitectureTests/packages.lock.json",
+      "sha256": "b419001f869e2659592c818e3cb7145920ca4463b0ad87a5263d613e588080e7"
+    },
+    {
+      "path": "tests/Erp.CrashHarness/Erp.CrashHarness.csproj",
+      "sha256": "d6c38bcc489426afdb3fe09ab5299db9549912287a9879d21907b613c7855e75"
+    },
+    {
+      "path": "tests/Erp.CrashHarness/Program.cs",
+      "sha256": "37b522262b1066b7c075cc3a60648c4fc6dc095e8766061733d4930135dce16b"
+    },
+    {
+      "path": "tests/Erp.CrashHarness/packages.lock.json",
+      "sha256": "4da7e93b57b29af142ce03bcf6297a26af1ba69a7bd1f58c8917dc02d93341b6"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/DatabaseFixture.cs",
+      "sha256": "f0ddf27b8c24b34c2a959ffa126c7278f7b21a2a7339ab8244c540337d76b3e1"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/Erp.IntegrationTests.csproj",
+      "sha256": "017b99485143965a43c5be3e676d0d97256328c5694429e045d600133ca0c0e9"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/GeneralLedgerPerformanceTests.cs",
+      "sha256": "0c0745ed8023a5c1d6e4395a87e281aaed430224b02fbdfdac4d3a95c470fd15"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/GeneralLedgerTests.cs",
+      "sha256": "42c3741b9044130c6baff76cb2084710d9b1b408b1293dc718958c73aafc3254"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/HttpTests.cs",
+      "sha256": "17233c950830ef3959a0de97bba1b374c6bf0e9bdd6f8599490826b3e045c26a"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/IntegrityTests.cs",
+      "sha256": "7c9a697b0403b9641a55265b4fe832fe74fdad12a691c485b8829748a5625c09"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/JournalReversalTests.cs",
+      "sha256": "3e3dd0dc44770aa7d5c25ba7bcf3688bf3a553805aa5caaf1fca914f9cb16c4f"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/ManualJournalHttpTests.cs",
+      "sha256": "682eb6a60d2f74b2c1ea7d881bfd5a899c96928289aa90637ff5e179fa04e9d1"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/ManualJournalTests.cs",
+      "sha256": "ab1702072e1599f6a9b8eb20ac1783044a3e5d88b9c8efafe4d37f56e8b784a1"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/OutboxTests.cs",
+      "sha256": "d0e64fe06de9abb4cce81a6b8f1d245a72538f4f9d387cc46303f7287dba47c8"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/TrialBalancePerformanceTests.cs",
+      "sha256": "b4e37f1a7ddf9a0b5d811f489a82aa3404617fdd0585cf4d3153142442fc7e8d"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/TrialBalanceTests.cs",
+      "sha256": "86abc25d7b4449e2fc53fc0bf3e908f72fdee6367287256dbeaf5d83a4975b58"
+    },
+    {
+      "path": "tests/Erp.IntegrationTests/packages.lock.json",
+      "sha256": "b3318820b7e90f1d7da9a581261d4637ff1cbb6f478033751bddb0010bfcf9f1"
+    },
+    {
+      "path": "tests/Erp.UnitTests/Erp.UnitTests.csproj",
+      "sha256": "c2ab14ec91ddcd7567438b6a9386175aac21935752920e76f093e923c3805a96"
+    },
+    {
+      "path": "tests/Erp.UnitTests/GeneralLedgerTests.cs",
+      "sha256": "39143e802dee4d7d6b6693bcbbe32f54a732d6a995ee8b2ad87818ca27b2beff"
+    },
+    {
+      "path": "tests/Erp.UnitTests/JournalReversalTests.cs",
+      "sha256": "64f1e84784cd53e2c1eabc12d2d7ff3f378728fafadf48d23219a146f695c35a"
+    },
+    {
+      "path": "tests/Erp.UnitTests/ManualJournalTests.cs",
+      "sha256": "1a805755714886819418e711d7d88a38d4914dc6bd82a65c570fb5e87910a3ce"
+    },
+    {
+      "path": "tests/Erp.UnitTests/PrimitivesTests.cs",
+      "sha256": "cbc9f1588dcdf36219d509a29c463d5ae90f3e241fd8b49496fd84ef42659c74"
+    },
+    {
+      "path": "tests/Erp.UnitTests/TrialBalanceTests.cs",
+      "sha256": "911ba2cfb9979087770610f41bcb83ca41a3e0f6bbf2063bcf7093a1247432f3"
+    },
+    {
+      "path": "tests/Erp.UnitTests/packages.lock.json",
+      "sha256": "5482320147505271312882c721ab03eefa4ab403735c353ddf473bda658bc594"
+    }
+  ]
+}

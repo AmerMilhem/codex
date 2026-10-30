@@ -1,0 +1,79 @@
+<section class="panel trial-balance" id="account-setup">
+  <h1>{{ i18n.t('chartOfAccounts') }}</h1>
+  <a [routerLink]="['/finance', tenant, company, 'journals']">{{ i18n.t('back') }}</a>
+  @if (authorization.can('Finance.Account.Create')) {
+  <form id="account-create-form" (submit)="create($event)">
+    <h2>{{ i18n.t('createAccount') }}</h2>
+    <label
+      >{{ i18n.t('accountCode') }}
+      <input
+        id="account-create-code"
+        required
+        maxlength="32"
+        [disabled]="retryPending"
+        [value]="code"
+        (input)="code=$any($event.target).value"
+      />
+    </label>
+    <label
+      >{{ i18n.t('accountName') }}
+      <input
+        id="account-create-name"
+        required
+        maxlength="200"
+        [disabled]="retryPending"
+        [value]="name"
+        (input)="name=$any($event.target).value"
+      />
+    </label>
+    <label
+      ><input
+        id="account-create-postable"
+        type="checkbox"
+        [checked]="postingAllowed"
+        [disabled]="retryPending"
+        (change)="postingAllowed=$any($event.target).checked"
+      />{{ i18n.t('postingAllowed') }}</label
+    >
+    @if (retryPending) {
+    <p role="status">{{ i18n.t('accountCreateRetry') }}</p>
+    }
+    <button id="create-account" class="primary" type="submit" [disabled]="busy() || !code || !name">
+      {{ i18n.t('createAccount') }}
+    </button>
+  </form>
+  } @if (error()) {
+  <p role="alert">{{ error() }}</p>
+  } @if (notice()) {
+  <p role="status">{{ notice() }}</p>
+  } @if (busy()) {
+  <p role="status">{{ i18n.t('busy') }}</p>
+  } @if (authorization.can('Finance.Account.View') && !busy() && accounts().length === 0) {
+  <p id="account-empty">{{ i18n.t('accountEmpty') }}</p>
+  } @if (authorization.can('Finance.Account.View')) {
+  <div class="table-scroll">
+    <table id="account-table">
+      <thead>
+        <tr>
+          <th>{{ i18n.t('accountCode') }}</th>
+          <th>{{ i18n.t('accountName') }}</th>
+          <th>{{ i18n.t('periodStatus') }}</th>
+          <th>{{ i18n.t('postingAllowed') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (account of accounts(); track account.id) {
+        <tr>
+          <td dir="ltr">{{ account.code }}</td>
+          <td>{{ account.name }}</td>
+          <td>
+            {{ account.status === 'Active' ? i18n.t('accountActive') : i18n.t('accountInactive') }}
+          </td>
+          <td>{{ account.postingAllowed ? i18n.t('yes') : i18n.t('no') }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+</section>

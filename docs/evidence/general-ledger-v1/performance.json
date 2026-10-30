@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "journals": 510,
+    "lines": 102000,
+    "busyAccountLines": 51000,
+    "openingAccountLines": 25000,
+    "periodAccountLines": 26000
+  },
+  "offset": 13000,
+  "pageSize": 50,
+  "runs": 5,
+  "milliseconds": {
+    "opening": [
+      11.7161,
+      10.2886,
+      15.994,
+      9.9191,
+      11.0976
+    ],
+    "count-and-period": [
+      9.9679,
+      9.4752,
+      10.7092,
+      9.2947,
+      10.0937
+    ],
+    "movements-middle-page": [
+      25.6631,
+      25.7414,
+      26.2583,
+      27.6962,
+      25.321
+    ],
+    "trial-reconciliation": [
+      16.7179,
+      26.867,
+      17.0507,
+      16.2049,
+      16.7626
+    ],
+    "full-report": [
+      68.6512,
+      102.6337,
+      62.9976,
+      63.7054,
+      62.6172
+    ]
+  },
+  "medians": {
+    "opening": 11.0976,
+    "count-and-period": 9.9679,
+    "movements-middle-page": 25.7414,
+    "trial-reconciliation": 16.7626,
+    "full-report": 63.7054
+  },
+  "strategy": "Parameterized Npgsql SQL, NUMERIC window before LIMIT/OFFSET, independent existing Trial Balance projection, REPEATABLE READ READ ONLY snapshot",
+  "limitations": "Local warm-cache single-client measurements; not a production SLA. OFFSET windows and lifetime opening scan eligible history. Plans retained; no speculative index added."
+}

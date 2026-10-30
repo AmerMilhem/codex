@@ -1,0 +1,383 @@
+@if(posted && !journal()?.reversal && !journal()?.correction &&
+authorization.can('Finance.Journal.Correct')) {
+<a id="correct-journal" [routerLink]="['/finance',tenant,company,'journals',id,'correct']"
+  >{{i18n.t('correctJournal')}}</a
+>
+} @if(journal()?.correction; as c) {
+<section id="correction-relationship">
+  <h2>{{i18n.t('correctionRelationship')}}</h2>
+  <a
+    id="correction-original"
+    [routerLink]="['/finance',tenant,company,'journals',c.originalJournalId]"
+    >{{i18n.t('originalJournal')}}</a
+  >
+  <a
+    id="correction-reversal"
+    [routerLink]="['/finance',tenant,company,'journals',c.reversalJournalId]"
+    >{{i18n.t('reversalJournal')}}</a
+  >
+  <a
+    id="correction-replacement"
+    [routerLink]="['/finance',tenant,company,'journals',c.replacementJournalId]"
+    >{{i18n.t('replacementJournal')}}</a
+  >
+  <p>{{c.reason}} — {{c.postingDate}}</p>
+</section>
+}
+<section class="panel journals">
+  @if(posted && ledgerReturn){<a
+    id="journal-gl-back"
+    [routerLink]="['/finance',tenant,company,'general-ledger']"
+    [queryParams]="ledgerParams"
+    >{{i18n.t('generalLedger')}}</a
+  >} @if(journal()?.reversal; as relation) {
+  <section id="reversal-relationship" class="report-warning">
+    <h2>{{i18n.t('reversalRelationship')}}</h2>
+    <p>
+      {{i18n.t('originalJournal')}}:
+      <a
+        id="original-link"
+        [routerLink]="['/finance',tenant,company,'journals',relation.originalJournalId]"
+        >{{relation.originalJournalNumber}}</a
+      >
+    </p>
+    <p>
+      {{i18n.t('reversalJournal')}}:
+      <a
+        id="reversal-link"
+        [routerLink]="['/finance',tenant,company,'journals',relation.reversalJournalId]"
+        >{{relation.reversalJournalNumber}}</a
+      >
+    </p>
+    <p>{{i18n.t('reversalDate')}}: <span dir="ltr">{{relation.postingDate}}</span></p>
+    <p>{{i18n.t('reversalReason')}}: {{relation.reason}}</p>
+    <p>{{i18n.t('reversalHistory')}}</p>
+  </section>
+  } @if(canReverse) {
+  <button id="reverse-journal" (click)="reversalOpen=true" [disabled]="busy()">
+    {{i18n.t('reverseJournal')}}
+  </button>
+  @if(reversalOpen) {
+  <form id="reversal-form" class="report-range" (submit)="reverse($event)">
+    <label
+      >{{i18n.t('reversalDate')}}<input
+        id="reversal-date"
+        required
+        type="date"
+        [value]="reversalDate"
+        [disabled]="busy() || !!pendingReversal()"
+        (input)="reversalDate=$any($event.target).value"
+    /></label>
+    <label
+      >{{i18n.t('reversalReason')}}<textarea
+        id="reversal-reason"
+        required
+        maxlength="1000"
+        [value]="reversalReason"
+        [disabled]="busy() || !!pendingReversal()"
+        (input)="reversalReason=$any($event.target).value"
+      ></textarea>
+    </label>
+    <label
+      ><input
+        id="reversal-confirm"
+        type="checkbox"
+        required
+        [checked]="reversalConfirmed"
+        [disabled]="busy()"
+        (change)="reversalConfirmed=$any($event.target).checked"
+      />{{i18n.t('reversalConfirmation')}}</label
+    >
+    @if(pendingReversal()){
+    <p role="status">{{i18n.t('reversalRetry')}}</p>
+    }
+    <button
+      id="confirm-reversal"
+      class="primary"
+      type="submit"
+      [disabled]="busy() || !reversalConfirmed"
+    >
+      {{i18n.t('confirmReversal')}}
+    </button>
+  </form>
+  } }
+  <h1>{{ i18n.t('journals') }}</h1>
+  @if (authorization.can('Finance.Book.View')) {
+  <a id="book-setup-link" [routerLink]="['/finance', tenant, company, 'books']"
+    >{{ i18n.t('accountingBooks') }}</a
+  >
+  } @if (authorization.can('Finance.Account.View')) {
+  <a id="account-setup-link" [routerLink]="['/finance', tenant, company, 'accounts']"
+    >{{ i18n.t('chartOfAccounts') }}</a
+  >
+  } @if (authorization.can('Finance.Journal.View')) {
+  <a id="trial-balance-link" [routerLink]="['/finance', tenant, company, 'trial-balance']"
+    >{{ i18n.t('trialBalance') }}</a
+  >
+  } @if (error()) {
+  <p role="alert" class="error">{{ error() }}</p>
+  } @if (notice()) {
+  <p role="status">{{ i18n.t(notice()!) }}</p>
+  } @if (busy()) {
+  <p role="status">{{ i18n.t('busy') }}</p>
+  } @if (!id) {
+  <div class="actions">
+    @if (authorization.can('Finance.Journal.Create')) {
+    <a id="new-journal" class="primary" [routerLink]="[...listRoute, 'new']"
+      >{{ i18n.t('newJournal') }}</a
+    >
+    } @if (authorization.can('Finance.Journal.View')) {
+    <button id="reconcile" (click)="reconcile()" [disabled]="busy()">
+      {{ i18n.t('reconciliation') }}
+    </button>
+    }
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>{{ i18n.t('journalNumber') }}</th>
+          <th>{{ i18n.t('postingDate') }}</th>
+          <th>{{ i18n.t('reference') }}</th>
+          <th>{{ i18n.t('debit') }}</th>
+          <th>{{ i18n.t('credit') }}</th>
+          <th>{{ i18n.t('draft') }} / {{ i18n.t('posted') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of items(); track item.id) {
+        <tr>
+          <td>
+            <a [routerLink]="[...listRoute, item.id]"
+              >{{ item.journalNumber || i18n.t('draft') }}</a
+            >
+          </td>
+          <td>{{ item.postingDate }}</td>
+          <td>{{ item.reference }}</td>
+          <td dir="ltr">{{ item.totalDebit }}</td>
+          <td dir="ltr">{{ item.totalCredit }}</td>
+          <td>{{ i18n.t(item.status === 'Posted' ? 'posted' : 'draft') }}</td>
+        </tr>
+        } @empty {
+        <tr>
+          <td colspan="6">{{ i18n.t('noJournals') }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="actions">
+    <button (click)="page(-1)" [disabled]="offset === 0 || busy()">{{ i18n.t('previous') }}</button
+    ><button (click)="page(1)" [disabled]="!hasMore() || busy()">{{ i18n.t('next') }}</button>
+  </div>
+  } @else {
+  <a [routerLink]="listRoute">{{ i18n.t('back') }}</a>
+  @if (journal() || id === 'new') {
+  <h2 id="journal-status">{{ i18n.t(posted ? 'posted' : 'draft') }}</h2>
+  @if (posted) {
+  <dl class="posting-meta">
+    <dt>{{ i18n.t('journalNumber') }}</dt>
+    <dd id="journal-number">{{ journal()!.journalNumber }}</dd>
+    <dt>{{ i18n.t('postedBy') }}</dt>
+    <dd>{{ journal()!.postedByIssuer }} / {{ journal()!.postedBySubject }}</dd>
+    <dt>{{ i18n.t('postedAt') }}</dt>
+    <dd>{{ journal()!.postedAt }}</dd>
+  </dl>
+  }
+  <form (submit)="save($event)">
+    <fieldset [disabled]="!editable || busy()">
+      <div class="journal-header">
+        <label
+          >{{ i18n.t('postingDate') }}<input
+            id="posting-date"
+            type="date"
+            [value]="form.postingDate || ''"
+            (input)="form.postingDate=$any($event.target).value; changed()"
+        /></label>
+        <label
+          >{{ i18n.t('reference') }}<input
+            id="journal-reference"
+            maxlength="128"
+            [value]="form.reference"
+            (input)="form.reference=$any($event.target).value; changed()"
+        /></label>
+        <label
+          >{{ i18n.t('currency') }}<input id="journal-currency" [value]="form.currency" readonly
+        /></label>
+        <label
+          >{{ i18n.t('journalDescription') }}<textarea
+            id="journal-description"
+            maxlength="1000"
+            [value]="form.description"
+            (input)="form.description=$any($event.target).value; changed()"
+          ></textarea>
+        </label>
+      </div>
+      <div class="table-scroll">
+        <table class="line-grid">
+          <thead>
+            <tr>
+              <th>{{ i18n.t('account') }}</th>
+              <th>{{ i18n.t('debit') }}</th>
+              <th>{{ i18n.t('credit') }}</th>
+              <th>{{ i18n.t('journalDescription') }}</th>
+              @if (editable) {
+              <th></th>
+              }
+            </tr>
+          </thead>
+          <tbody>
+            @for (line of form.lines; track $index; let index = $index) {
+            <tr>
+              <td>
+                @if (posted) {
+                <span class="posted-account"
+                  >{{ journal()!.lines[index].accountCode }} · {{
+                  journal()!.lines[index].accountName }}</span
+                >
+                } @else {
+                <select
+                  [attr.aria-label]="i18n.t('account')"
+                  [value]="line.accountId"
+                  (change)="line.accountId=$any($event.target).value; changed()"
+                >
+                  <option value="" [selected]="!line.accountId">—</option>
+                  @for (account of accounts(); track account.id) {
+                  <option [value]="account.id" [selected]="account.id === line.accountId">
+                    {{ account.code }} · {{ account.name }}
+                  </option>
+                  }
+                </select>
+                }
+              </td>
+              <td>
+                <input
+                  class="debit"
+                  [attr.aria-label]="i18n.t('debit')"
+                  inputmode="decimal"
+                  type="text"
+                  dir="ltr"
+                  maxlength="25"
+                  [value]="line.debit"
+                  (input)="line.debit=$any($event.target).value; changed()"
+                />
+              </td>
+              <td>
+                <input
+                  class="credit"
+                  [attr.aria-label]="i18n.t('credit')"
+                  inputmode="decimal"
+                  type="text"
+                  dir="ltr"
+                  maxlength="25"
+                  [value]="line.credit"
+                  (input)="line.credit=$any($event.target).value; changed()"
+                />
+              </td>
+              <td>
+                <input
+                  [attr.aria-label]="i18n.t('journalDescription')"
+                  maxlength="256"
+                  [value]="line.description"
+                  (input)="line.description=$any($event.target).value; changed()"
+                />
+              </td>
+              @if (editable) {
+              <td>
+                <button
+                  type="button"
+                  (click)="removeLine(index)"
+                  [attr.aria-label]="i18n.t('removeLine')"
+                >
+                  ×
+                </button>
+              </td>
+              }
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      @if (editable) {
+      <button type="button" id="add-line" (click)="addLine()" [disabled]="form.lines.length >= 200">
+        {{ i18n.t('addLine') }}
+      </button>
+      }
+    </fieldset>
+    <dl class="journal-totals">
+      <dt>{{ i18n.t('debit') }}</dt>
+      <dd id="total-debit" dir="ltr">{{ total.debit }}</dd>
+      <dt>{{ i18n.t('credit') }}</dt>
+      <dd id="total-credit" dir="ltr">{{ total.credit }}</dd>
+      <dt>{{ i18n.t('difference') }}</dt>
+      <dd id="difference" dir="ltr">{{ total.difference }}</dd>
+    </dl>
+    @if (dirty() && !posted) {
+    <p role="status">{{ i18n.t('unsaved') }}</p>
+    } @if (pendingPost()) {
+    <p role="alert">{{ i18n.t('retryNotice') }}</p>
+    }
+    <div class="actions">
+      @if (editable) {
+      <button
+        id="save-draft"
+        class="primary"
+        type="submit"
+        [disabled]="busy() || !dirty() || !total.valid"
+      >
+        {{ i18n.t('saveDraft') }}
+      </button>
+      } @if (journal() && !posted && authorization.can('Finance.Journal.Edit')) {
+      <button
+        id="validate-journal"
+        type="button"
+        (click)="validate()"
+        [disabled]="busy() || dirty() || !!pendingPost()"
+      >
+        {{ i18n.t('validateJournal') }}
+      </button>
+      } @if (journal() && !posted && authorization.can('Finance.Journal.Post')) {
+      <button id="post-journal" type="button" (click)="post()" [disabled]="busy() || dirty()">
+        {{ i18n.t(pendingPost() ? 'retryPost' : 'postJournal') }}
+      </button>
+      }
+    </div>
+  </form>
+  @if (validation(); as validation) { @if (validation.valid) {
+  <p id="validation-valid" role="status">{{ i18n.t('validJournal') }}</p>
+  }
+  <ul>
+    @for (issue of validation.issues; track $index) {
+    <li>{{ errors.fromCode(issue.code) }} <code>{{ issue.errorId }}</code></li>
+    }
+  </ul>
+  } @if (journal()) {
+  <h2>{{ i18n.t('audit') }}</h2>
+  <div class="table-scroll">
+    <table class="audit-grid">
+      <thead>
+        <tr>
+          <th>{{ i18n.t('audit') }}</th>
+          <th>{{ i18n.t('postedBy') }}</th>
+          <th>{{ i18n.t('postedAt') }}</th>
+          <th>{{ i18n.t('request') }} / {{ i18n.t('correlation') }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (event of audit(); track event.requestId + event.action) {
+        <tr>
+          <td>
+            {{ event.action }} @if(event.reversal; as reversal){
+            <p>{{reversal.reason}} · <span dir="ltr">{{reversal.postingDate}}</span></p>
+            <code>{{reversal.originalJournalId}} → {{reversal.reversalJournalId}}</code>}
+          </td>
+          <td>{{ event.actorSubject }}</td>
+          <td>{{ event.timestamp }}</td>
+          <td><code>{{ event.requestId }}</code><br /><code>{{ event.correlationId }}</code></td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  } } }
+</section>

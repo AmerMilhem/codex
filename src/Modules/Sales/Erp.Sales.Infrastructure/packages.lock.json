@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "dependencies": {
+    "net10.0": {
+      "erp.application.abstractions": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Kernel": "[1.0.0, )"
+        }
+      },
+      "erp.finance.contracts": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Kernel": "[1.0.0, )"
+        }
+      },
+      "erp.inventory.contracts": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Kernel": "[1.0.0, )"
+        }
+      },
+      "erp.kernel": {
+        "type": "Project"
+      },
+      "erp.sales.application": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Application.Abstractions": "[1.0.0, )",
+          "Erp.Finance.Contracts": "[1.0.0, )",
+          "Erp.Inventory.Contracts": "[1.0.0, )",
+          "Erp.Sales.Contracts": "[1.0.0, )",
+          "Erp.Sales.Domain": "[1.0.0, )"
+        }
+      },
+      "erp.sales.contracts": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Kernel": "[1.0.0, )"
+        }
+      },
+      "erp.sales.domain": {
+        "type": "Project",
+        "dependencies": {
+          "Erp.Kernel": "[1.0.0, )"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-24T21:29:56.797Z",
+  "browser": "154.0.8037.57",
+  "checks": [
+    {
+      "name": "Styles load under strict CSP",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL home shell",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR",
+      "status": "PASS"
+    },
+    {
+      "name": "Lazy workspace routing",
+      "status": "PASS"
+    },
+    {
+      "name": "Restricted UI absent",
+      "status": "PASS"
+    },
+    {
+      "name": "Language survives reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL workspace",
+      "status": "PASS"
+    },
+    {
+      "name": "Mobile-width shell fits",
+      "status": "PASS"
+    },
+    {
+      "name": "No runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

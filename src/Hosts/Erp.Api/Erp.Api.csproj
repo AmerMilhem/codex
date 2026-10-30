@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+<PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+<ItemGroup><ProjectReference Include="../../Platform/Erp.Platform.Infrastructure/Erp.Platform.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Finance/Erp.Finance.Infrastructure/Erp.Finance.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Inventory/Erp.Inventory.Infrastructure/Erp.Inventory.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Sales/Erp.Sales.Infrastructure/Erp.Sales.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Procurement/Erp.Procurement.Infrastructure/Erp.Procurement.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Manufacturing/Erp.Manufacturing.Infrastructure/Erp.Manufacturing.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Workflow/Erp.Workflow.Infrastructure/Erp.Workflow.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Localization/Erp.Localization.Infrastructure/Erp.Localization.Infrastructure.csproj" />
+</ItemGroup></Project>

@@ -1,0 +1,12 @@
+{
+  "draft_id": "4a93c3ed-5d2e-4ca2-bdfe-e5e05b315310~cecfgdraft_6ad499760740819c9831e2d27fbe36d7",
+  "status": "saved",
+  "requires_publish": true,
+  "fields": [
+    "install_script",
+    "start_skill"
+  ],
+  "networkAndSecrets": "preserved",
+  "published": false,
+  "freshTaskRestorationVerified": false
+}

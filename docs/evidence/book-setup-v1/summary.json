@@ -1,0 +1,135 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-24T21:32:28.545019+00:00",
+  "dotnet": {
+    "unit": 71,
+    "architecture": 9,
+    "integration": 137
+  },
+  "angularUnit": 55,
+  "automatedTestsTotal": 272,
+  "newAutomatedTests": 22,
+  "browserAcceptanceChecksTotal": 177,
+  "newBrowserAcceptanceChecks": 22,
+  "browserChecksByRunner": [
+    9,
+    19,
+    22,
+    24,
+    22,
+    16,
+    24,
+    19,
+    22
+  ],
+  "goldenDatabaseChecks": {
+    "bookState": "Active:JOD:3",
+    "bookRows": "1",
+    "bookRequestedAudit": "1",
+    "bookCreatedAudit": "1",
+    "bookOutbox": "1",
+    "bookReceipt": "1",
+    "periodState": "Closed:2",
+    "accountRows": "2",
+    "reversalLinks": "1",
+    "postedJournals": "2",
+    "newAccountJournal": "2",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  },
+  "migrationChain": [
+    "20261018141639_ManualJournalV1",
+    "20261020202816_ManualJournalReversalV1",
+    "20261023152528_FiscalPeriodCloseV1",
+    "20261023212645_FiscalPeriodSetupV1",
+    "20261024162900_ChartOfAccountsSetupV1",
+    "20261024211908_AccountingBookSetupV1"
+  ],
+  "cleanInstall": true,
+  "previousToCurrentUpgrade": true,
+  "legacyHistoricalDigestUnchanged": true,
+  "oneBookPerCompany": true,
+  "fullVerifyExitCode": 0,
+  "securityAudits": "PASS",
+  "remoteCiExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false,
+  "files": [
+    {
+      "file": "verification.txt",
+      "sha256": "c35d58e66f57c59a230625ccdea0164bfe6ad17ed6033a8eaf0d20f7036f6b82"
+    },
+    {
+      "file": "Erp.ArchitectureTests.trx",
+      "sha256": "27e8a6a7172d34665376e86907bac6126c5ff0e281c29ac462614cd01116003d"
+    },
+    {
+      "file": "Erp.UnitTests.trx",
+      "sha256": "d5fad1c3829f73585816bc3a95b1bd9c6941dc12c0e1503e71b23d311d5a95a1"
+    },
+    {
+      "file": "Erp.IntegrationTests.trx",
+      "sha256": "c8d48adf122f3b6cffae1f3dcf08520e5bf8f223e8e0e4e010179f1b1d45ddcb"
+    },
+    {
+      "file": "angular-unit-results.json",
+      "sha256": "44ec426797fae39a1c53e2b9773de031dcc5c436029db20b08fbaa7f34c1da10"
+    },
+    {
+      "file": "foundation-browser-results.json",
+      "sha256": "f6f1f4e2c97c1202add21f3b1d4a4ba1c73430b1e71ba1c6fd1e61f02e6884b8"
+    },
+    {
+      "file": "browser-results.json",
+      "sha256": "6cafa777a1797f3e599029f9ae02a405baa79cd108373e084a7ed41b466cebd4"
+    },
+    {
+      "file": "golden-results.json",
+      "sha256": "6135ea9d26f265368c4458bc90cd4002ee5d1b409803c757cec642abc208b2bf"
+    },
+    {
+      "file": "book-setup-ar.png",
+      "sha256": "40ff2e75391df032fc7904aeed9d29440d7110d54d8c9dca735b699270d01b89"
+    },
+    {
+      "file": "book-setup-en.png",
+      "sha256": "6205a8898a1cc8b8a53dbed0445be3f46934b24fce8aec527508a8409d14b238"
+    },
+    {
+      "file": "nuget-audit.json",
+      "sha256": "b2b3a9ac0f78ba3a16bbf839e3147b5b78e86688f1fc490529774ff5a639901b"
+    },
+    {
+      "file": "npm-audit.json",
+      "sha256": "b444ea8acfbf12058f5967b66fe0d1bcd02cf53dbc42dc36b94859f6595c2bf2"
+    },
+    {
+      "file": "journal-regression-results.json",
+      "sha256": "b7896af518934115533e63a4c6ed2b8aad549ae992905b468ead99f0e963141b"
+    },
+    {
+      "file": "trialBalance-regression-results.json",
+      "sha256": "c38a32cedef705a4cc22a4564f8e615201ba2ac8613c42a168c4b3c9f17faae5"
+    },
+    {
+      "file": "generalLedger-regression-results.json",
+      "sha256": "9b71aed73fad14de2ae23914cd6097fb37bcfd6733a08f0672921dd26df28862"
+    },
+    {
+      "file": "reversal-regression-results.json",
+      "sha256": "03e82e1a72744d938b192f7447741231c06a1a6abfa1fc4b03c3a949cabc37e9"
+    },
+    {
+      "file": "periodClose-regression-results.json",
+      "sha256": "e2c6f1300e40295c8a6bbc37b329c95578a7b747fecc98a8f3684a27341bd98a"
+    },
+    {
+      "file": "periodSetup-regression-results.json",
+      "sha256": "9c9cd256d599586fa77acb8d3e7bd73f8e957a5da587c1478ea1b5e8996635e1"
+    },
+    {
+      "file": "accountSetup-regression-results.json",
+      "sha256": "4cd7c2c1dad224d42211118a2d36b3e38b333860a5c1b2deb24adda89f43dd33"
+    }
+  ]
+}

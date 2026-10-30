@@ -1,0 +1,51 @@
+[
+  {
+    "source": "opening",
+    "qty": 10.00000000,
+    "value": 100.000000,
+    "average": 10,
+    "delta": 100
+  },
+  {
+    "source": "receipt-one",
+    "qty": 20.00000000,
+    "value": 240.000000,
+    "average": 12,
+    "delta": 140
+  },
+  {
+    "source": "issue",
+    "qty": 15.00000000,
+    "value": 180.000000,
+    "average": 12,
+    "delta": -60
+  },
+  {
+    "source": "receipt-two",
+    "qty": 20.00000000,
+    "value": 270.000000,
+    "average": 13.5,
+    "delta": 90
+  },
+  {
+    "source": "linked-return-of-issue",
+    "qty": 22.00000000,
+    "value": 294.000000,
+    "average": 13.3636363636,
+    "delta": 24
+  },
+  {
+    "source": "approved-value-adjustment",
+    "qty": 22.00000000,
+    "value": 300.000000,
+    "average": 13.6363636364,
+    "delta": 6
+  },
+  {
+    "source": "last-issue-residual",
+    "qty": 0.00000000,
+    "value": 0.000000,
+    "average": 0,
+    "delta": -300.000000
+  }
+]

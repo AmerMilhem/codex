@@ -1,0 +1,137 @@
+<section class="panel trial-balance" id="fiscal-periods">
+  <h1>{{ i18n.t('fiscalPeriods') }}</h1>
+  <p>{{ i18n.t('periodCloseScope') }}</p>
+  <a [routerLink]="['/finance', tenant, company, 'journals']">{{ i18n.t('back') }}</a>
+  @if (authorization.can('Finance.Period.Create')) {
+  <form id="period-create-form" (submit)="create($event)">
+    <h2>{{ i18n.t('periodSetup') }}</h2>
+    <label
+      >{{ i18n.t('startDate') }}
+      <input
+        id="period-create-start"
+        type="date"
+        required
+        [disabled]="createRetryPending"
+        [value]="startDate"
+        (input)="startDate=$any($event.target).value"
+      />
+    </label>
+    <label
+      >{{ i18n.t('endDate') }}
+      <input
+        id="period-create-end"
+        type="date"
+        required
+        [disabled]="createRetryPending"
+        [value]="endDate"
+        (input)="endDate=$any($event.target).value"
+      />
+    </label>
+    @if (createRetryPending) {
+    <p role="status">{{ i18n.t('periodCreateRetry') }}</p>
+    }
+    <button
+      id="create-period"
+      class="primary"
+      type="submit"
+      [disabled]="busy() || !startDate || !endDate"
+    >
+      {{ i18n.t('createPeriod') }}
+    </button>
+  </form>
+  } @if (error()) {
+  <p role="alert">{{ error() }}</p>
+  } @if (busy()) {
+  <p role="status">{{ i18n.t('busy') }}</p>
+  } @if (!busy() && periods().length === 0) {
+  <p id="period-empty">{{ i18n.t('periodEmpty') }}</p>
+  }
+  <table id="period-table" class="trial-balance-table">
+    <thead>
+      <tr>
+        <th>{{ i18n.t('startDate') }}</th>
+        <th>{{ i18n.t('endDate') }}</th>
+        <th>{{ i18n.t('periodStatus') }}</th>
+        <th>{{ i18n.t('periodClosedAt') }}</th>
+        <th>{{ i18n.t('periodClosedBy') }}</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (period of periods(); track period.id) {
+      <tr>
+        <td dir="ltr">{{ period.startDate }}</td>
+        <td dir="ltr">{{ period.endDate }}</td>
+        <td>
+          {{ period.status === 'Open' ? i18n.t('periodOpen') : i18n.t('periodClosedStatus') }}
+        </td>
+        <td dir="ltr">{{ period.closedAt ?? '—' }}</td>
+        <td>{{ period.closedBySubject ?? '—' }}</td>
+        <td>
+          @if (period.status === 'Open' && authorization.can('Finance.Period.Close')) {
+          <button type="button" class="primary" [disabled]="busy()" (click)="inspect(period)">
+            {{ i18n.t('inspectClose') }}
+          </button>
+          }
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  @if (preview(); as result) {
+  <section id="period-close-preview" class="report-warning">
+    <h2>{{ i18n.t('periodPreClose') }}</h2>
+    <p>{{ i18n.t('company') }}: <span dir="ltr">{{ company }}</span></p>
+    <p>
+      {{ i18n.t('startDate') }}: <span dir="ltr">{{ result.period.startDate }}</span> · {{
+      i18n.t('endDate') }}: <span dir="ltr">{{ result.period.endDate }}</span>
+    </p>
+    <p>
+      {{ i18n.t('debit') }}: {{ result.periodDebit }} · {{ i18n.t('credit') }}: {{
+      result.periodCredit }}
+    </p>
+    <p id="period-validation">
+      {{ result.passed ? i18n.t('periodChecksPass') : i18n.t('periodChecksFail') }}
+    </p>
+    @if (!result.passed) {
+    <ul>
+      @for (check of result.checks; track check.code) { @if (!check.passed) {
+      <li>{{ check.code }}: {{ check.expected }} / {{ check.actual }}</li>
+      } }
+    </ul>
+    } @if (result.passed && authorization.can('Finance.Period.Close')) {
+    <form (submit)="close($event)">
+      <label
+        >{{ i18n.t('closeComment') }}
+        <textarea
+          id="period-comment"
+          maxlength="1000"
+          [disabled]="retryPending"
+          [value]="comment"
+          (input)="comment=$any($event.target).value"
+        ></textarea>
+      </label>
+      <label
+        ><input
+          id="period-confirm"
+          type="checkbox"
+          [checked]="confirmed"
+          (change)="confirmed=$any($event.target).checked"
+        />{{ i18n.t('periodCloseConfirmation') }}</label
+      >
+      @if (retryPending) {
+      <p role="status">{{ i18n.t('periodCloseRetry') }}</p>
+      }
+      <button
+        id="confirm-period-close"
+        class="primary"
+        type="submit"
+        [disabled]="busy() || !confirmed"
+      >
+        {{ i18n.t('closePeriod') }}
+      </button>
+    </form>
+    }
+  </section>
+  }
+</section>

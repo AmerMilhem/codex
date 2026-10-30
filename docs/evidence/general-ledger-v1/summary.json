@@ -1,0 +1,75 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-20T15:34:12.930497+00:00",
+  "scope": "Finance General Ledger Detail, read-only; all previous regression gates required",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "debee683f31a1e1d23d141ed1c2b670e506a011eb8ae9284cf6516275c0baea8"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "executed": 77,
+      "passed": 77,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "08a574dde2bd419839ffe66a889a0232f71f614cdc6344d5735da8bdd138f54f"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "executed": 37,
+      "passed": 37,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "b424d212fb00094cb69edc420e9ce33ed6a76442d5b834e8d6d16a91a6ded043"
+    }
+  ],
+  "dotnetTotal": 123,
+  "angularUnit": 28,
+  "automatedTestsTotal": 151,
+  "newAutomatedTests": 29,
+  "browserAcceptanceChecksTotal": 74,
+  "newBrowserAcceptanceChecks": 24,
+  "generalLedgerBrowserChecks": 24,
+  "assertionCounting": "xUnit theory rows plus Vitest tests; named browser acceptance checks counted separately; SQL controls not double-counted",
+  "goldenDatabaseChecks": {
+    "postedJournals": "4",
+    "draftJournals": "1",
+    "postingOutboxRows": "4",
+    "postingReceipts": "4",
+    "periodDebit": "65.000000",
+    "periodCredit": "65.000000",
+    "globalUnbalanced": "0",
+    "readOnlyStateUnchanged": true
+  },
+  "performanceDataset": {
+    "journals": 510,
+    "lines": 102000,
+    "busyAccountLines": 51000,
+    "openingAccountLines": 25000,
+    "periodAccountLines": 26000
+  },
+  "performanceMedianMilliseconds": {
+    "opening": 11.0976,
+    "count-and-period": 9.9679,
+    "movements-middle-page": 25.7414,
+    "trial-reconciliation": 16.7626,
+    "full-report": 63.7054
+  },
+  "migrationsAdded": 0,
+  "indexesAdded": 0,
+  "architecture": "PASS",
+  "securityAudits": "No reported vulnerabilities at execution time",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false,
+  "remainingExternalGates": [
+    "production identity/MFA",
+    "production deployment/operations",
+    "Jordan/JoFotara/legal/retention/residency verification"
+  ]
+}

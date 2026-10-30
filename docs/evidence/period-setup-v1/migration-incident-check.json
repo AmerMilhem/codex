@@ -1,0 +1,13 @@
+{
+  "migrationIds": [
+    "20261018141639_ManualJournalV1",
+    "20261020202816_ManualJournalReversalV1",
+    "20261023152528_FiscalPeriodCloseV1",
+    "20261023212645_FiscalPeriodSetupV1"
+  ],
+  "closeDesignerMatchesPriorManifest": true,
+  "closeOperationsPriorSha256": "98a94963f656820edff9e48927dcb59f0d274e491e37c2a161b907db464ad16a",
+  "closeOperationsCurrentSha256": "ff1127ec635165c33caaffd68e478799e2c26d6e3c3012c5c24cf66caa535d87",
+  "closeOperationsByteIdentical": false,
+  "restoredBy": "Reconstructed operations and exact generated Designer; clean/sequential migration tests validate resulting schema"
+}

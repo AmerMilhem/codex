@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Erp.Finance.Domain/Erp.Finance.Domain.csproj" />
+    <ProjectReference Include="../Erp.Finance.Contracts/Erp.Finance.Contracts.csproj" />
+    <ProjectReference Include="../../../BuildingBlocks/Erp.Application.Abstractions/Erp.Application.Abstractions.csproj" />
+</ItemGroup>
+</Project>

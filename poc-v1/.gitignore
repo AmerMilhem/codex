@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/node_modules/
+web/dist/
+web/.angular/
+evidence/runs/
+evidence/*.dump
+evidence/*.png
+*.log

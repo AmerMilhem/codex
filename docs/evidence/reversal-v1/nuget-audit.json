@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/workspace/codex/src/BuildingBlocks/Erp.Application.Abstractions/Erp.Application.Abstractions.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/BuildingBlocks/Erp.Kernel/Erp.Kernel.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Hosts/Erp.Api/Erp.Api.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Hosts/Erp.Migrations/Erp.Migrations.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Hosts/Erp.Worker/Erp.Worker.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Finance/Erp.Finance.Application/Erp.Finance.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Finance/Erp.Finance.Contracts/Erp.Finance.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Finance/Erp.Finance.Domain/Erp.Finance.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Finance/Erp.Finance.Infrastructure/Erp.Finance.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Inventory/Erp.Inventory.Application/Erp.Inventory.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Inventory/Erp.Inventory.Contracts/Erp.Inventory.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Inventory/Erp.Inventory.Domain/Erp.Inventory.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Inventory/Erp.Inventory.Infrastructure/Erp.Inventory.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Localization/Erp.Localization.Application/Erp.Localization.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Localization/Erp.Localization.Contracts/Erp.Localization.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Localization/Erp.Localization.Domain/Erp.Localization.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Localization/Erp.Localization.Infrastructure/Erp.Localization.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Application/Erp.Manufacturing.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Contracts/Erp.Manufacturing.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Domain/Erp.Manufacturing.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/Erp.Manufacturing.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Procurement/Erp.Procurement.Application/Erp.Procurement.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Procurement/Erp.Procurement.Contracts/Erp.Procurement.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Procurement/Erp.Procurement.Domain/Erp.Procurement.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Procurement/Erp.Procurement.Infrastructure/Erp.Procurement.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Sales/Erp.Sales.Application/Erp.Sales.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Sales/Erp.Sales.Contracts/Erp.Sales.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Sales/Erp.Sales.Domain/Erp.Sales.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Sales/Erp.Sales.Infrastructure/Erp.Sales.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Workflow/Erp.Workflow.Application/Erp.Workflow.Application.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Workflow/Erp.Workflow.Contracts/Erp.Workflow.Contracts.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Workflow/Erp.Workflow.Domain/Erp.Workflow.Domain.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Modules/Workflow/Erp.Workflow.Infrastructure/Erp.Workflow.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/src/Platform/Erp.Platform.Infrastructure/Erp.Platform.Infrastructure.csproj"
+    },
+    {
+      "path": "/workspace/codex/tests/Erp.ArchitectureTests/Erp.ArchitectureTests.csproj"
+    },
+    {
+      "path": "/workspace/codex/tests/Erp.CrashHarness/Erp.CrashHarness.csproj"
+    },
+    {
+      "path": "/workspace/codex/tests/Erp.IntegrationTests/Erp.IntegrationTests.csproj"
+    },
+    {
+      "path": "/workspace/codex/tests/Erp.UnitTests/Erp.UnitTests.csproj"
+    }
+  ]
+}

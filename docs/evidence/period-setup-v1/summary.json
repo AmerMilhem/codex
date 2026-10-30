@@ -1,0 +1,67 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-24T16:23:47.319788+00:00",
+  "scope": "Finance Fiscal Period Setup; all previous regression gates required",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "4d045429fe76e57cf5c7c26b2a1cbed3a90a12dbaad3289a3bec398542d2f692"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "passed": 118,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "13646a9f8e6fd9b58f12d93f9849a7b2e31f27de540a3c8bb36d5e9ef4246b65"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "passed": 55,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "56f2c1ce143441ff1319a804e598f95cb81f9de22b2e8646155754dd4a5c41bb"
+    }
+  ],
+  "dotnetTotal": 182,
+  "angularUnit": 44,
+  "automatedTestsTotal": 226,
+  "newAutomatedTests": 18,
+  "browserAcceptanceChecksTotal": 136,
+  "newBrowserAcceptanceChecks": 24,
+  "periodSetupBrowserChecks": 24,
+  "goldenDatabaseChecks": {
+    "periodState": "Closed:2",
+    "createRequestedAudit": "1",
+    "createdAudit": "1",
+    "createdOutbox": "1",
+    "createReceipt": "1",
+    "closeOutbox": "1",
+    "postedJournals": "2",
+    "originalUnchanged": "1",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  },
+  "migrationsAdded": 1,
+  "tablesAdded": 0,
+  "architecture": "PASS",
+  "migrationIncidentCheck": {
+    "migrationIds": [
+      "20261018141639_ManualJournalV1",
+      "20261020202816_ManualJournalReversalV1",
+      "20261023152528_FiscalPeriodCloseV1",
+      "20261023212645_FiscalPeriodSetupV1"
+    ],
+    "closeDesignerMatchesPriorManifest": true,
+    "closeOperationsPriorSha256": "98a94963f656820edff9e48927dcb59f0d274e491e37c2a161b907db464ad16a",
+    "closeOperationsCurrentSha256": "ff1127ec635165c33caaffd68e478799e2c26d6e3c3012c5c24cf66caa535d87",
+    "closeOperationsByteIdentical": false,
+    "restoredBy": "Reconstructed operations and exact generated Designer; clean/sequential migration tests validate resulting schema"
+  },
+  "securityAudits": "No reported vulnerabilities at execution time",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false
+}

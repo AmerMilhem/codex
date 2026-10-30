@@ -1,0 +1,20 @@
+{
+  "migrationIds": [
+    "20261018141639_ManualJournalV1",
+    "20261020202816_ManualJournalReversalV1",
+    "20261023152528_FiscalPeriodCloseV1",
+    "20261023212645_FiscalPeriodSetupV1",
+    "20261024162900_ChartOfAccountsSetupV1",
+    "20261024211908_AccountingBookSetupV1"
+  ],
+  "cleanInstall": true,
+  "sequentialUpgrade": true,
+  "historicalDigestUnchanged": true,
+  "legacyCurrencies": [
+    "JOD:3",
+    "EUR:2"
+  ],
+  "legacyCreatorNull": true,
+  "noPendingModelChanges": true,
+  "forceRlsRestored": true
+}

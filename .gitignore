@@ -1,0 +1,54 @@
+# Local secrets and machine-specific configuration
+.env
+.env.*
+*.pem
+*.pfx
+*.p12
+*.key
+*.jks
+*credentials*.json
+*secrets*.json
+**/appsettings.Development.json
+**/appsettings.*.local.json
+.local/
+
+# .NET, Node, and frontend build/dependency output
+**/bin/
+**/obj/
+**/node_modules/
+**/.angular/
+**/dist/
+**/coverage/
+**/.cache/
+**/.turbo/
+**/.next/
+**/.svelte-kit/
+artifacts/
+TestResults/
+**/test-results/
+**/playwright-report/
+*.trx
+
+# Python environments and caches
+.venv/
+venv/
+env/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+*.py[cod]
+
+# Local databases, logs, and editor state
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.tmp
+*.swp
+*.user
+*.suo
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

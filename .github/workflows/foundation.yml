@@ -1,0 +1,35 @@
+name: Foundation and Finance slices
+on: [push, pull_request]
+permissions:
+  contents: read
+concurrency:
+  group: foundation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: 10.0.402
+      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
+        with:
+          node-version: 24.19.0
+          cache: npm
+          cache-dependency-path: src/Clients/Web/package-lock.json
+      - name: Install frozen Web dependencies and matching browser
+        working-directory: src/Clients/Web
+        run: |
+          npm ci --ignore-scripts
+          npx --no-install playwright install --with-deps chromium
+      - name: Build, format, test, isolate, migrate, scan and publish artifacts
+        run: bash scripts/verify.sh
+      - name: Preserve test and build evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: foundation-and-finance-evidence
+          path: artifacts/
+          retention-days: 7

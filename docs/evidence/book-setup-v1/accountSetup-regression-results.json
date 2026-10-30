@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Company begins without SQL-seeded accounts or fiscal periods",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL account creation form",
+      "status": "PASS"
+    },
+    {
+      "name": "Lost response follows committed account creation",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry freezes code name and posting flag",
+      "status": "PASS"
+    },
+    {
+      "name": "Account retry keeps idempotency key and exact payload",
+      "status": "PASS"
+    },
+    {
+      "name": "Expense account starts Active with creator and one identity",
+      "status": "PASS"
+    },
+    {
+      "name": "Cash is postable and header is Active but non-postable",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid code is explained in Arabic without request",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate code rejected at UI/API boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "Account Create remains independent from Journal Post permission",
+      "status": "PASS"
+    },
+    {
+      "name": "Fiscal period created through Slice 6 UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted Journal displays both UI-created account codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance shows both new accounts and balances",
+      "status": "PASS"
+    },
+    {
+      "name": "GL detail reconciles expense account",
+      "status": "PASS"
+    },
+    {
+      "name": "Cash GL and trial balance agree",
+      "status": "PASS"
+    },
+    {
+      "name": "Server rejects non-postable account at Post",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR account list has same accounts",
+      "status": "PASS"
+    },
+    {
+      "name": "English duplicate error remains understandable",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "periodId": "01a16fd3-40a0-7c42-950a-044490fd1b7d",
+  "journalId": "01a16fd3-4214-7df7-907a-dd94bf763850",
+  "expenseId": "01a16fd3-3c94-7d0c-8c0f-54a39548e00d",
+  "cashId": "01a16fd3-3e3f-7a9a-a7cc-45e64b3c85ca",
+  "headerId": "01a16fd3-3ec5-7ee8-bc3e-7107223ba3bd",
+  "trialBalance": {
+    "openingDebit": "0",
+    "openingCredit": "0",
+    "periodDebit": "100",
+    "periodCredit": "100",
+    "closingDebit": "100",
+    "closingCredit": "100"
+  },
+  "generalLedger": {
+    "totalCount": 1
+  },
+  "databaseChecks": {
+    "periodState": "Open:1",
+    "accountRows": "3",
+    "createRequestedAudit": "3",
+    "createdAudit": "3",
+    "createdOutbox": "3",
+    "createReceipt": "3",
+    "postedJournals": "1",
+    "newAccountJournal": "2",
+    "nonpostable": "t",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  }
+}

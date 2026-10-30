@@ -1,0 +1,154 @@
+<section class="panel trial-balance">
+  <h1>{{i18n.t('generalLedger')}}</h1>
+  <a
+    id="gl-trial-balance"
+    [routerLink]="['/finance',tenant,company,'trial-balance']"
+    [queryParams]="{startDate:startDate,endDate:endDate}"
+    >{{i18n.t('trialBalance')}}</a
+  >
+  <p>{{i18n.t('ledgerSemantics')}}</p>
+  <form class="report-range" (submit)="run($event)">
+    <label
+      >{{i18n.t('account')}}<select
+        id="gl-account"
+        required
+        [value]="accountId"
+        (change)="accountId=$any($event.target).value;changed()"
+      >
+        <option value="">—</option>
+        @for(a of accounts();track a.id){
+        <option [value]="a.id" [selected]="a.id===accountId">{{a.code}} — {{a.name}}</option>
+        }
+      </select></label
+    >
+    <label
+      >{{i18n.t('startDate')}}<input
+        id="gl-start"
+        required
+        type="date"
+        [value]="startDate"
+        (input)="startDate=$any($event.target).value;changed()"
+    /></label>
+    <label
+      >{{i18n.t('endDate')}}<input
+        id="gl-end"
+        required
+        type="date"
+        [value]="endDate"
+        (input)="endDate=$any($event.target).value;changed()"
+    /></label>
+    <label
+      >{{i18n.t('pageSize')}}<select
+        id="gl-size"
+        [value]="limit"
+        (change)="limit=+$any($event.target).value;changed()"
+      >
+        @for(size of [1,10,50,100,200];track size){
+        <option [value]="size" [selected]="size===limit">{{size}}</option>
+        }
+      </select></label
+    >
+    <button
+      id="gl-run"
+      type="submit"
+      class="primary"
+      [disabled]="busy() || !authorization.can('Finance.Journal.View')"
+    >
+      {{i18n.t('runReport')}}
+    </button>
+  </form>
+  @if(busy()){
+  <p id="gl-loading" role="status">{{i18n.t('busy')}}</p>
+  } @if(error()){
+  <p id="gl-error" role="alert">{{error()}}</p>
+  } @if(report();as r){
+  <h2>{{r.accountCode}} — {{r.accountName}}</h2>
+  <p>
+    {{i18n.t('currency')}}: {{r.currency}} · <span dir="ltr">{{r.startDate}} — {{r.endDate}}</span>
+  </p>
+  <p>
+    {{i18n.t('openingBalance')}}: <strong id="gl-opening" dir="ltr">{{r.openingBalance}}</strong>
+  </p>
+  @if(r.reconciliation.passed){
+  <p id="gl-reconciled" role="status">{{i18n.t('ledgerReconciled')}}</p>
+  }@else{
+  <div id="gl-warning" class="report-warning" role="alert">
+    <p>{{i18n.t('ledgerFailure')}}</p>
+    <ul>
+      @for(check of r.reconciliation.checks;track check.code){@if(!check.passed){
+      <li>
+        <code>{{check.code}}</code>: {{i18n.t('expected')}}
+        <span dir="ltr">{{check.expected}}</span> / {{i18n.t('actual')}}
+        <span dir="ltr">{{check.actual}}</span>
+      </li>
+      }}
+    </ul>
+  </div>
+  } @if(r.movements.length===0){
+  <p id="gl-empty">{{i18n.t('ledgerEmpty')}}</p>
+  }
+  <div class="table-scroll" tabindex="0" [attr.aria-label]="i18n.t('generalLedger')">
+    <table id="general-ledger-table" class="trial-balance-table">
+      <thead>
+        <tr>
+          <th>{{i18n.t('postingDate')}}</th>
+          <th>{{i18n.t('journalNumber')}}</th>
+          <th>{{i18n.t('reference')}}</th>
+          <th>{{i18n.t('journalDescription')}}</th>
+          <th>{{i18n.t('debit')}}</th>
+          <th>{{i18n.t('credit')}}</th>
+          <th>{{i18n.t('runningBalance')}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(line of r.movements;track line.lineId){
+        <tr [attr.data-line-id]="line.lineId">
+          <td dir="ltr">{{line.postingDate}}</td>
+          <td>
+            <a
+              class="gl-journal"
+              [routerLink]="['/finance',tenant,company,'journals',line.journalId]"
+              [queryParams]="{glAccount:r.accountId,startDate:r.startDate,endDate:r.endDate,offset:r.offset,limit:r.limit}"
+              >{{line.journalNumber}}</a
+            >
+          </td>
+          <td>{{line.reference}}</td>
+          <td>{{line.journalDescription}}<br />{{line.description}}</td>
+          <td dir="ltr">{{line.debit}}</td>
+          <td dir="ltr">{{line.credit}}</td>
+          <td class="gl-running" dir="ltr">{{line.runningBalance}}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <p>
+    {{i18n.t('periodMovement')}}: {{i18n.t('debit')}}
+    <strong id="gl-debit" dir="ltr">{{r.periodDebit}}</strong> · {{i18n.t('credit')}}
+    <strong id="gl-credit" dir="ltr">{{r.periodCredit}}</strong>
+  </p>
+  <p>
+    {{i18n.t('closingBalance')}}: <strong id="gl-closing" dir="ltr">{{r.closingBalance}}</strong>
+  </p>
+  <div role="navigation" [attr.aria-label]="i18n.t('pages')">
+    <button
+      id="gl-prev"
+      [disabled]="busy() || r.offset===0"
+      (click)="page(r.offset-r.limit<0?0:r.offset-r.limit)"
+    >
+      {{i18n.t('previous')}}
+    </button>
+    <span id="gl-count" dir="ltr"
+      >{{r.movements.length ? r.offset+1 : 0}}–{{r.offset+r.movements.length}} /
+      {{r.totalCount}}</span
+    >
+    <button
+      id="gl-next"
+      [disabled]="busy() || r.offset+r.movements.length>=r.totalCount"
+      (click)="page(r.offset+r.limit)"
+    >
+      {{i18n.t('next')}}
+    </button>
+  </div>
+  }
+</section>

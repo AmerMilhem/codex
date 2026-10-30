@@ -1,0 +1,45 @@
+{
+  "events": [
+    {
+      "step": "input0",
+      "wip": 500
+    },
+    {
+      "step": "receipt0",
+      "quantity": 40,
+      "value": 480,
+      "wip": 20
+    },
+    {
+      "step": "input1",
+      "wip": 320
+    },
+    {
+      "step": "receipt1",
+      "quantity": 30,
+      "value": 320,
+      "wip": 0
+    },
+    {
+      "step": "input2",
+      "wip": 200
+    },
+    {
+      "step": "receipt2",
+      "quantity": 30,
+      "value": 200,
+      "wip": 0
+    }
+  ],
+  "total": 1000,
+  "actual": 1000,
+  "deltas": [
+    -80,
+    -20,
+    100
+  ],
+  "inventoryCorrection": 40.0,
+  "cogsCorrection": -40.0,
+  "wipFacts": 0.000000,
+  "gl": 0.000000
+}

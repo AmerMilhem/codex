@@ -1,0 +1,122 @@
+{
+  "utc": "2026-10-18T09:56:13Z",
+  "sources": [
+    {
+      "name": "angular-compiler",
+      "url": "https://registry.npmjs.org/@angular/compiler-cli/22.2.3",
+      "status": 200,
+      "sha256": "189bf4bede70a863c891cb8a5a0e3fc114dd11e2206a0cdbaa6d9f9878e021ab",
+      "bytes": 2949,
+      "file": "angular-compiler.source"
+    },
+    {
+      "name": "angular-core",
+      "url": "https://registry.npmjs.org/@angular/core/22.2.3",
+      "status": 200,
+      "sha256": "df93a83c0de11d42390423f37a482a9fbf240ff1683985c94eb81c8c6d7d99af",
+      "bytes": 3351,
+      "file": "angular-core.source"
+    },
+    {
+      "name": "angular-cli",
+      "url": "https://registry.npmjs.org/@angular/cli/22.2.3",
+      "status": 200,
+      "sha256": "b9d67788ba77b0bb727d9471863820b5401e8920be0297730f6862265b0cbe44",
+      "bytes": 2489,
+      "file": "angular-cli.source"
+    },
+    {
+      "name": "typescript",
+      "url": "https://registry.npmjs.org/typescript/6.0.3",
+      "status": 200,
+      "sha256": "c3b095f0ba61c854843c4965598d3d1de8eb8e3d41cfec93c5ffbfd8bde537cc",
+      "bytes": 3772,
+      "file": "typescript.source"
+    },
+    {
+      "name": "playwright",
+      "url": "https://registry.npmjs.org/@playwright/test/1.64.1",
+      "status": 200,
+      "sha256": "c25ebb098c5a7c88dc09e3e82ca58cdaa1d7ab217e1de99ff8c2b5537777fa24",
+      "bytes": 2266,
+      "file": "playwright.source"
+    },
+    {
+      "name": "node-schedule",
+      "url": "https://raw.githubusercontent.com/nodejs/Release/main/schedule.json",
+      "status": 200,
+      "sha256": "1cf0432ceb9dfde7f1fd4cce43206519942cfdfad5a26039c2f4bb20fde8549c",
+      "bytes": 3255,
+      "file": "node-schedule.source"
+    },
+    {
+      "name": "angular-version-policy",
+      "url": "https://raw.githubusercontent.com/angular/angular/main/adev/src/content/reference/versions.md",
+      "status": 200,
+      "sha256": "875d43ccefd6435b157f9766e9ffdbab7a2efce407425bc97899bcf974b869e5",
+      "bytes": 10101,
+      "file": "angular-version-policy.source"
+    },
+    {
+      "name": "dotnet-policy",
+      "url": "https://raw.githubusercontent.com/dotnet/core/main/release-notes/10.0/README.md",
+      "status": 200,
+      "sha256": "ab233a44fa955064c1196a6ccba027772ebd147ff6005ae3af085c793742e862",
+      "bytes": 5969,
+      "file": "dotnet-policy.source"
+    },
+    {
+      "name": "postgres-tag",
+      "url": "https://raw.githubusercontent.com/postgres/postgres/REL_18_2/configure.ac",
+      "status": 200,
+      "sha256": "90ce19691b5c18e79f05a8f1278c8cd8da586a7ac34ff72455d1069a8ed64f8a",
+      "bytes": 89274,
+      "file": "postgres-tag.source"
+    },
+    {
+      "name": "postgres-license",
+      "url": "https://raw.githubusercontent.com/postgres/postgres/REL_18_2/COPYRIGHT",
+      "status": 200,
+      "sha256": "3d6af92ff8a4c2cdf69afb1cf44edea727922f5cd0cf8b5f72b11cdecac8fdfd",
+      "bytes": 1198,
+      "file": "postgres-license.source"
+    },
+    {
+      "name": "flutter-release-archive",
+      "url": "https://storage.googleapis.com/flutter_infra_release/flutter/releases/releases_linux.json",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "flutter-license",
+      "url": "https://raw.githubusercontent.com/flutter/flutter/stable/LICENSE",
+      "status": 200,
+      "sha256": "a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20",
+      "bytes": 1519,
+      "file": "flutter-license.source"
+    },
+    {
+      "name": "dart-license",
+      "url": "https://raw.githubusercontent.com/dart-lang/sdk/main/LICENSE",
+      "status": 200,
+      "sha256": "2cfa3ee8e7512e6d44c854b986510810fadc815f93f890373b3a81c1b6ccd256",
+      "bytes": 1502,
+      "file": "dart-license.source"
+    },
+    {
+      "name": "testcontainers-license",
+      "url": "https://raw.githubusercontent.com/testcontainers/testcontainers-dotnet/develop/LICENSE",
+      "status": 200,
+      "sha256": "defe81b29379cd310c24132e904947a6e9083a41a51e2ae79e43c63393dced3d",
+      "bytes": 1107,
+      "file": "testcontainers-license.source"
+    },
+    {
+      "name": "node-license",
+      "url": "https://raw.githubusercontent.com/nodejs/node/v24.19.0/LICENSE",
+      "status": 200,
+      "sha256": "148eacf7863ef4329224a29398623077200a27194aa075569faf4a0a85566ca5",
+      "bytes": 157606,
+      "file": "node-license.source"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+name: erp-foundation-v1
+services:
+  postgres:
+    image: postgres:18.2@sha256:a688ae5c99f86c1424e046ace0de890608cc0ddb5ec8ef72a6ff8305fdc8f4d2
+    container_name: erp-foundation-dev
+    labels:
+      purpose: erp-foundation-development
+    environment:
+      POSTGRES_DB: erp_foundation
+      POSTGRES_PASSWORD: ${ERP_LOCAL_ADMIN_PASSWORD:?Generate the ignored local environment file first}
+    ports: ["127.0.0.1:55433:5432"]
+    volumes: ["foundation-data:/var/lib/postgresql"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d erp_foundation"]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+volumes:
+  foundation-data:

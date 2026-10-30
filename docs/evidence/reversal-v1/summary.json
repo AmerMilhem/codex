@@ -1,0 +1,66 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-21T14:31:37.917084+00:00",
+  "scope": "Finance Manual Journal Reversal; all previous regression gates required",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "4da17909f63d55d9d8e6a4d05bbda9bd59f2326b25ca95b22d36b151387eceef"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "executed": 95,
+      "passed": 95,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "a105dd47ef16e2c07f060cfdc07d77592cdf0b1e1b833323d9cd4c5dd63108a9"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "executed": 45,
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "1c7aeb641fa43b839cbeef2e618489381720f7dc8fdf300a8375f4b1c07b367a"
+    }
+  ],
+  "dotnetTotal": 149,
+  "angularUnit": 36,
+  "automatedTestsTotal": 185,
+  "newAutomatedTests": 34,
+  "browserAcceptanceChecksTotal": 96,
+  "newBrowserAcceptanceChecks": 22,
+  "reversalBrowserChecks": 22,
+  "assertionCounting": "xUnit theory rows plus Vitest tests; browser acceptance checks are counted separately",
+  "goldenDatabaseChecks": {
+    "originalUnchanged": true,
+    "originalPeriod": "Closed",
+    "reversalPeriod": "Open",
+    "postedJournals": "2",
+    "links": "1",
+    "reversalRequestedAudit": "1",
+    "reversedAudit": "1",
+    "postedAudit": "2",
+    "reversedOutbox": "1",
+    "postedOutbox": "2",
+    "reversalReceipts": "1",
+    "unbalanced": "0"
+  },
+  "migrationsAdded": 1,
+  "tablesAdded": 1,
+  "explicitIndexesAdded": 1,
+  "architecture": "PASS",
+  "securityAudits": "No reported vulnerabilities at execution time",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false,
+  "remainingExternalGates": [
+    "production identity/MFA",
+    "production deployment/operations",
+    "Jordan/JoFotara/legal/retention/residency verification"
+  ]
+}

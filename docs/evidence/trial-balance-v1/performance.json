@@ -1,0 +1,70 @@
+{
+  "dataset": {
+    "journals": 500,
+    "lines": 100000,
+    "accounts": 100,
+    "openingJournals": 250,
+    "periodJournals": 250
+  },
+  "fixturePreparationMilliseconds": 66400.329,
+  "runs": 5,
+  "sqlProjectionMilliseconds": [
+    25.5481,
+    25.7709,
+    25.3398,
+    26.0724,
+    27.5519
+  ],
+  "efProjectionMilliseconds": [
+    29.4492,
+    42.6816,
+    28.2793,
+    27.8092,
+    26.8361
+  ],
+  "fullReportWithIndependentControlMilliseconds": [
+    175.2005,
+    186.4663,
+    190.9076,
+    174.5998,
+    173.7511
+  ],
+  "medians": {
+    "sqlProjection": 25.7709,
+    "efProjection": 28.2793,
+    "fullReport": 175.2005
+  },
+  "rowsReturned": 100,
+  "scanTupleVisits": 101321,
+  "scanDefinition": "Sum of scan-node (Actual Rows \u002B Rows Removed by Filter) * Actual Loops; tuple visits across tables, not unique ledger lines",
+  "postgresExecutionMilliseconds": 48.216,
+  "scanNodes": [
+    {
+      "node": "Seq Scan",
+      "relation": "journal_lines",
+      "index": null,
+      "rowsPerLoop": 50000,
+      "loops": 2,
+      "removedPerLoop": 44
+    },
+    {
+      "node": "Seq Scan",
+      "relation": "journal_entries",
+      "index": null,
+      "rowsPerLoop": 500,
+      "loops": 2,
+      "removedPerLoop": 44
+    },
+    {
+      "node": "Seq Scan",
+      "relation": "accounts",
+      "index": null,
+      "rowsPerLoop": 103,
+      "loops": 1,
+      "removedPerLoop": 42
+    }
+  ],
+  "strategy": "Explicit parameterized Npgsql SQL: exact NUMERIC-to-text aggregates, explicit independent controls, no new dependency; EF projection measured as an alternative",
+  "indexesAdded": 0,
+  "limitations": "Local warm-cache single-client measurements, not production capacity or an SLA. Full historical opening must read eligible ledger history."
+}

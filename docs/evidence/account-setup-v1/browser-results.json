@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Company begins without SQL-seeded accounts or fiscal periods",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL account creation form",
+      "status": "PASS"
+    },
+    {
+      "name": "Lost response follows committed account creation",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry freezes code name and posting flag",
+      "status": "PASS"
+    },
+    {
+      "name": "Account retry keeps idempotency key and exact payload",
+      "status": "PASS"
+    },
+    {
+      "name": "Expense account starts Active with creator and one identity",
+      "status": "PASS"
+    },
+    {
+      "name": "Cash is postable and header is Active but non-postable",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid code is explained in Arabic without request",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate code rejected at UI/API boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "Account Create remains independent from Journal Post permission",
+      "status": "PASS"
+    },
+    {
+      "name": "Fiscal period created through Slice 6 UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted Journal displays both UI-created account codes",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance shows both new accounts and balances",
+      "status": "PASS"
+    },
+    {
+      "name": "GL detail reconciles expense account",
+      "status": "PASS"
+    },
+    {
+      "name": "Cash GL and trial balance agree",
+      "status": "PASS"
+    },
+    {
+      "name": "Server rejects non-postable account at Post",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR account list has same accounts",
+      "status": "PASS"
+    },
+    {
+      "name": "English duplicate error remains understandable",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "periodId": "01a16ecb-7150-732a-ad4e-11e0a794a544",
+  "journalId": "01a16ecb-72c0-7d27-8013-7f2f5a62f1cf",
+  "expenseId": "01a16ecb-6d11-70f2-9736-1097979aab64",
+  "cashId": "01a16ecb-6ecd-74f3-a2b2-6a30bcd2b70a",
+  "headerId": "01a16ecb-6f53-7b84-ab59-cd25f22e3bcd",
+  "trialBalance": {
+    "openingDebit": "0",
+    "openingCredit": "0",
+    "periodDebit": "100",
+    "periodCredit": "100",
+    "closingDebit": "100",
+    "closingCredit": "100"
+  },
+  "generalLedger": {
+    "totalCount": 1
+  }
+}

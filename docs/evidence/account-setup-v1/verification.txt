@@ -1,0 +1,177 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+Exact pins, lock coverage and EF alignment verified.
+  Erp.Kernel -> /workspace/codex/src/BuildingBlocks/Erp.Kernel/bin/Release/net10.0/Erp.Kernel.dll
+  Erp.Finance.Domain -> /workspace/codex/src/Modules/Finance/Erp.Finance.Domain/bin/Release/net10.0/Erp.Finance.Domain.dll
+  Erp.Inventory.Domain -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Domain/bin/Release/net10.0/Erp.Inventory.Domain.dll
+  Erp.Inventory.Contracts -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Contracts/bin/Release/net10.0/Erp.Inventory.Contracts.dll
+  Erp.Manufacturing.Contracts -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Contracts/bin/Release/net10.0/Erp.Manufacturing.Contracts.dll
+  Erp.Finance.Contracts -> /workspace/codex/src/Modules/Finance/Erp.Finance.Contracts/bin/Release/net10.0/Erp.Finance.Contracts.dll
+  Erp.Application.Abstractions -> /workspace/codex/src/BuildingBlocks/Erp.Application.Abstractions/bin/Release/net10.0/Erp.Application.Abstractions.dll
+  Erp.Manufacturing.Domain -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Domain/bin/Release/net10.0/Erp.Manufacturing.Domain.dll
+  Erp.Platform.Infrastructure -> /workspace/codex/src/Platform/Erp.Platform.Infrastructure/bin/Release/net10.0/Erp.Platform.Infrastructure.dll
+  Erp.Procurement.Contracts -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Contracts/bin/Release/net10.0/Erp.Procurement.Contracts.dll
+  Erp.Procurement.Domain -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Domain/bin/Release/net10.0/Erp.Procurement.Domain.dll
+  Erp.Inventory.Application -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Application/bin/Release/net10.0/Erp.Inventory.Application.dll
+  Erp.Sales.Contracts -> /workspace/codex/src/Modules/Sales/Erp.Sales.Contracts/bin/Release/net10.0/Erp.Sales.Contracts.dll
+  Erp.Inventory.Infrastructure -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Infrastructure/bin/Release/net10.0/Erp.Inventory.Infrastructure.dll
+  Erp.Finance.Application -> /workspace/codex/src/Modules/Finance/Erp.Finance.Application/bin/Release/net10.0/Erp.Finance.Application.dll
+  Erp.Sales.Domain -> /workspace/codex/src/Modules/Sales/Erp.Sales.Domain/bin/Release/net10.0/Erp.Sales.Domain.dll
+  Erp.Finance.Infrastructure -> /workspace/codex/src/Modules/Finance/Erp.Finance.Infrastructure/bin/Release/net10.0/Erp.Finance.Infrastructure.dll
+  Erp.Workflow.Domain -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Domain/bin/Release/net10.0/Erp.Workflow.Domain.dll
+  Erp.Procurement.Application -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Application/bin/Release/net10.0/Erp.Procurement.Application.dll
+  Erp.Migrations -> /workspace/codex/src/Hosts/Erp.Migrations/bin/Release/net10.0/Erp.Migrations.dll
+  Erp.Localization.Domain -> /workspace/codex/src/Modules/Localization/Erp.Localization.Domain/bin/Release/net10.0/Erp.Localization.Domain.dll
+  Erp.Workflow.Contracts -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Contracts/bin/Release/net10.0/Erp.Workflow.Contracts.dll
+  Erp.Localization.Contracts -> /workspace/codex/src/Modules/Localization/Erp.Localization.Contracts/bin/Release/net10.0/Erp.Localization.Contracts.dll
+  Erp.Workflow.Application -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Application/bin/Release/net10.0/Erp.Workflow.Application.dll
+  Erp.Localization.Application -> /workspace/codex/src/Modules/Localization/Erp.Localization.Application/bin/Release/net10.0/Erp.Localization.Application.dll
+  Erp.Procurement.Infrastructure -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Infrastructure/bin/Release/net10.0/Erp.Procurement.Infrastructure.dll
+  Erp.Worker -> /workspace/codex/src/Hosts/Erp.Worker/bin/Release/net10.0/Erp.Worker.dll
+  Erp.Localization.Infrastructure -> /workspace/codex/src/Modules/Localization/Erp.Localization.Infrastructure/bin/Release/net10.0/Erp.Localization.Infrastructure.dll
+  Erp.Manufacturing.Application -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Application/bin/Release/net10.0/Erp.Manufacturing.Application.dll
+  Erp.Sales.Application -> /workspace/codex/src/Modules/Sales/Erp.Sales.Application/bin/Release/net10.0/Erp.Sales.Application.dll
+  Erp.ArchitectureTests -> /workspace/codex/tests/Erp.ArchitectureTests/bin/Release/net10.0/Erp.ArchitectureTests.dll
+  Erp.Sales.Infrastructure -> /workspace/codex/src/Modules/Sales/Erp.Sales.Infrastructure/bin/Release/net10.0/Erp.Sales.Infrastructure.dll
+  Erp.Workflow.Infrastructure -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Infrastructure/bin/Release/net10.0/Erp.Workflow.Infrastructure.dll
+  Erp.Manufacturing.Infrastructure -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/bin/Release/net10.0/Erp.Manufacturing.Infrastructure.dll
+  Erp.CrashHarness -> /workspace/codex/tests/Erp.CrashHarness/bin/Release/net10.0/Erp.CrashHarness.dll
+  Erp.UnitTests -> /workspace/codex/tests/Erp.UnitTests/bin/Release/net10.0/Erp.UnitTests.dll
+  Erp.Api -> /workspace/codex/src/Hosts/Erp.Api/bin/Release/net10.0/Erp.Api.dll
+  Erp.IntegrationTests -> /workspace/codex/tests/Erp.IntegrationTests/bin/Release/net10.0/Erp.IntegrationTests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.84
+Test run for /workspace/codex/tests/Erp.UnitTests/bin/Release/net10.0/Erp.UnitTests.dll (.NETCoreApp,Version=v10.0)
+Test run for /workspace/codex/tests/Erp.IntegrationTests/bin/Release/net10.0/Erp.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+Test run for /workspace/codex/tests/Erp.ArchitectureTests/bin/Release/net10.0/Erp.ArchitectureTests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+Results File: /workspace/codex/artifacts/tests/_73cef1084800_2026-10-24_16_40_16_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    63, Skipped:     0, Total:    63, Duration: 92 ms - Erp.UnitTests.dll (net10.0)
+Results File: /workspace/codex/artifacts/tests/_73cef1084800_2026-10-24_16_40_16_net10.0[1].trx
+
+Passed!  - Failed:     0, Passed:     9, Skipped:     0, Total:     9, Duration: 79 ms - Erp.ArchitectureTests.dll (net10.0)
+Results File: /workspace/codex/artifacts/tests/_73cef1084800_2026-10-24_16_40_23_net10.0.trx
+
+Passed!  - Failed:     0, Passed:   128, Skipped:     0, Total:   128, Duration: 1 m 16 s - Erp.IntegrationTests.dll (net10.0)
+
+> erp-web-foundation@0.1.0 lint
+> tsc --noEmit -p tsconfig.app.json
+
+
+> erp-web-foundation@0.1.0 format:check
+> prettier --check src angular.json *.json *.mjs
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> erp-web-foundation@0.1.0 build
+> ng build
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names          |  Raw size | Estimated transfer size
+main.js             | main           | 266.91 kB |                72.77 kB
+styles.css          | styles         |   4.24 kB |                 1.31 kB
+
+                    | Initial total  | 271.15 kB |                74.07 kB
+
+Lazy chunk files    | Names          |  Raw size | Estimated transfer size
+chunk-BVAOOlBU.js   | journals       |  21.55 kB |                 4.95 kB
+chunk-CV8VcwQt.js   | general-ledger |   9.80 kB |                 2.91 kB
+chunk-BnjKP9cH.js   | fiscal-periods |   9.75 kB |                 2.67 kB
+chunk-YFHC0MmT.js   | trial-balance  |   7.66 kB |                 2.27 kB
+chunk-BgtLfR0v.js   | account-setup  |   5.94 kB |                 1.92 kB
+chunk-TFtqFitx.js   | workspace      |   3.98 kB |                 1.24 kB
+chunk-BvLVeOO1.js   | -              |   1.89 kB |               726 bytes
+chunk-BXIYqjR0.js   | home           | 682 bytes |               682 bytes
+
+Application bundle generation complete. [1.928 seconds] - 2026-10-24T16:41:42.514Z
+
+Output location: /workspace/codex/src/Clients/Web/dist/web
+
+
+> erp-web-foundation@0.1.0 test
+> ng test --watch=false
+
+❯ Building...
+✔ Building...
+Application bundle generation complete. [1.634 seconds] - 2026-10-24T16:41:44.659Z
+
+
+ RUN  v4.1.12 /workspace/codex/src/Clients/Web
+
+ ✓ |web| src/features/finance/general-ledger.spec.ts (9 tests) 157ms
+ ✓ |web| src/features/finance/trial-balance.spec.ts (8 tests) 170ms
+ ✓ |web| src/features/finance/journal-reversal.spec.ts (8 tests) 177ms
+ ✓ |web| src/features/finance/account-setup.spec.ts (6 tests) 59ms
+ ✓ |web| src/features/finance/journals.spec.ts (6 tests) 69ms
+ ✓ |web| src/features/finance/fiscal-periods.spec.ts (8 tests) 69ms
+ ✓ |web| src/core/foundation.spec.ts (5 tests) 17ms
+
+ Test Files  7 passed (7)
+      Tests  50 passed (50)
+   Start at  16:41:44
+   Duration  1.15s (transform 316ms, setup 718ms, import 472ms, tests 718ms, environment 2.62s)
+
+JSON report written to /workspace/codex/artifacts/web/unit-results.json
+
+> erp-web-foundation@0.1.0 test:browser
+> node browser-tests.mjs
+
+{"status": "PASS", "browserChecks": 19, "databaseChecks": {"postedJournals": "1", "postedAudit": "1", "outbox": "1", "receipt": "1", "inbox": "1", "deliveredTrace": "1", "correlationChain": "1", "globalUnbalanced": "0", "totals": "100.000000 / 100.000000"}}
+{"status": "PASS", "browserChecks": 22, "databaseChecks": {"postedJournals": "4", "draftJournals": "1", "postingOutboxRows": "4", "postingReceipts": "4", "periodDebit": "140.000000", "periodCredit": "140.000000", "globalUnbalanced": "0", "readOnlyStateUnchanged": true}}
+{"status": "PASS", "browserChecks": 24, "databaseChecks": {"postedJournals": "4", "draftJournals": "1", "postingOutboxRows": "4", "postingReceipts": "4", "periodDebit": "65.000000", "periodCredit": "65.000000", "globalUnbalanced": "0", "readOnlyStateUnchanged": true}}
+{"status": "PASS", "browserChecks": 22, "databaseChecks": {"originalUnchanged": true, "originalPeriod": "Closed", "reversalPeriod": "Open", "postedJournals": "2", "links": "1", "reversalRequestedAudit": "1", "reversedAudit": "1", "postedAudit": "2", "reversedOutbox": "1", "postedOutbox": "2", "reversalReceipts": "1", "unbalanced": "0"}}
+{"status": "PASS", "browserChecks": 16, "databaseChecks": {"periodState": "Closed:2", "requestedAudit": "1", "closedAudit": "1", "outbox": "1", "receipt": "1", "postedJournals": "1", "originalUnchanged": "1", "unbalanced": "0", "rlsForced": "t"}}
+{"status": "PASS", "browserChecks": 24, "databaseChecks": {"periodState": "Closed:2", "createRequestedAudit": "1", "createdAudit": "1", "createdOutbox": "1", "createReceipt": "1", "closeOutbox": "1", "postedJournals": "2", "originalUnchanged": "1", "unbalanced": "0", "rlsForced": "t"}}
+{"status": "PASS", "browserChecks": 19, "databaseChecks": {"periodState": "Open:1", "accountRows": "3", "createRequestedAudit": "3", "createdAudit": "3", "createdOutbox": "3", "createReceipt": "3", "postedJournals": "1", "newAccountJournal": "2", "nonpostable": "t", "unbalanced": "0", "rlsForced": "t"}}
+NuGet vulnerability gate passed.
+  Erp.Kernel -> /workspace/codex/src/BuildingBlocks/Erp.Kernel/bin/Release/net10.0/Erp.Kernel.dll
+  Erp.Application.Abstractions -> /workspace/codex/src/BuildingBlocks/Erp.Application.Abstractions/bin/Release/net10.0/Erp.Application.Abstractions.dll
+  Erp.Finance.Contracts -> /workspace/codex/src/Modules/Finance/Erp.Finance.Contracts/bin/Release/net10.0/Erp.Finance.Contracts.dll
+  Erp.Inventory.Contracts -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Contracts/bin/Release/net10.0/Erp.Inventory.Contracts.dll
+  Erp.Platform.Infrastructure -> /workspace/codex/src/Platform/Erp.Platform.Infrastructure/bin/Release/net10.0/Erp.Platform.Infrastructure.dll
+  Erp.Sales.Contracts -> /workspace/codex/src/Modules/Sales/Erp.Sales.Contracts/bin/Release/net10.0/Erp.Sales.Contracts.dll
+  Erp.Sales.Domain -> /workspace/codex/src/Modules/Sales/Erp.Sales.Domain/bin/Release/net10.0/Erp.Sales.Domain.dll
+  Erp.Finance.Domain -> /workspace/codex/src/Modules/Finance/Erp.Finance.Domain/bin/Release/net10.0/Erp.Finance.Domain.dll
+  Erp.Inventory.Domain -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Domain/bin/Release/net10.0/Erp.Inventory.Domain.dll
+  Erp.Procurement.Contracts -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Contracts/bin/Release/net10.0/Erp.Procurement.Contracts.dll
+  Erp.Localization.Domain -> /workspace/codex/src/Modules/Localization/Erp.Localization.Domain/bin/Release/net10.0/Erp.Localization.Domain.dll
+  Erp.Localization.Contracts -> /workspace/codex/src/Modules/Localization/Erp.Localization.Contracts/bin/Release/net10.0/Erp.Localization.Contracts.dll
+  Erp.Procurement.Domain -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Domain/bin/Release/net10.0/Erp.Procurement.Domain.dll
+  Erp.Workflow.Domain -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Domain/bin/Release/net10.0/Erp.Workflow.Domain.dll
+  Erp.Localization.Application -> /workspace/codex/src/Modules/Localization/Erp.Localization.Application/bin/Release/net10.0/Erp.Localization.Application.dll
+  Erp.Finance.Application -> /workspace/codex/src/Modules/Finance/Erp.Finance.Application/bin/Release/net10.0/Erp.Finance.Application.dll
+  Erp.Manufacturing.Domain -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Domain/bin/Release/net10.0/Erp.Manufacturing.Domain.dll
+  Erp.Inventory.Application -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Application/bin/Release/net10.0/Erp.Inventory.Application.dll
+  Erp.Workflow.Contracts -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Contracts/bin/Release/net10.0/Erp.Workflow.Contracts.dll
+  Erp.Manufacturing.Contracts -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Contracts/bin/Release/net10.0/Erp.Manufacturing.Contracts.dll
+  Erp.Inventory.Infrastructure -> /workspace/codex/src/Modules/Inventory/Erp.Inventory.Infrastructure/bin/Release/net10.0/Erp.Inventory.Infrastructure.dll
+  Erp.Localization.Infrastructure -> /workspace/codex/src/Modules/Localization/Erp.Localization.Infrastructure/bin/Release/net10.0/Erp.Localization.Infrastructure.dll
+  Erp.Finance.Infrastructure -> /workspace/codex/src/Modules/Finance/Erp.Finance.Infrastructure/bin/Release/net10.0/Erp.Finance.Infrastructure.dll
+  Erp.Procurement.Application -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Application/bin/Release/net10.0/Erp.Procurement.Application.dll
+  Erp.Manufacturing.Application -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Application/bin/Release/net10.0/Erp.Manufacturing.Application.dll
+  Erp.Procurement.Infrastructure -> /workspace/codex/src/Modules/Procurement/Erp.Procurement.Infrastructure/bin/Release/net10.0/Erp.Procurement.Infrastructure.dll
+  Erp.Sales.Application -> /workspace/codex/src/Modules/Sales/Erp.Sales.Application/bin/Release/net10.0/Erp.Sales.Application.dll
+  Erp.Workflow.Application -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Application/bin/Release/net10.0/Erp.Workflow.Application.dll
+  Erp.Workflow.Infrastructure -> /workspace/codex/src/Modules/Workflow/Erp.Workflow.Infrastructure/bin/Release/net10.0/Erp.Workflow.Infrastructure.dll
+  Erp.Sales.Infrastructure -> /workspace/codex/src/Modules/Sales/Erp.Sales.Infrastructure/bin/Release/net10.0/Erp.Sales.Infrastructure.dll
+  Erp.Manufacturing.Infrastructure -> /workspace/codex/src/Modules/Manufacturing/Erp.Manufacturing.Infrastructure/bin/Release/net10.0/Erp.Manufacturing.Infrastructure.dll
+  Erp.Api -> /workspace/codex/src/Hosts/Erp.Api/bin/Release/net10.0/Erp.Api.dll
+  Erp.Api -> /workspace/codex/artifacts/api/
+  Erp.Kernel -> /workspace/codex/src/BuildingBlocks/Erp.Kernel/bin/Release/net10.0/Erp.Kernel.dll
+  Erp.Application.Abstractions -> /workspace/codex/src/BuildingBlocks/Erp.Application.Abstractions/bin/Release/net10.0/Erp.Application.Abstractions.dll
+  Erp.Finance.Domain -> /workspace/codex/src/Modules/Finance/Erp.Finance.Domain/bin/Release/net10.0/Erp.Finance.Domain.dll
+  Erp.Finance.Contracts -> /workspace/codex/src/Modules/Finance/Erp.Finance.Contracts/bin/Release/net10.0/Erp.Finance.Contracts.dll
+  Erp.Platform.Infrastructure -> /workspace/codex/src/Platform/Erp.Platform.Infrastructure/bin/Release/net10.0/Erp.Platform.Infrastructure.dll
+  Erp.Finance.Application -> /workspace/codex/src/Modules/Finance/Erp.Finance.Application/bin/Release/net10.0/Erp.Finance.Application.dll
+  Erp.Finance.Infrastructure -> /workspace/codex/src/Modules/Finance/Erp.Finance.Infrastructure/bin/Release/net10.0/Erp.Finance.Infrastructure.dll
+  Erp.Worker -> /workspace/codex/src/Hosts/Erp.Worker/bin/Release/net10.0/Erp.Worker.dll
+  Erp.Worker -> /workspace/codex/artifacts/worker/

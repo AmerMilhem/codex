@@ -1,0 +1,11 @@
+{
+  "context": 200,
+  "anonymous": 401,
+  "crossTenant": 403,
+  "crossCompany": 403,
+  "correlation": "propagated",
+  "secretsPrinted": false,
+  "workerUnknownEvent": "Failed:HANDLER_REJECTED",
+  "localMigrations": "applied",
+  "status": "PASS"
+}

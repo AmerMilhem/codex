@@ -1,0 +1,11 @@
+{
+  "migrationIds": [
+    "20261018141639_ManualJournalV1",
+    "20261020202816_ManualJournalReversalV1",
+    "20261023152528_FiscalPeriodCloseV1",
+    "20261023212645_FiscalPeriodSetupV1",
+    "20261024162900_ChartOfAccountsSetupV1"
+  ],
+  "priorSetupDesignerMatchesApprovedManifest": true,
+  "newMigration": "20261024162900_ChartOfAccountsSetupV1"
+}

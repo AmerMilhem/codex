@@ -1,0 +1,75 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-18T15:37:06.589214+00:00",
+  "scope": "Trial Balance read-only; Foundation and Manual Journal regressions required; no production deployment or compliance claim",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "f2e354d9b1c2e81763b7f28a9ec30cf9f9e9009fbecdf4c343bee5677415aff6"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "executed": 67,
+      "passed": 67,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "0ea93ecbcf1ba838461ddf93ad295c34612e754a1f7c5877d85ef839869e3538"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "executed": 27,
+      "passed": 27,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "4e675b688a950c0aabdb1c2f18690ba5f86061e4255a1514011e8617ae708820"
+    }
+  ],
+  "dotnetTotal": 103,
+  "angularUnit": 19,
+  "automatedTestsTotal": 122,
+  "newAutomatedTests": 28,
+  "browserAcceptanceChecksTotal": 50,
+  "newBrowserAcceptanceChecks": 22,
+  "trialBalanceBrowserChecks": 22,
+  "assertionCounting": "xUnit theory rows + Vitest tests; browser acceptance checks counted separately; SQL controls not counted again",
+  "readOnlyStateUnchanged": true,
+  "goldenDatabaseChecks": {
+    "postedJournals": "4",
+    "draftJournals": "1",
+    "postingOutboxRows": "4",
+    "postingReceipts": "4",
+    "periodDebit": "140.000000",
+    "periodCredit": "140.000000",
+    "globalUnbalanced": "0",
+    "readOnlyStateUnchanged": true
+  },
+  "performanceDataset": {
+    "journals": 500,
+    "lines": 100000,
+    "accounts": 100,
+    "openingJournals": 250,
+    "periodJournals": 250
+  },
+  "performanceMedianMilliseconds": {
+    "sqlProjection": 25.7709,
+    "efProjection": 28.2793,
+    "fullReport": 175.2005
+  },
+  "indexesAdded": 0,
+  "migrationsAdded": 0,
+  "build": "Release clean; 0 warnings/errors",
+  "architecture": "PASS",
+  "securityAudits": "no currently reported vulnerabilities",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false,
+  "remainingExternalGates": [
+    "production identity/MFA",
+    "production deployment/operations",
+    "Jordan/JoFotara/legal/retention/residency verification"
+  ]
+}

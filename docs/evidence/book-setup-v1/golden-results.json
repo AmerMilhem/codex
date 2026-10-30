@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "No operational SQL seed for book period or accounts",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL Book Setup form",
+      "status": "PASS"
+    },
+    {
+      "name": "Book commit survives lost HTTP response",
+      "status": "PASS"
+    },
+    {
+      "name": "Book retry freezes code name and currency",
+      "status": "PASS"
+    },
+    {
+      "name": "Book retry uses original key and canonical payload",
+      "status": "PASS"
+    },
+    {
+      "name": "Book has explicit ID Active status and JOD precision",
+      "status": "PASS"
+    },
+    {
+      "name": "One-book-per-company rule rejects even a different code",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid functional currency rejected at API boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "Journal Post permission cannot create an accounting book",
+      "status": "PASS"
+    },
+    {
+      "name": "New book accepts UI-created fiscal period",
+      "status": "PASS"
+    },
+    {
+      "name": "Company accounts created through Slice 7 UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Book-backed journal validates and posts through UI",
+      "status": "PASS"
+    },
+    {
+      "name": "Book-backed reversal succeeds in Open period",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance remains balanced within sole book",
+      "status": "PASS"
+    },
+    {
+      "name": "GL shows both posted movements within sole book",
+      "status": "PASS"
+    },
+    {
+      "name": "TB and GL reconciliation agree on the new book",
+      "status": "PASS"
+    },
+    {
+      "name": "Book period closes using existing command",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed book period blocks later Post",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period reports remain readable and balanced",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR Book Setup shows the same book",
+      "status": "PASS"
+    },
+    {
+      "name": "English duplicate explanation is understandable",
+      "status": "PASS"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "bookId": "01a16fd3-6a00-7c86-97a0-8f0c14a78c64",
+  "periodId": "01a16fd3-6ce6-713d-946d-fee887d5181b",
+  "journalId": "01a16fd3-6faa-760b-98dd-91715eef5a5b",
+  "expenseId": "01a16fd3-6e5d-70ae-8d83-b2d05f8f9e87",
+  "cashId": "01a16fd3-6dde-74b2-a321-c49f0661ed3e",
+  "trialBalance": {
+    "openingDebit": "0",
+    "openingCredit": "0",
+    "periodDebit": "200",
+    "periodCredit": "200",
+    "closingDebit": "0",
+    "closingCredit": "0"
+  },
+  "generalLedger": {
+    "totalCount": 2
+  },
+  "databaseChecks": {
+    "bookState": "Active:JOD:3",
+    "bookRows": "1",
+    "bookRequestedAudit": "1",
+    "bookCreatedAudit": "1",
+    "bookOutbox": "1",
+    "bookReceipt": "1",
+    "periodState": "Closed:2",
+    "accountRows": "2",
+    "reversalLinks": "1",
+    "postedJournals": "2",
+    "newAccountJournal": "2",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  }
+}

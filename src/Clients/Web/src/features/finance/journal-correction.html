@@ -1,0 +1,90 @@
+<section class="panel">
+  <h1>{{i18n.t('correctJournal')}}</h1>
+  @if(error()){
+  <p role="alert">{{error()}}</p>
+  } @if(original(); as o){
+  <h2>
+    {{i18n.t('originalJournal')}}:
+    <a [routerLink]="['/finance',tenant,company,'journals',id]">{{o.journalNumber}}</a>
+  </h2>
+  <table id="correction-original-lines">
+    <tbody>
+      @for(line of o.lines;track line.id){
+      <tr>
+        <td>{{line.accountCode}} {{line.accountName}}</td>
+        <td>{{line.debit}}</td>
+        <td>{{line.credit}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <p>{{o.totalDebit}} / {{o.totalCredit}} — {{o.postingDate}}</p>
+  @if(eligible){
+  <form id="correction-form" (submit)="submit($event)">
+    <fieldset [disabled]="busy() || !!pending">
+      <label
+        >{{i18n.t('correctionDate')}}<input
+          id="correction-date"
+          type="date"
+          required
+          [value]="date"
+          (input)="date=$any($event.target).value"
+      /></label>
+      <label
+        >{{i18n.t('correctionReason')}}<input
+          id="correction-reason"
+          required
+          maxlength="1000"
+          [value]="reason"
+          (input)="reason=$any($event.target).value"
+      /></label>
+      <table>
+        <tbody>
+          @for(line of lines;track $index;let idx=$index){
+          <tr>
+            <td>
+              <select [value]="line.accountId" (change)="line.accountId=$any($event.target).value">
+                @for(a of accounts();track a.id){
+                <option [value]="a.id">{{a.code}} {{a.name}}</option>
+                }
+              </select>
+            </td>
+            <td>
+              <input
+                class="correction-debit"
+                aria-label="Debit"
+                [value]="line.debit"
+                (input)="line.debit=$any($event.target).value"
+              />
+            </td>
+            <td>
+              <input
+                class="correction-credit"
+                aria-label="Credit"
+                [value]="line.credit"
+                (input)="line.credit=$any($event.target).value"
+              />
+            </td>
+            <td><button type="button" (click)="lines.splice(idx,1)">−</button></td>
+          </tr>
+          }
+        </tbody>
+      </table>
+      <button type="button" (click)="add()">+</button>
+      <label
+        ><input
+          id="correction-confirm"
+          type="checkbox"
+          (change)="confirmed=$any($event.target).checked"
+        />{{i18n.t('correctionConfirm')}}</label
+      >
+    </fieldset>
+    <p>{{i18n.t('correctedTotal')}}: {{total.debit}} / {{total.credit}} ({{total.difference}})</p>
+    <button id="submit-correction" [disabled]="busy() || !confirmed">
+      {{i18n.t('correctJournal')}}
+    </button>
+  </form>
+  } @else {
+  <p role="alert">{{i18n.t('correctionNotAllowed')}}</p>
+  } }
+</section>

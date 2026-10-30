@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Erp.Finance.Application/Erp.Finance.Application.csproj" />
+    <ProjectReference Include="../Erp.Finance.Contracts/Erp.Finance.Contracts.csproj" />
+    <ProjectReference Include="../../../BuildingBlocks/Erp.Application.Abstractions/Erp.Application.Abstractions.csproj" />
+    <ProjectReference Include="../../../Platform/Erp.Platform.Infrastructure/Erp.Platform.Infrastructure.csproj" />
+</ItemGroup>
+  <ItemGroup><FrameworkReference Include="Microsoft.AspNetCore.App" /></ItemGroup>
+  <ItemGroup><PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" /></ItemGroup>
+</Project>

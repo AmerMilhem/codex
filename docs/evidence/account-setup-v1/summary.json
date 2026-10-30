@@ -1,0 +1,66 @@
+{
+  "decision": "SLICE PASS",
+  "recordedAtUtc": "2026-10-24T16:43:28.857921+00:00",
+  "scope": "Finance Chart of Accounts Setup; all previous regression gates required",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "af5db7dd68adab8b85d6c693076a33ea34eafd53381764d5bcf2e4948bfb8dbc"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "passed": 128,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "71231431a6e1947a73effbb24fb058ccf07ccc2d02c8f758db692c7d15cea594"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "passed": 63,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "f83fe525e1dac1ce36a37f51befa020c9df782011ac4635d1b1e5889e65284a9"
+    }
+  ],
+  "dotnetTotal": 200,
+  "angularUnit": 50,
+  "automatedTestsTotal": 250,
+  "newAutomatedTests": 24,
+  "browserAcceptanceChecksTotal": 155,
+  "newBrowserAcceptanceChecks": 19,
+  "accountSetupBrowserChecks": 19,
+  "goldenDatabaseChecks": {
+    "periodState": "Open:1",
+    "accountRows": "3",
+    "createRequestedAudit": "3",
+    "createdAudit": "3",
+    "createdOutbox": "3",
+    "createReceipt": "3",
+    "postedJournals": "1",
+    "newAccountJournal": "2",
+    "nonpostable": "t",
+    "unbalanced": "0",
+    "rlsForced": "t"
+  },
+  "migrationsAdded": 1,
+  "tablesAdded": 0,
+  "architecture": "PASS",
+  "migrationChainCheck": {
+    "migrationIds": [
+      "20261018141639_ManualJournalV1",
+      "20261020202816_ManualJournalReversalV1",
+      "20261023152528_FiscalPeriodCloseV1",
+      "20261023212645_FiscalPeriodSetupV1",
+      "20261024162900_ChartOfAccountsSetupV1"
+    ],
+    "priorSetupDesignerMatchesApprovedManifest": true,
+    "newMigration": "20261024162900_ChartOfAccountsSetupV1"
+  },
+  "securityAudits": "No reported vulnerabilities at execution time",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "nextSliceStarted": false
+}

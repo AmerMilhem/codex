@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Trial Balance cash closing is 115 debit",
+      "status": "PASS"
+    },
+    {
+      "name": "Trial Balance account drill-down preserves company account dates",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL GL screen",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted only; draft and after-end excluded",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening movement running closing Golden Scenario",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent Trial Balance reconciliation",
+      "status": "PASS"
+    },
+    {
+      "name": "UI shows server running balances",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR retains identical financial figures",
+      "status": "PASS"
+    },
+    {
+      "name": "Last page running includes first page",
+      "status": "PASS"
+    },
+    {
+      "name": "First page returns same opening/running",
+      "status": "PASS"
+    },
+    {
+      "name": "GL opens existing Posted Journal with audit correlation",
+      "status": "PASS"
+    },
+    {
+      "name": "Posted Journal has no mutation buttons",
+      "status": "PASS"
+    },
+    {
+      "name": "Journal return preserves account dates and pagination",
+      "status": "PASS"
+    },
+    {
+      "name": "Different page sizes retain exact movements and totals",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty account period returns zeros",
+      "status": "PASS"
+    },
+    {
+      "name": "Arabic RTL mobile has contained horizontal scrolling",
+      "status": "PASS"
+    },
+    {
+      "name": "Foreign company rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Modified account identifier cannot disclose movements",
+      "status": "PASS"
+    },
+    {
+      "name": "Report and drill-down browser requests are GET only",
+      "status": "PASS"
+    },
+    {
+      "name": "Browser has no runtime errors",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed period Trial Balance remains readable",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed period GL remains readable",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period report requests are GET only",
+      "status": "PASS"
+    },
+    {
+      "name": "Closed-period browser has no runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "snapshots": {
+    "firstJournal": "01a15ede-db22-74f9-a57e-59898ef34c0d",
+    "secondJournal": "01a15ede-db5f-79f4-b4c8-8881924b31c2",
+    "golden": {
+      "tenantId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "companyId": "11111111-1111-4111-8111-111111111111",
+      "accountId": "66666666-6666-4666-8666-666666666666",
+      "accountCode": "1000",
+      "accountName": "نقد / Cash",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-31",
+      "currency": "JOD",
+      "minorUnits": 3,
+      "openingScope": "company-book-lifetime",
+      "generatedAt": "2026-10-21T14:30:26.504514+00:00",
+      "offset": 0,
+      "limit": 50,
+      "totalCount": 2,
+      "openingBalance": "100",
+      "periodDebit": "40",
+      "periodCredit": "25",
+      "closingBalance": "115",
+      "pageOpeningBalance": "100",
+      "movements": [
+        {
+          "lineId": "01a15ede-db23-73a0-973a-76a2879bfab7",
+          "journalId": "01a15ede-db22-74f9-a57e-59898ef34c0d",
+          "position": 1,
+          "postingDate": "2026-01-01",
+          "journalNumber": "MJ-2026-000001",
+          "reference": "GL golden",
+          "description": "Debit line",
+          "journalDescription": "General ledger acceptance",
+          "debit": "40",
+          "credit": "0",
+          "runningBalance": "140"
+        },
+        {
+          "lineId": "01a15ede-db5f-741d-ae6c-9a2745fda81d",
+          "journalId": "01a15ede-db5f-79f4-b4c8-8881924b31c2",
+          "position": 2,
+          "postingDate": "2026-01-31",
+          "journalNumber": "MJ-2026-000002",
+          "reference": "GL golden",
+          "description": "Credit line",
+          "journalDescription": "General ledger acceptance",
+          "debit": "0",
+          "credit": "25",
+          "runningBalance": "115"
+        }
+      ],
+      "reconciliation": {
+        "passed": true,
+        "checks": [
+          {
+            "code": "GL_TB_OPENING",
+            "passed": true,
+            "expected": "100",
+            "actual": "100"
+          },
+          {
+            "code": "GL_TB_PERIOD_DEBIT",
+            "passed": true,
+            "expected": "40",
+            "actual": "40"
+          },
+          {
+            "code": "GL_TB_PERIOD_CREDIT",
+            "passed": true,
+            "expected": "25",
+            "actual": "25"
+          },
+          {
+            "code": "GL_TB_CLOSING",
+            "passed": true,
+            "expected": "115",
+            "actual": "115"
+          },
+          {
+            "code": "GL_CLOSING_EQUATION",
+            "passed": true,
+            "expected": "115",
+            "actual": "115"
+          },
+          {
+            "code": "GL_PAGE_RUNNING_EQUATION",
+            "passed": true,
+            "expected": "0",
+            "actual": "0"
+          }
+        ]
+      }
+    }
+  },
+  "databaseChecks": {
+    "postedJournals": "4",
+    "draftJournals": "1",
+    "postingOutboxRows": "4",
+    "postingReceipts": "4",
+    "periodDebit": "65.000000",
+    "periodCredit": "65.000000",
+    "globalUnbalanced": "0",
+    "readOnlyStateUnchanged": true
+  }
+}

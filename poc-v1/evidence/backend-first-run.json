@@ -1,0 +1,548 @@
+{
+  "runId": "7198174d-dae8-4fc7-bbcb-50dd0a088287",
+  "utc": "2026-10-18T09:46:35.8201412+00:00",
+  "framework": ".NET 10.0.13",
+  "os": "Debian GNU/Linux 13 (trixie)",
+  "results": [
+    {
+      "name": "runtime-role-is-not-owner-or-bypass",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 22.6035,
+      "detail": {
+        "safe": true
+      }
+    },
+    {
+      "name": "rls-tenant-company-and-missing-context",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 21.4574,
+      "detail": {
+        "scopes": 3,
+        "missing": 0,
+        "crossTenant": 0,
+        "crossCompany": 0
+      }
+    },
+    {
+      "name": "rls-cross-scope-writes-and-resource-id",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 18.0968,
+      "detail": {
+        "crossTenant": "denied",
+        "crossCompany": "denied",
+        "modifiedResource": "zero rows"
+      }
+    },
+    {
+      "name": "rls-pool-reuse-rollback-cancel-worker-support",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 131.2362,
+      "detail": {
+        "pidA": 92,
+        "pidB": 92,
+        "physicalReuse": true,
+        "afterRollback": 0,
+        "afterCancellation": 0,
+        "worker": "scoped",
+        "support": "no implicit bypass"
+      }
+    },
+    {
+      "name": "malicious-context-parameter-fails-closed",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 2.7793,
+      "detail": {
+        "injectedSqlExecuted": false
+      }
+    },
+    {
+      "name": "mass-assignment-field-and-upload-contract-rejections",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 26.9772,
+      "detail": {
+        "strictJson": true,
+        "restrictedDto": true,
+        "invalidUpload": "denied",
+        "scope": "contract function only; object-store scan pending"
+      }
+    },
+    {
+      "name": "ef-three-contexts-one-acid-commit",
+      "category": "transactions",
+      "status": "PASS",
+      "milliseconds": 681.146,
+      "detail": {
+        "id": "01a14e67-cb30-75c5-bfa8-7bb8e06c1a9c",
+        "documents": 1,
+        "journals": 1,
+        "outbox": 1,
+        "contexts": 3
+      }
+    },
+    {
+      "name": "deferred-unbalanced-commit-rolls-back-everything",
+      "category": "accounting",
+      "status": "PASS",
+      "milliseconds": 9.9473,
+      "detail": {
+        "documents": 0,
+        "journals": 0,
+        "outbox": 0
+      }
+    },
+    {
+      "name": "ef-savechanges-unique-failure-outer-rollback",
+      "category": "transactions",
+      "status": "PASS",
+      "milliseconds": 12.5892,
+      "detail": {
+        "original": 1,
+        "failedClaim": 0
+      }
+    },
+    {
+      "name": "explicit-rollback-after-savechanges",
+      "category": "transactions",
+      "status": "PASS",
+      "milliseconds": 4.9441,
+      "detail": {
+        "documents": 0
+      }
+    },
+    {
+      "name": "posting-closed-invalid-inactive-accounts",
+      "category": "accounting",
+      "status": "PASS",
+      "milliseconds": 8.5101,
+      "detail": {
+        "rejections": 3
+      }
+    },
+    {
+      "name": "connection-interruption-rolls-back-and-fresh-uow-retries",
+      "category": "transactions",
+      "status": "PASS",
+      "milliseconds": 21.7385,
+      "detail": {
+        "terminatedPid": 90,
+        "initialEffects": 0,
+        "retriedEffects": 1
+      }
+    },
+    {
+      "name": "postgres-deadlock-detected-and-full-uow-retry",
+      "category": "transactions",
+      "status": "PASS",
+      "milliseconds": 1012.5496,
+      "detail": {
+        "sqlstate": "40P01",
+        "victims": 1,
+        "recovery": "fresh transaction, consistent lock order"
+      }
+    },
+    {
+      "name": "posted-history-update-delete-denied",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 3.4498,
+      "detail": {
+        "immutable": true
+      }
+    },
+    {
+      "name": "reservation-8-vs-7-atomic",
+      "category": "reservation",
+      "status": "PASS",
+      "milliseconds": 126.1401,
+      "detail": {
+        "rounds": 25,
+        "successfulReservations": 25,
+        "doubleWinners": 0,
+        "retries": 0,
+        "deadlocks": 0,
+        "minWinner": 7.00000000,
+        "maxWinner": 8.00000000,
+        "meanWinnerMs": 1.5225840000000002,
+        "p95WinnerMs": 2.6326,
+        "scope": "single bucket adversarial pair, not production throughput benchmark"
+      }
+    },
+    {
+      "name": "reservation-8-vs-7-row-lock",
+      "category": "reservation",
+      "status": "PASS",
+      "milliseconds": 227.9699,
+      "detail": {
+        "rounds": 25,
+        "successfulReservations": 25,
+        "doubleWinners": 0,
+        "retries": 0,
+        "deadlocks": 0,
+        "minWinner": 7.00000000,
+        "maxWinner": 8.00000000,
+        "meanWinnerMs": 5.9500839999999995,
+        "p95WinnerMs": 10.0649,
+        "scope": "single bucket adversarial pair, not production throughput benchmark"
+      }
+    },
+    {
+      "name": "reservation-8-vs-7-serializable",
+      "category": "reservation",
+      "status": "PASS",
+      "milliseconds": 346.4578,
+      "detail": {
+        "rounds": 25,
+        "successfulReservations": 25,
+        "doubleWinners": 0,
+        "retries": 25,
+        "deadlocks": 0,
+        "minWinner": 7.00000000,
+        "maxWinner": 8.00000000,
+        "meanWinnerMs": 6.6514999999999995,
+        "p95WinnerMs": 8.6282,
+        "scope": "single bucket adversarial pair, not production throughput benchmark"
+      }
+    },
+    {
+      "name": "reservation-8-vs-7-optimistic",
+      "category": "reservation",
+      "status": "PASS",
+      "milliseconds": 222.0086,
+      "detail": {
+        "rounds": 25,
+        "successfulReservations": 25,
+        "doubleWinners": 0,
+        "retries": 25,
+        "deadlocks": 0,
+        "minWinner": 7.00000000,
+        "maxWinner": 8.00000000,
+        "meanWinnerMs": 5.715504000000002,
+        "p95WinnerMs": 8.5212,
+        "scope": "single bucket adversarial pair, not production throughput benchmark"
+      }
+    },
+    {
+      "name": "stale-concurrency-token-does-not-overwrite",
+      "category": "reservation",
+      "status": "PASS",
+      "milliseconds": 1.7806,
+      "detail": {
+        "changed": 0
+      }
+    },
+    {
+      "name": "same-key-once-sequential-concurrent-timeout-replay",
+      "category": "idempotency",
+      "status": "PASS",
+      "milliseconds": 51.876,
+      "detail": {
+        "sequential": 2,
+        "concurrent": 8,
+        "effects": 1,
+        "clientTimeout": true,
+        "outboxDispatches": "tested separately; no network inside posting"
+      }
+    },
+    {
+      "name": "same-key-different-fingerprint-rejected",
+      "category": "idempotency",
+      "status": "PASS",
+      "milliseconds": 3.7556,
+      "detail": {
+        "conflict": "idempotency.key_conflict",
+        "effects": 1
+      }
+    },
+    {
+      "name": "fresh-concurrent-key-and-business-source-uniqueness",
+      "category": "accounting",
+      "status": "PASS",
+      "milliseconds": 26.4317,
+      "detail": {
+        "sameKeyConcurrent": 8,
+        "effects": 1,
+        "differentKeySuccess": 1,
+        "differentKeyConflict": 1
+      }
+    },
+    {
+      "name": "process-killed-after-commit-replayed-once",
+      "category": "idempotency",
+      "status": "PASS",
+      "milliseconds": 865.164,
+      "detail": {
+        "exitCode": 137,
+        "marker": "COMMITTED_BEFORE_PROCESS_KILL",
+        "effects": 1,
+        "recovery": "query/replay existing receipt, no blind new command"
+      }
+    },
+    {
+      "name": "replay-rechecks-current-authorization",
+      "category": "security",
+      "status": "PASS",
+      "milliseconds": 0.5446,
+      "detail": {
+        "denied": true
+      }
+    },
+    {
+      "name": "decimal-postgresql-even-rounding-vectors",
+      "category": "decimal",
+      "status": "PASS",
+      "milliseconds": 48.0607,
+      "detail": {
+        "vectors": 17,
+        "mismatchesUnderExplicitPolicy": 0,
+        "postgresDefault": "away from zero; differs from .NET ToEven",
+        "roundingPoint": "ledger line boundary, explicit final residual; no repeated hidden intermediate rounding"
+      }
+    },
+    {
+      "name": "decimal-intermediate-overflow-range-and-time-uuid",
+      "category": "decimal",
+      "status": "FAIL",
+      "milliseconds": 1.5938,
+      "error": "System.Exception: big intermediate missing\n   at P.Check(Boolean value, String why) in /workspace/codex/poc-v1/src/Program.cs:line 14\n   at P.\u003C\u003Ec.\u003C\u003CDecimalTests\u003Eb__4_1\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Costing.cs:line 31\n--- End of stack trace from previous location ---\n   at P.Run(String name, String category, Func\u00601 f) in /workspace/codex/poc-v1/src/Program.cs:line 15"
+    },
+    {
+      "name": "mwa-sequence-ledger-value-gl-reconciliation",
+      "category": "costing",
+      "status": "PASS",
+      "milliseconds": 64.1613,
+      "detail": {
+        "steps": 7,
+        "finalQuantity": 0,
+        "finalValue": 0,
+        "reconciliation": "after every event",
+        "history": "append-only"
+      }
+    },
+    {
+      "name": "mwa-concurrent-receipts-issues-and-retries",
+      "category": "costing",
+      "status": "PASS",
+      "milliseconds": 114.7099,
+      "detail": {
+        "concurrentEvents": 20,
+        "finalQuantity": 100.00000000,
+        "serializedPool": true,
+        "reconciliation": "exact; order-specific MWA recorded by sequence"
+      }
+    },
+    {
+      "name": "late-cost-append-only-onhand-and-consumed-split",
+      "category": "costing",
+      "status": "PASS",
+      "milliseconds": 21.8538,
+      "detail": {
+        "originalReceipt": 100,
+        "correctedReceipt": 110,
+        "remainingQuantity": 5,
+        "remainingValue": 55,
+        "consumedCost": 55,
+        "inventoryDelta": 5,
+        "cogsDelta": 5,
+        "oldIssue": -50.000000,
+        "limitation": "single-source shadow-delta case only; mixed-source downstream production graph not proven"
+      }
+    },
+    {
+      "name": "open-item-partial-allocation-reconciliation",
+      "category": "reconciliation",
+      "status": "PASS",
+      "milliseconds": 6.3362,
+      "detail": {
+        "original": 100,
+        "allocations": 100.000000,
+        "remaining": 0,
+        "scope": "AR representative; FX/AP full flow pending"
+      }
+    },
+    {
+      "name": "wip-partial-100-40-30-30-estimated-credit-allowed",
+      "category": "wip",
+      "status": "PASS",
+      "milliseconds": 51.1937,
+      "detail": {
+        "policy": "estimated-credit-allowed",
+        "provisionalValue": 1200,
+        "actual": 1000,
+        "finalVariance": -200,
+        "inventoryCorrection": -160.0,
+        "cogsCorrection": -40.0,
+        "wipFacts": 0.000000,
+        "gl": 0.000000,
+        "finalOutput": 100,
+        "remainingQuantity": 80,
+        "remainingValue": 800,
+        "consumedCost": 200,
+        "decision": "technical comparison only; no final financial policy approval"
+      }
+    },
+    {
+      "name": "wip-partial-100-40-30-30-incurred-cap",
+      "category": "wip",
+      "status": "PASS",
+      "milliseconds": 39.4668,
+      "detail": {
+        "policy": "incurred-cap",
+        "provisionalValue": 1000,
+        "actual": 1000,
+        "finalVariance": 0,
+        "inventoryCorrection": 40.0,
+        "cogsCorrection": -40.0,
+        "wipFacts": 0.000000,
+        "gl": 0.000000,
+        "finalOutput": 100,
+        "remainingQuantity": 80,
+        "remainingValue": 800,
+        "consumedCost": 200,
+        "decision": "technical comparison only; no final financial policy approval"
+      }
+    },
+    {
+      "name": "wip-partial-100-40-30-30-wait-for-funded-estimate",
+      "category": "wip",
+      "status": "PASS",
+      "milliseconds": 24.5532,
+      "detail": {
+        "policy": "wait-for-funded-estimate",
+        "events": [
+          {
+            "step": "input0",
+            "wip": 500
+          },
+          {
+            "step": "receipt0",
+            "quantity": 40,
+            "value": 480,
+            "wip": 20
+          },
+          {
+            "step": "input1",
+            "wip": 320
+          },
+          {
+            "step": "receipt1",
+            "state": "BLOCKED insufficient incurred WIP",
+            "wip": 320
+          },
+          {
+            "step": "input2",
+            "wip": 520
+          },
+          {
+            "step": "receipt2",
+            "quantity": 30,
+            "value": 360,
+            "wip": 160
+          }
+        ],
+        "denied": 1,
+        "decision": "cannot provide the requested partial schedule without receipt deferral/replanning; policy decision required"
+      }
+    },
+    {
+      "name": "outbox-crash-before-send-after-send-lease-fencing",
+      "category": "outbox",
+      "status": "PASS",
+      "milliseconds": 33.9634,
+      "detail": {
+        "claims": 3,
+        "dispatchAttempts": 2,
+        "consumerEffects": 1,
+        "staleAck": 0,
+        "ack": 1,
+        "delivery": "at least once; not exactly once",
+        "crashMechanism": "lease-owner disappearance modeled by expired durable lease; actual process kill tested separately"
+      }
+    },
+    {
+      "name": "two-workers-skip-locked-one-pickup",
+      "category": "outbox",
+      "status": "PASS",
+      "milliseconds": 12.3131,
+      "detail": {
+        "workers": 2,
+        "claims": 1
+      }
+    },
+    {
+      "name": "consumer-inbox-and-effect-atomic-rollback",
+      "category": "outbox",
+      "status": "PASS",
+      "milliseconds": 3.8582,
+      "detail": {
+        "inbox": 0,
+        "effect": 0
+      }
+    },
+    {
+      "name": "database-command-timeout-and-worker-restart",
+      "category": "failure",
+      "status": "PASS",
+      "milliseconds": 1007.4596,
+      "detail": {
+        "timedOut": true,
+        "freshWorkerScope": "B",
+        "recovered": true
+      }
+    },
+    {
+      "name": "external-timeout-retry-stable-event-id",
+      "category": "failure",
+      "status": "FAIL",
+      "milliseconds": 440.7034,
+      "error": "System.InvalidOperationException: This instance has already started one or more requests. Properties can only be modified before sending the first request.\n   at System.Net.Http.HttpClient.CheckDisposedOrStarted()\n   at System.Net.Http.HttpClient.set_Timeout(TimeSpan value)\n   at P.\u003C\u003Ec.\u003C\u003COutboxTests\u003Eb__31_4\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Recovery.cs:line 30\n--- End of stack trace from previous location ---\n   at P.\u003C\u003Ec.\u003C\u003COutboxTests\u003Eb__31_4\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Recovery.cs:line 30\n--- End of stack trace from previous location ---\n   at P.Run(String name, String category, Func\u00601 f) in /workspace/codex/poc-v1/src/Program.cs:line 15"
+    },
+    {
+      "name": "global-ledger-openitem-reconciliation",
+      "category": "reconciliation",
+      "status": "PASS",
+      "milliseconds": 3.7143,
+      "detail": {
+        "glDifference": 0.000000,
+        "overallocatedItems": 0
+      }
+    },
+    {
+      "name": "expand-dual-compatible-backfill-contract",
+      "category": "migration",
+      "status": "PASS",
+      "milliseconds": 17.8501,
+      "detail": {
+        "rows": 3,
+        "expandMs": 1.1152,
+        "consecutiveVersionsCompatible": true,
+        "backfillMismatches": 0,
+        "contract": "only after N writers retired",
+        "limitation": "small local fixture; no fleet-scale lock/replication proof"
+      }
+    },
+    {
+      "name": "oidc-code-pkce-bff-current-membership-negative-tests",
+      "category": "oidc",
+      "status": "FAIL",
+      "milliseconds": 248.9177,
+      "error": "System.Exception: OIDC login failed: \n   at P.Check(Boolean value, String why) in /workspace/codex/poc-v1/src/Program.cs:line 14\n   at P.\u003C\u003Ec.\u003C\u003CIdentity\u003Eb__11_0\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Identity.cs:line 34\n--- End of stack trace from previous location ---\n   at P.\u003C\u003Ec.\u003C\u003CIdentity\u003Eb__11_0\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Identity.cs:line 42\n--- End of stack trace from previous location ---\n   at P.\u003C\u003Ec.\u003C\u003CIdentity\u003Eb__11_0\u003Ed.MoveNext() in /workspace/codex/poc-v1/src/Identity.cs:line 42\n--- End of stack trace from previous location ---\n   at P.Run(String name, String category, Func\u00601 f) in /workspace/codex/poc-v1/src/Program.cs:line 15"
+    },
+    {
+      "name": "testcontainers-postgresql18-runtime-smoke",
+      "category": "compatibility",
+      "status": "PASS",
+      "milliseconds": 2540.884,
+      "detail": {
+        "version": "18.2 (Debian 18.2-1.pgdg13\u002B1)",
+        "testcontainers": "4.16.0.0",
+        "image": "postgres:18.2@sha256:a688ae5c99f86c1424e046ace0de890608cc0ddb5ec8ef72a6ff8305fdc8f4d2"
+      }
+    }
+  ]
+}

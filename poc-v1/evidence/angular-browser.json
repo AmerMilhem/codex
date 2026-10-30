@@ -1,0 +1,59 @@
+{
+  "utc": "2026-10-18T09:53:25.315Z",
+  "browser": "154.0.8037.57",
+  "executable": "/usr/bin/chromium",
+  "playwright": "1.64.1",
+  "checks": [
+    {
+      "name": "100 editable rows",
+      "status": "PASS",
+      "detail": {
+        "rows": 100,
+        "renderMs": 259.69332799999995
+      }
+    },
+    {
+      "name": "Arabic RTL",
+      "status": "PASS"
+    },
+    {
+      "name": "restricted column absent",
+      "status": "PASS"
+    },
+    {
+      "name": "keyboard next row",
+      "status": "PASS"
+    },
+    {
+      "name": "reactive invalid quantity blocks submit",
+      "status": "PASS"
+    },
+    {
+      "name": "reactive correction",
+      "status": "PASS"
+    },
+    {
+      "name": "English LTR",
+      "status": "PASS"
+    },
+    {
+      "name": "permission visibility fixture",
+      "status": "PASS"
+    },
+    {
+      "name": "inputs accessible names",
+      "status": "PASS"
+    },
+    {
+      "name": "no horizontal overflow at 1280",
+      "status": "PASS"
+    },
+    {
+      "name": "no browser runtime errors",
+      "status": "PASS",
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "limitation": "Installed Chromium, not Playwright managed bundled revision; screen-reader audit and production browser matrix pending"
+}

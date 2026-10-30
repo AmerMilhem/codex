@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+<ItemGroup><ProjectReference Include="../../Platform/Erp.Platform.Infrastructure/Erp.Platform.Infrastructure.csproj" />
+<ProjectReference Include="../../Modules/Finance/Erp.Finance.Infrastructure/Erp.Finance.Infrastructure.csproj" />
+<FrameworkReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup></Project>

@@ -1,0 +1,9 @@
+{
+  "docs/ACCOUNTING-BOOK-EXISTING-MODEL.md": "fbc65776394df34167ff22e9905469a812756eb1760fa32d2e9c3c139914a4c8",
+  "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261024162900_ChartOfAccountsSetupV1.Designer.cs": "eeafe3a527204d787e7df646360d5acddea7b9e48f235014b310fa0104ca59bc",
+  "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261024211908_AccountingBookSetupV1.cs": "c814531a05d7d3db55d866394f521f15a709cc89bb53f9cb2c8f968dc4376a34",
+  "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/20261024211908_AccountingBookSetupV1.Designer.cs": "545e16cbb8c4fcaeed90066ad46b0a68517d793f5e1e4e486c9e16be1b317d0a",
+  "src/Modules/Finance/Erp.Finance.Infrastructure/Migrations/FinanceDbContextModelSnapshot.cs": "451586281740244dc27ef112fec416080dccecccf58704a19f7100364b8ee9a2",
+  "scripts/add-finance-migration.sh": "f26889c7b0358e7cda0b7c8581c827bc472808c4a9afaf380391e5484a3e13d6",
+  "scripts/verify.sh": "82da9da41e448286d8e42e8b2bd57c957fb6b2f47e0b78db5aac361c0d72e32c"
+}

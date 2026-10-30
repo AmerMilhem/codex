@@ -1,0 +1,48 @@
+{
+  "decision": "FOUNDATION PASS",
+  "scope": "Authorized Backend/Web Foundation only; no business feature or production readiness claim",
+  "recordedAtUtc": "2026-10-18T13:54:26.796041+00:00",
+  "dotnet": [
+    {
+      "assembly": "Erp.ArchitectureTests.dll",
+      "executed": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "282b4f2ffbcabd892001a349efebe1f3c7ff05a945ef624e423ec476e2a23093"
+    },
+    {
+      "assembly": "Erp.IntegrationTests.dll",
+      "executed": 23,
+      "passed": 23,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "736c8c5a21e8efd6d2146e261b8416423a4808b87ed196f1029acc54a70c8f34"
+    },
+    {
+      "assembly": "Erp.UnitTests.dll",
+      "executed": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "sha256": "81733e1c1b36808fa3aeb16af9d12008a54b3f62cf9ca8988062c7c486a044e0"
+    }
+  ],
+  "dotnetTotal": 38,
+  "angularUnit": {
+    "executed": 5,
+    "passed": 5,
+    "failed": 0,
+    "runner": "Vitest 4.1.12"
+  },
+  "browser": {
+    "executed": 8,
+    "passed": 8,
+    "browser": "154.0.8037.57"
+  },
+  "localStartup": "PASS",
+  "securityAudits": "no currently reported vulnerabilities",
+  "ciRemoteExecuted": false,
+  "productionDeployment": false,
+  "userApprovalRequiredForNextSlice": true
+}
